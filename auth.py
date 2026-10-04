@@ -5,9 +5,13 @@ from __future__ import annotations
 
 import getpass
 import json
+import os
 import secrets
 import urllib.parse
 import urllib.request
+
+if os.path.isfile("/etc/ssl/cert.pem"):
+    os.environ.setdefault("SSL_CERT_FILE", "/etc/ssl/cert.pem")
 
 
 def request_json(url: str, data: dict | None = None) -> dict:
