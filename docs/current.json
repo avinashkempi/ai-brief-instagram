@@ -1,0 +1,17 @@
+{
+  "date": "2026-10-04",
+  "status": "ready",
+  "generated_at": "2026-10-04T15:55:51.446597+00:00",
+  "story": {
+    "title": "A model guide for the GPT-6 family",
+    "url": "https://openai.com/index/practical-guide-building-gpt-6",
+    "published": "2026-10-02T16:15:00+00:00",
+    "source": "OpenAI News",
+    "priority": 1,
+    "summary": "Learn how startups can choose GPT-6 models, tune reasoning effort, improve prompts and skills, coordinate tools, and prepare workflows for production."
+  },
+  "caption": "A model guide for the GPT-6 family\n\nLearn how startups can choose GPT-6 models, tune reasoning effort, improve prompts and skills, coordinate tools, and prepare workflows for production.\n\nSource: OpenAI News\nhttps://openai.com/index/practical-guide-building-gpt-6\n\nAI Brief · Daily AI developments",
+  "alt_text": "AI Brief news card. Headline: A model guide for the GPT-6 family. Source: OpenAI News.",
+  "image_path": "posts/2026-10-04.jpg",
+  "image_url": "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-10-04.jpg"
+}
