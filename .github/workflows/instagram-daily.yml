@@ -10,7 +10,7 @@ on:
   workflow_dispatch:
     inputs:
       mode:
-        description: "Prepare image or publish today's ready package"
+        description: "Prepare today's image and publish it, or publish today's ready package"
         type: choice
         options:
           - prepare
@@ -71,7 +71,18 @@ jobs:
         uses: actions/deploy-pages@v4
 
   publish:
-    if: github.event.schedule == '35 2 * * *' || (github.event_name == 'workflow_dispatch' && inputs.mode == 'publish')
+    needs: prepare
+    if: >-
+      always() &&
+      (
+        (github.event.schedule == '35 2 * * *' && needs.prepare.result == 'skipped') ||
+        (github.event_name == 'workflow_dispatch' &&
+          inputs.mode == 'publish' &&
+          needs.prepare.result == 'skipped') ||
+        (github.event_name == 'workflow_dispatch' &&
+          inputs.mode == 'prepare' &&
+          needs.prepare.result == 'success')
+      )
     runs-on: ubuntu-latest
     steps:
       - name: Check out the repository
@@ -97,7 +108,7 @@ jobs:
       - name: Commit the published-state record
         run: |
           git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config user.email "41898282+avinashkempi@users.noreply.github.com"
           git add docs/
           git diff --cached --quiet || git commit -m "Record daily AI Brief publication"
           git push
