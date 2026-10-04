@@ -25,7 +25,7 @@ GitHub schedule events can be delayed during high load, so the schedule is not a
 
 The public repository is already created at [github.com/avinashkempi/ai-brief-instagram](https://github.com/avinashkempi/ai-brief-instagram), and its project files are uploaded.
 
-1. Enable **Settings → Pages → Source → GitHub Actions** in the repository. The site will be public at https://avinashkempi.github.io/ai-brief-instagram/.
+1. GitHub Pages is configured to use **GitHub Actions**. After the first prepare run deploys it, the public site will be at https://avinashkempi.github.io/ai-brief-instagram/.
 2. In Meta for Developers, create an app, add **Instagram API with Instagram Login**, and register this redirect URI exactly: https://avinashkempi.github.io/ai-brief-instagram/oauth-callback/. Add your professional Instagram account as a tester if Meta requires it in development mode, then accept the invitation.
 3. On your own computer, run **python auth.py** from this project folder. The helper prints an Instagram authorization URL, checks the returned OAuth state, requests your Meta app secret without echoing it, and exchanges the temporary authorization code locally. It does not save credentials to disk.
 4. In the repository, open **Settings → Secrets and variables → Actions**. Add **IG_USER_ID** and **IG_ACCESS_TOKEN** using the values printed by the helper.
