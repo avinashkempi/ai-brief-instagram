@@ -1,0 +1,6 @@
+[
+  {"name": "OpenAI News", "feed": "https://openai.com/news/rss.xml", "priority": 1},
+  {"name": "Google DeepMind", "feed": "https://deepmind.google/blog/rss.xml", "priority": 1},
+  {"name": "Google AI", "feed": "https://blog.google/innovation-and-ai/technology/ai/rss/", "priority": 1},
+  {"name": "arXiv cs.AI", "feed": "https://rss.arxiv.org/rss/cs.AI", "priority": 2}
+]
