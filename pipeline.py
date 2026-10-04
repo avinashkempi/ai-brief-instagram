@@ -28,6 +28,8 @@ DOCS = ROOT / "docs"
 POSTS = DOCS / "posts"
 IST = ZoneInfo("Asia/Kolkata")
 WIDTH, HEIGHT = 1080, 1350
+MAX_CAROUSEL_SLIDES = 5
+INSTAGRAM_CAPTION_LIMIT = 2200
 BG, PAPER, MUTED, ACCENT, GRID = "#10120F", "#F4F5EF", "#B7B9B0", "#D7FF64", "#22251F"
 USER_AGENT = "AIBriefPublisher/1.0 (RSS-based editorial card)"
 
@@ -130,15 +132,15 @@ def candidates(now: datetime) -> list[dict]:
     return found
 
 
-def choose_story(now: datetime) -> dict | None:
+def choose_stories(now: datetime, limit: int = MAX_CAROUSEL_SLIDES) -> list[dict]:
     seen = read_json(DOCS / "seen.json", [])
     seen_urls = {item.get("url") for item in seen if isinstance(item, dict)}
     fresh = [item for item in candidates(now) if item["url"] not in seen_urls]
     if not fresh:
-        return None
-    # Newest item wins; primary source priority breaks timestamp ties.
+        return []
+    # Newest items win; primary-source priority breaks timestamp ties.
     fresh.sort(key=lambda item: (datetime.fromisoformat(item["published"]), -item["priority"]), reverse=True)
-    return fresh[0]
+    return fresh[:limit]
 
 
 def load_font(size: int, bold: bool = False) -> ImageFont.FreeTypeFont:
@@ -176,7 +178,7 @@ def wrap_text(draw: ImageDraw.ImageDraw, text: str, use_font: ImageFont.FreeType
     return lines
 
 
-def draw_card(story: dict, output: Path, issued: date) -> None:
+def draw_card(story: dict, output: Path, issued: date, slide_number: int, total_slides: int) -> None:
     image = Image.new("RGB", (WIDTH, HEIGHT), BG)
     draw = ImageDraw.Draw(image)
     for x in range(0, WIDTH, 48):
@@ -195,7 +197,7 @@ def draw_card(story: dict, output: Path, issued: date) -> None:
     draw.text((80, 62), "AI BRIEF", font=load_font(28, True), fill=ACCENT)
     draw.text((80, 109), "THE DAILY SIGNAL", font=load_font(17), fill="#A6AA9E")
     draw.rounded_rectangle((80, 160, 272, 204), radius=22, fill=ACCENT)
-    draw.text((101, 170), "DEVELOPMENT", font=load_font(15, True), fill=BG)
+    draw.text((101, 170), f"STORY {slide_number:02d} / {total_slides:02d}", font=load_font(15, True), fill=BG)
 
     title_font = load_font(70, True)
     lines = wrap_text(draw, story["title"], title_font, 900, 4)
@@ -232,15 +234,35 @@ def draw_card(story: dict, output: Path, issued: date) -> None:
     image.save(output, format="JPEG", quality=92, optimize=True, progressive=True)
 
 
-def caption_for(story: dict) -> str:
-    source_excerpt = story.get("summary", "")
-    if source_excerpt:
-        source_excerpt = source_excerpt[:500].rstrip()
-        if len(story.get("summary", "")) > 500:
-            source_excerpt = source_excerpt.rsplit(" ", 1)[0] + "…"
-    else:
-        source_excerpt = f"{story['source']} has published a new update. Open the source for the full details."
-    return f"{story['title']}\n\n{source_excerpt}\n\nSource: {story['source']}\n{story['url']}\n\nAI Brief · Daily AI developments"
+def short_text(value: str, limit: int) -> str:
+    clean = re.sub(r"\s+", " ", value or "").strip()
+    if len(clean) <= limit:
+        return clean
+    return clean[: limit - 1].rstrip() + "…"
+
+
+def caption_for(stories: list[dict]) -> str:
+    lines = [f"Today's AI Brief: {len(stories)} developments.", "Swipe through for the stories and sources."]
+    for index, story in enumerate(stories, start=1):
+        title = short_text(story["title"], 130)
+        source = short_text(story["source"], 60)
+        url = story["url"]
+        summary = short_text(story.get("summary", ""), 110)
+        entry = f"{index}. {title}"
+        if summary:
+            entry += f"\n{summary}"
+        entry += f"\nSource: {source}\n{url}"
+        candidate = "\n\n".join(lines + [entry, "AI Brief · Daily AI developments"])
+        if len(candidate) > INSTAGRAM_CAPTION_LIMIT:
+            entry = f"{index}. {title}\nSource: {source}\n{url}"
+            candidate = "\n\n".join(lines + [entry, "AI Brief · Daily AI developments"])
+        if len(candidate) <= INSTAGRAM_CAPTION_LIMIT:
+            lines.append(entry)
+    lines.append("AI Brief · Daily AI developments")
+    caption = "\n\n".join(lines)
+    if len(caption) > INSTAGRAM_CAPTION_LIMIT:
+        raise RuntimeError("The source links exceed Instagram's caption limit.")
+    return caption
 
 
 def write_index() -> None:
@@ -255,23 +277,36 @@ def write_index() -> None:
 def prepare() -> None:
     now = datetime.now(timezone.utc)
     today = now.astimezone(IST).date()
-    story = choose_story(now)
+    stories = choose_stories(now)
     package = {"date": today.isoformat(), "status": "skip", "generated_at": now.isoformat()}
-    if story:
-        image_path = POSTS / f"{today.isoformat()}.jpg"
-        draw_card(story, image_path, today)
+    if len(stories) >= 2:
         owner, repo = os.environ["GITHUB_REPOSITORY"].split("/", 1)
+        image_paths = []
+        image_urls = []
+        alt_texts = []
+        for index, story in enumerate(stories, start=1):
+            filename = f"{today.isoformat()}-{index:02d}.jpg"
+            image_path = POSTS / filename
+            draw_card(story, image_path, today, index, len(stories))
+            image_paths.append(f"posts/{filename}")
+            image_urls.append(f"https://{owner}.github.io/{repo}/posts/{filename}")
+            alt_texts.append(short_text(
+                f"AI Brief carousel slide {index} of {len(stories)}. Headline: {story['title']}. Source: {story['source']}.",
+                1000,
+            ))
         package.update({
             "status": "ready",
-            "story": story,
-            "caption": caption_for(story),
-            "alt_text": f"AI Brief news card. Headline: {story['title']}. Source: {story['source']}.",
-            "image_path": f"posts/{today.isoformat()}.jpg",
-            "image_url": f"https://{owner}.github.io/{repo}/posts/{today.isoformat()}.jpg",
+            "stories": stories,
+            "story": stories[0],
+            "caption": caption_for(stories),
+            "alt_texts": alt_texts,
+            "image_paths": image_paths,
+            "image_urls": image_urls,
+            "carousel": True,
         })
-        print(f"Prepared image from {story['source']}: {story['title']}")
+        print(f"Prepared {len(stories)}-image carousel with latest AI stories.")
     else:
-        package["reason"] = "No new eligible story in the last three days. Today's post will be skipped."
+        package["reason"] = "Fewer than two new eligible stories were found in the last three days; today's carousel is skipped."
         print(package["reason"])
     DOCS.mkdir(parents=True, exist_ok=True)
     (DOCS / "current.json").write_text(json.dumps(package, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
@@ -327,19 +362,39 @@ def refresh_instagram_token(token: str) -> str:
 
 
 def record_published(package: dict, today: str, media_id: str) -> None:
-    (DOCS / "published.json").write_text(json.dumps({"date": today, "media_id": media_id, "story_url": package["story"]["url"]}, indent=2) + "\n", encoding="utf-8")
+    stories = package.get("stories") or [package["story"]]
+    story_urls = [story["url"] for story in stories]
+    (DOCS / "published.json").write_text(json.dumps({
+        "date": today,
+        "media_id": media_id,
+        "story_urls": story_urls,
+        "story_url": story_urls[0] if story_urls else "",
+    }, indent=2) + "\n", encoding="utf-8")
     seen = read_json(DOCS / "seen.json", [])
-    seen = [item for item in seen if item.get("url") != package["story"]["url"]]
-    seen.append({"url": package["story"]["url"], "published": today})
+    seen_urls = set(story_urls)
+    seen = [item for item in seen if item.get("url") not in seen_urls]
+    seen.extend({"url": url, "published": today} for url in story_urls)
     (DOCS / "seen.json").write_text(json.dumps(seen[-120:], indent=2) + "\n", encoding="utf-8")
     write_index()
+
+
+def wait_for_container(creation_id: str, token: str) -> None:
+    status_url = f"https://graph.instagram.com/{creation_id}?fields=status_code,status&access_token={urllib.parse.quote(token)}"
+    for _ in range(24):
+        status = request_json(status_url)
+        if status.get("status_code") == "FINISHED":
+            return
+        if status.get("status_code") == "ERROR":
+            raise RuntimeError(f"Instagram image processing failed: {status.get('status', 'unknown error')}")
+        time.sleep(5)
+    raise RuntimeError(f"Instagram did not finish processing container {creation_id} in time.")
 
 
 def publish() -> None:
     today = datetime.now(IST).date().isoformat()
     package = read_json(DOCS / "current.json", {})
     if package.get("date") != today or package.get("status") != "ready":
-        print("No current image package is ready; skipping today's publication.")
+        print("No current carousel package is ready; skipping today's publication.")
         return
     published = read_json(DOCS / "published.json", {})
     if published.get("date") == today:
@@ -352,42 +407,64 @@ def publish() -> None:
     base = f"https://graph.instagram.com/{version}/{ig_user_id}"
     recent_url = f"{base}/media?" + urllib.parse.urlencode({"fields": "id,caption,timestamp", "limit": "25", "access_token": token})
     recent = request_json(recent_url).get("data", [])
+    stories = package.get("stories") or [package["story"]]
+    story_urls = [story["url"] for story in stories]
     for media in recent:
         caption = media.get("caption", "")
-        if package["story"]["url"] not in caption:
+        if not any(url in caption for url in story_urls):
             continue
         posted_at = datetime.fromisoformat(media["timestamp"].replace("Z", "+00:00")).astimezone(IST).date().isoformat()
         if posted_at == today:
             record_published(package, today, media["id"])
-            print("This story is already present in today's Instagram posts; preventing a duplicate.")
+            print("This story set is already present in today's Instagram posts; preventing a duplicate.")
             return
-    container = request_json(f"{base}/media", {
-        "image_url": package["image_url"],
-        "caption": package["caption"],
-        "alt_text": package["alt_text"],
-        "access_token": token,
-    }, method="POST")
-    creation_id = container.get("id")
-    if not creation_id:
-        raise RuntimeError("Meta did not return an image container ID.")
 
-    status_url = f"https://graph.instagram.com/{creation_id}?fields=status_code,status&access_token={urllib.parse.quote(token)}"
-    for _ in range(24):
-        status = request_json(status_url)
-        if status.get("status_code") == "FINISHED":
-            break
-        if status.get("status_code") == "ERROR":
-            raise RuntimeError(f"Instagram image processing failed: {status.get('status', 'unknown error')}")
-        time.sleep(5)
+    image_urls = package.get("image_urls") or [package["image_url"]]
+    alt_texts = package.get("alt_texts") or [package.get("alt_text", "AI Brief image")]
+    if len(image_urls) == 1:
+        container = request_json(f"{base}/media", {
+            "image_url": image_urls[0],
+            "caption": package["caption"],
+            "alt_text": alt_texts[0],
+            "access_token": token,
+        }, method="POST")
+        creation_id = container.get("id")
+        if not creation_id:
+            raise RuntimeError("Instagram did not return an image container ID.")
     else:
-        raise RuntimeError("Instagram did not finish processing the image in time.")
+        child_ids = []
+        for index, image_url in enumerate(image_urls):
+            child = request_json(f"{base}/media", {
+                "image_url": image_url,
+                "is_carousel_item": "true",
+                "alt_text": alt_texts[index] if index < len(alt_texts) else "AI Brief news carousel slide",
+                "access_token": token,
+            }, method="POST")
+            child_id = child.get("id")
+            if not child_id:
+                raise RuntimeError(f"Instagram did not return a container ID for carousel image {index + 1}.")
+            wait_for_container(child_id, token)
+            child_ids.append(child_id)
+
+        if len(child_ids) < 2:
+            raise RuntimeError("Instagram carousels require at least two image items.")
+        container = request_json(f"{base}/media", {
+            "media_type": "CAROUSEL",
+            "children": ",".join(child_ids),
+            "caption": package["caption"],
+            "access_token": token,
+        }, method="POST")
+        creation_id = container.get("id")
+        if not creation_id:
+            raise RuntimeError("Instagram did not return a carousel container ID.")
+    wait_for_container(creation_id, token)
 
     result = request_json(f"{base}/media_publish", {"creation_id": creation_id, "access_token": token}, method="POST")
     media_id = result.get("id")
     if not media_id:
-        raise RuntimeError("Meta did not return a published media ID.")
+        raise RuntimeError("Meta did not return a published carousel media ID.")
     record_published(package, today, media_id)
-    print(f"Published Instagram media ID {media_id}.")
+    print(f"Published Instagram post media ID {media_id} with {len(image_urls)} image(s).")
 
 
 if __name__ == "__main__":
