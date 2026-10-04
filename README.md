@@ -1,46 +1,52 @@
 # AI Brief — free Instagram publisher
 
-This starter implementation prepares one original, image-only AI news card each morning and schedules it for Instagram at 8:05 p.m. India Standard Time. **AI Brief** is a provisional name.
+A free, image-only daily AI developments channel for Instagram Professional accounts. The workflow prepares a minimalist 1080 × 1350 card from public AI research and company RSS feeds, writes a source-linked caption, hosts the image on GitHub Pages, and publishes it with Meta's official Instagram API.
 
-## $0 operating design
+The initial publishing target is **8:05 a.m. India Standard Time**. There is no account Insights history yet, so this is a starting time rather than a claim that it is optimal. Review Instagram Insights after four weeks and adjust the schedule to when your followers are most active.
+
+## Free operating plan
 
 - Public GitHub repository, GitHub Actions standard hosted runners, and GitHub Pages for public image hosting.
-- Python, Pillow, and PyNaCl are free open-source packages.
-- Public official RSS feeds and arXiv provide the candidate stories.
-- Instagram publishing uses Meta's official API. No paid scheduler, paid AI model, Cloudflare account, or other paid service is part of this design.
-- No LLM is called: the headline comes from the source, and the caption is built from the source excerpt and link. This keeps the recurring cost at $0 but makes the writing more templated. The image is drawn from scratch; no internet photo is reused.
+- Python, Pillow, and PyNaCl are free open-source packages. No paid AI API, scheduler, image service, or Cloudflare account.
+- Headlines and excerpts come directly from public RSS feeds; the image is composed from original shapes and typography. No third-party web photos are scraped or republished.
+- The repository, cards, captions, and source links are public. Do not put credentials or private data in repository files.
+- This design uses public-repository Actions and Pages. Keep paid features and billing upgrades disabled. The plan does not require a paid service.
 
-The repository and generated cards/captions must be public for GitHub Pages to host the JPEG on GitHub Free. That is appropriate for a public Instagram post. Keep all Meta tokens and the GitHub secret-management token in GitHub Actions secrets. Never commit them or paste them into chat. Use standard runners only. GitHub documents standard runner use as free for public repositories and Pages as available on GitHub Free public repositories ([Actions billing](https://docs.github.com/en/billing/concepts/product-billing/github-actions), [Pages setup](https://docs.github.com/en/pages/getting-started-with-github-pages)). Scheduled workflows can run late during GitHub load, so 8:05 p.m. is a target rather than an exact-time guarantee ([schedule event limits](https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows#schedule)).
+## What it does each day
 
-## Daily workflow
+1. At **7:05 a.m. IST**, check the feeds listed in [sources.json](sources.json) for an eligible item from the last three days. Select the newest unseen item; if none qualifies, skip that day.
+2. Create a consistent, minimalist image and a source-linked caption, then publish the image and metadata to the public Pages site.
+3. At **8:05 a.m. IST**, publish that image using Meta's official Instagram API. Record the posted story to prevent duplicate posts on retries.
+4. Refresh the long-lived Instagram token during the publishing run. If it changes, a repo-scoped GitHub token updates the stored Actions secret.
 
-1. **06:05 IST:** read the source feeds in `sources.json`; consider new items from the last three days and skip links already published.
-2. Select the newest eligible item, favoring primary lab announcements on timestamp ties. If no new source item is available, publish nothing that day.
-3. Generate a 1080 × 1350 JPEG in the consistent dark, minimalist design; write the headline, short feed excerpt, accessible alt text, and source link into `docs/current.json`.
-4. Deploy the image and package to GitHub Pages so Meta can fetch a public HTTPS JPEG.
-5. **20:05 IST:** refresh the long-lived Instagram token, create an image container with Meta's API, wait for image processing, publish it, and record the media ID. A published-state file prevents duplicate posts on retries.
-6. Use Instagram Insights to adjust the posting window after four weeks. The starting time is a test; no generic timing chart can promise maximum engagement.
+GitHub schedule events can be delayed during high load, so the schedule is not an exact-time guarantee. The publishing job skips the day if no current image package is available.
 
-Instagram's official API accepts professional accounts and uses a create-container-then-publish flow. Instagram Login does not require a linked Facebook Page; this setup asks only for `instagram_business_basic` and `instagram_business_content_publish` ([Meta Instagram API collection](https://www.postman.com/meta/workspace/instagram/documentation/23987686-9386f468-7714-490f-9bfc-9442db5c8f00)).
+## One-time account connection
 
-## One-time setup to activate it
+The public repository is already created at [github.com/avinashkempi/ai-brief-instagram](https://github.com/avinashkempi/ai-brief-instagram), and its project files are uploaded.
 
-1. Create a **public** GitHub repository and upload this project. Enable GitHub Actions and set Pages to deploy with GitHub Actions.
-2. In Meta for Developers, create an app, add Instagram API with Instagram Login, and configure the redirect URL `https://GITHUB-OWNER.github.io/REPOSITORY/oauth-callback/` using your actual repository owner and name. Add your Instagram profile as an app tester if Meta requires it in development mode, then accept the invitation.
-3. Run `python auth.py` on your computer. It prints a Meta sign-in URL, exchanges the temporary code locally, asks for your app secret without echoing it, and prints the long-lived token and Instagram user ID. Add `IG_ACCESS_TOKEN` and `IG_USER_ID` in repository Settings → Secrets and variables → Actions. The helper does not save credentials to disk. Do not share them here.
-4. Create a fine-grained GitHub token restricted to this repository with permission to write Actions secrets, and store it as `GH_SECRETS_TOKEN`. The publisher uses it only to replace a refreshed Instagram token when Meta returns a different value.
-5. Manually run the `prepare` workflow, verify the preview at the Pages URL, then run the `publish` workflow for a one-time authorized test post. Scheduled posting is active once the workflow is on the default branch and enabled.
+1. Enable **Settings → Pages → Source → GitHub Actions** in the repository. The site will be public at https://avinashkempi.github.io/ai-brief-instagram/.
+2. In Meta for Developers, create an app, add **Instagram API with Instagram Login**, and register this redirect URI exactly: https://avinashkempi.github.io/ai-brief-instagram/oauth-callback/. Add your professional Instagram account as a tester if Meta requires it in development mode, then accept the invitation.
+3. On your own computer, run **python auth.py** from this project folder. The helper prints an Instagram authorization URL, checks the returned OAuth state, requests your Meta app secret without echoing it, and exchanges the temporary authorization code locally. It does not save credentials to disk.
+4. In the repository, open **Settings → Secrets and variables → Actions**. Add **IG_USER_ID** and **IG_ACCESS_TOKEN** using the values printed by the helper.
+5. Create a fine-grained GitHub token restricted to this repository with **Actions secrets: read and write**, then save it as the **GH_SECRETS_TOKEN** Actions secret. The workflow uses it only if Meta rotates the Instagram token.
+6. Once the Actions secrets are set and Pages has deployed, manually run **Actions → AI Brief daily Instagram publishing → Run workflow → prepare** to create the first image. Check the public preview at https://avinashkempi.github.io/ai-brief-instagram/current.json.
+7. Run the workflow once with **publish** to authorize the first public post. Daily scheduled posting then runs without daily involvement.
 
-The daily runs need no manual approval once enabled. A $0 service cannot guarantee immediate recovery if GitHub/Meta changes, rate-limits, or disables an account; failures appear in GitHub Actions and the workflow should be set to notify you on failure. GitHub scheduled work may be delayed. Keep spending disabled in billing settings; the plan relies on public-repository standard runners and GitHub Free Pages.
+Instagram Login supports Professional Business and Creator accounts and does not require a linked Facebook Page. This project requests **instagram_business_basic** and **instagram_business_content_publish**. See [Meta's Instagram API documentation](https://www.postman.com/meta/workspace/instagram/documentation/23987686-9386f468-7714-490f-9bfc-9442db5c8f00).
+
+## Tune the time
+
+Use Instagram Insights to identify follower activity after four weeks of posts. Change the two cron expressions in [the workflow](.github/workflows/instagram-daily.yml) together, keeping the image preparation one hour before publishing. GitHub's schedule runner may start late.
 
 ## Files
 
-- `pipeline.py` — feed selection, original JPEG composition, caption, token refresh, and Instagram publishing.
-- `auth.py` — one-time local OAuth helper; keeps the app secret and returned token out of chat and does not save them to disk.
-- `sources.json` — editable public RSS source list.
-- `.github/workflows/instagram-daily.yml` — 06:05 IST prepare and 20:05 IST publish schedules.
-- `assets/ai-brief-template.svg` — editable design reference.
+- **pipeline.py** — RSS selection, card generation, caption, token refresh, and Instagram publishing.
+- **auth.py** — one-time local OAuth helper; does not save the app secret or access token to disk.
+- **sources.json** — public RSS feeds.
+- **.github/workflows/instagram-daily.yml** — daily preparation and publication schedule.
+- **assets/ai-brief-template.svg** — editable visual reference for the generated card.
 
-## Still needed
+## Cost and limits
 
-The project is ready for a public GitHub repository and account authorization. This workspace has no connected GitHub or Meta account, so it cannot create the external repository, accept Meta OAuth, or activate the schedule. Those are one-time setup steps; daily posting will be automatic after they are complete.
+The planned services and packages are available at $0 with this public-repository setup. The site and Instagram posts are public. This cannot guarantee uninterrupted posting: GitHub or Meta may change availability, scheduling, API limits, or account requirements. Workflow failures will appear in the repository's Actions tab. Scheduled runs may be late.
