@@ -108,7 +108,7 @@ jobs:
       - name: Commit the published-state record
         run: |
           git config user.name "github-actions[bot]"
-          git config user.email "41898282+avinashkempi@users.noreply.github.com"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add docs/
           git diff --cached --quiet || git commit -m "Record daily AI Brief publication"
           git push
