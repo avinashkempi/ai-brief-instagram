@@ -30,8 +30,8 @@ The public repository is already created at [github.com/avinashkempi/ai-brief-in
 3. On your own computer, run **python auth.py** from this project folder. The helper prints an Instagram authorization URL, checks the returned OAuth state, requests your Meta app secret without echoing it, and exchanges the temporary authorization code locally. It does not save credentials to disk.
 4. In the repository, open **Settings → Secrets and variables → Actions**. Add **IG_USER_ID** and **IG_ACCESS_TOKEN** using the values printed by the helper.
 5. Create a fine-grained GitHub token restricted to this repository with **Actions secrets: read and write**, then save it as the **GH_SECRETS_TOKEN** Actions secret. The workflow uses it only if Meta rotates the Instagram token.
-6. Once the Actions secrets are set and Pages has deployed, manually run **Actions → AI Brief daily Instagram publishing → Run workflow → prepare** to create the first image. Check the public preview at https://avinashkempi.github.io/ai-brief-instagram/current.json.
-7. Run the workflow once with **publish** to authorize the first public post. Daily scheduled posting then runs without daily involvement.
+6. Once the Actions secrets are set, scheduled preparation and publishing run automatically. The first image will be built at the next 7:05 a.m. IST preparation run, then published at 8:05 a.m. IST if a new eligible story is available. Check the public preview at https://avinashkempi.github.io/ai-brief-instagram/current.json after the first deployment.
+7. No daily approval or manual publish step is required. You may optionally run **Actions → AI Brief daily Instagram publishing → Run workflow → prepare** to prepare a preview sooner; do not choose **publish** unless you want to publish immediately.
 
 Instagram Login supports Professional Business and Creator accounts and does not require a linked Facebook Page. This project requests **instagram_business_basic** and **instagram_business_content_publish**. See [Meta's Instagram API documentation](https://www.postman.com/meta/workspace/instagram/documentation/23987686-9386f468-7714-490f-9bfc-9442db5c8f00).
 
