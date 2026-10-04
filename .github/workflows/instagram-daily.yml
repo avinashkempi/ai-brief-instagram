@@ -1,6 +1,9 @@
 name: AI Brief daily Instagram publishing
 
 on:
+  push:
+    paths:
+      - ".github/workflows/instagram-daily.yml"
   schedule:
     - cron: "35 1 * * *" # 07:05 IST: prepare the image and deploy it to Pages
     - cron: "35 2 * * *" # 08:05 IST: publish today's image
@@ -26,7 +29,7 @@ concurrency:
 
 jobs:
   prepare:
-    if: github.event.schedule == '35 1 * * *' || (github.event_name == 'workflow_dispatch' && inputs.mode == 'prepare')
+    if: github.event_name == 'push' || github.event.schedule == '35 1 * * *' || (github.event_name == 'workflow_dispatch' && inputs.mode == 'prepare')
     runs-on: ubuntu-latest
     environment:
       name: github-pages
