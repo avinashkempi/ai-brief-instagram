@@ -24,7 +24,8 @@ permissions:
   id-token: write
 
 concurrency:
-  group: instagram-daily-${{ github.event.schedule || inputs.mode || 'scheduled' }}
+  group: instagram-daily
+  # All runs write docs/ state, so they must share one lock.
   cancel-in-progress: false
 
 jobs:
@@ -55,8 +56,23 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add docs/
-          git diff --cached --quiet || git commit -m "Prepare daily AI Brief image"
-          git push
+          if git diff --cached --quiet; then
+            echo "No package changes to save."
+            exit 0
+          fi
+          git commit -m "Prepare daily AI Brief image"
+          for attempt in 1 2 3; do
+            if git push; then
+              exit 0
+            fi
+            if [ "$attempt" -lt 3 ]; then
+              echo "Remote branch moved; rebasing the state commit and retrying (attempt $attempt)."
+              git fetch origin "$GITHUB_REF_NAME"
+              git rebase "origin/$GITHUB_REF_NAME"
+            fi
+          done
+          echo "Could not save the state after three push attempts."
+          exit 1
 
       - name: Configure Pages
         uses: actions/configure-pages@v5
@@ -110,5 +126,20 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add docs/
-          git diff --cached --quiet || git commit -m "Record daily AI Brief publication"
-          git push
+          if git diff --cached --quiet; then
+            echo "No package changes to save."
+            exit 0
+          fi
+          git commit -m "Record daily AI Brief publication"
+          for attempt in 1 2 3; do
+            if git push; then
+              exit 0
+            fi
+            if [ "$attempt" -lt 3 ]; then
+              echo "Remote branch moved; rebasing the state commit and retrying (attempt $attempt)."
+              git fetch origin "$GITHUB_REF_NAME"
+              git rebase "origin/$GITHUB_REF_NAME"
+            fi
+          done
+          echo "Could not save the state after three push attempts."
+          exit 1
