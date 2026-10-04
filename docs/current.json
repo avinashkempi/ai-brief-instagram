@@ -1,17 +1,17 @@
 {
   "date": "2026-10-04",
   "status": "ready",
-  "generated_at": "2026-10-04T16:56:05.131085+00:00",
+  "generated_at": "2026-10-04T17:02:21.480396+00:00",
   "story": {
-    "title": "A model guide for the GPT-6 family",
-    "url": "https://openai.com/index/practical-guide-building-gpt-6",
-    "published": "2026-10-02T16:15:00+00:00",
-    "source": "OpenAI News",
+    "title": "The latest AI news we announced in September 2026",
+    "url": "https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-september-2026/",
+    "published": "2026-10-02T15:00:00+00:00",
+    "source": "Google AI",
     "priority": 1,
-    "summary": "Learn how startups can choose GPT-6 models, tune reasoning effort, improve prompts and skills, coordinate tools, and prepare workflows for production."
+    "summary": "A video showing the September AI updates"
   },
-  "caption": "A model guide for the GPT-6 family\n\nLearn how startups can choose GPT-6 models, tune reasoning effort, improve prompts and skills, coordinate tools, and prepare workflows for production.\n\nSource: OpenAI News\nhttps://openai.com/index/practical-guide-building-gpt-6\n\nAI Brief · Daily AI developments",
-  "alt_text": "AI Brief news card. Headline: A model guide for the GPT-6 family. Source: OpenAI News.",
+  "caption": "The latest AI news we announced in September 2026\n\nA video showing the September AI updates\n\nSource: Google AI\nhttps://blog.google/innovation-and-ai/technology/ai/google-ai-updates-september-2026/\n\nAI Brief · Daily AI developments",
+  "alt_text": "AI Brief news card. Headline: The latest AI news we announced in September 2026. Source: Google AI.",
   "image_path": "posts/2026-10-04.jpg",
   "image_url": "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-10-04.jpg"
 }
