@@ -2,8 +2,8 @@ name: AI Brief daily Instagram publishing
 
 on:
   schedule:
-    - cron: "35 0 * * *" # 06:05 IST: prepare the image and deploy it to Pages
-    - cron: "35 14 * * *" # 20:05 IST: publish today's image
+    - cron: "35 1 * * *" # 07:05 IST: prepare the image and deploy it to Pages
+    - cron: "35 2 * * *" # 08:05 IST: publish today's image
   workflow_dispatch:
     inputs:
       mode:
@@ -26,7 +26,7 @@ concurrency:
 
 jobs:
   prepare:
-    if: github.event.schedule == '35 0 * * *' || (github.event_name == 'workflow_dispatch' && inputs.mode == 'prepare')
+    if: github.event.schedule == '35 1 * * *' || (github.event_name == 'workflow_dispatch' && inputs.mode == 'prepare')
     runs-on: ubuntu-latest
     environment:
       name: github-pages
@@ -68,7 +68,7 @@ jobs:
         uses: actions/deploy-pages@v4
 
   publish:
-    if: github.event.schedule == '35 14 * * *' || (github.event_name == 'workflow_dispatch' && inputs.mode == 'publish')
+    if: github.event.schedule == '35 2 * * *' || (github.event_name == 'workflow_dispatch' && inputs.mode == 'publish')
     runs-on: ubuntu-latest
     steps:
       - name: Check out the repository
