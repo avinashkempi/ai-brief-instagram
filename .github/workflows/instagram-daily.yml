@@ -103,6 +103,9 @@ jobs:
     steps:
       - name: Check out the repository
         uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+          # Prepare commits the package after this run's initial SHA.
 
       - name: Set up Python
         uses: actions/setup-python@v5
