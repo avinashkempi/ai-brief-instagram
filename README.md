@@ -1,6 +1,6 @@
 # AI Brief — free Instagram publisher
 
-A free, image-only daily AI developments channel for Instagram Professional accounts. The workflow selects 2–5 fresh stories from public RSS feeds, creates one consistent minimalist 1080 × 1350 image per story, writes a source-linked caption, hosts the images on GitHub Pages, and publishes them as one carousel with Meta's official Instagram API.
+A free, image-only daily AI developments channel for Instagram Professional accounts. The workflow selects up to five fresh stories from public RSS feeds, creates one consistent minimalist 1080 × 1350 image per story, writes a source-linked caption, hosts the images on GitHub Pages, and publishes them with Meta's official Instagram API. Two or more fresh stories become a carousel; one becomes a single-image news post; when no fresh stories qualify, a clearly labeled, sourced evergreen explainer fills the day.
 
 The initial publishing target is **8:05 a.m. India Standard Time**. There is no account Insights history yet, so this is a starting time rather than a claim that it is optimal. Review Instagram Insights after four weeks and adjust the schedule to when your followers are most active.
 
@@ -14,12 +14,12 @@ The initial publishing target is **8:05 a.m. India Standard Time**. There is no 
 
 ## What it does each day
 
-1. At **7:05 a.m. IST**, check the feeds listed in [sources.json](sources.json) for eligible items from the last three days. Select up to five newest unseen stories; skip if fewer than two qualify.
+1. At **7:05 a.m. IST**, check the feeds listed in [sources.json](sources.json) for eligible items from the last three days. Select up to five newest unseen stories. Publish a carousel for two or more, a single-image post for one, or a sourced evergreen explainer if none qualify.
 2. Create one uniform 4:5 minimalist image for each story and a caption with story summaries and links, then deploy the images to the public Pages site.
 3. At **8:05 a.m. IST**, publish the images together as one carousel using Meta's official Instagram API. Record all included stories to prevent duplicate coverage on retries.
 4. Refresh the long-lived Instagram token during the publishing run. If it changes, a repo-scoped GitHub token updates the stored Actions secret.
 
-GitHub schedule events can be delayed during high load, so the schedule is not an exact-time guarantee. The publisher skips the day if fewer than two fresh stories are available or no current carousel package is ready.
+GitHub schedule events can be delayed during high load, so the schedule is not an exact-time guarantee. Thin-news days no longer cause a skip: the publisher uses a single story or a clearly labeled evergreen explainer. External failures such as GitHub Pages, network access, or Meta API errors can still prevent a post.
 
 
 ## Music limitation
@@ -35,7 +35,7 @@ The public repository is already created at [github.com/avinashkempi/ai-brief-in
 3. On your own computer, run **python auth.py** from this project folder. When prompted, enter the **Instagram App ID** and **Instagram App Secret** shown under **Set up Instagram business login** in the Instagram API setup. These are different from the main Meta App ID and secret. The helper prints an Instagram authorization URL, checks the returned OAuth state, requests the Instagram App Secret without echoing it, and exchanges the temporary authorization code locally. It does not save credentials to disk.
 4. In the repository, open **Settings → Secrets and variables → Actions**. Add **IG_USER_ID** and **IG_ACCESS_TOKEN** using the values printed by the helper.
 5. Create a fine-grained GitHub token restricted to this repository with **Actions secrets: read and write**, then save it as the **GH_SECRETS_TOKEN** Actions secret. The workflow uses it only if Meta rotates the Instagram token.
-6. Once the Actions secrets are set, scheduled preparation and publishing run automatically. The first carousel will be built at the next 7:05 a.m. IST preparation run, then published at 8:05 a.m. IST if at least two new eligible stories are available. Check the public preview at https://avinashkempi.github.io/ai-brief-instagram/current.json after deployment.
+6. Once the Actions secrets are set, scheduled preparation and publishing run automatically. The next post will be prepared at the next 7:05 a.m. IST run and published at 8:05 a.m. IST, using a carousel, single image, or evergreen explainer depending on fresh story availability. Check the public preview at https://avinashkempi.github.io/ai-brief-instagram/current.json after deployment.
 7. No daily approval is required for scheduled posts. If you manually run **Actions → AI Brief daily Instagram publishing → Run workflow → prepare**, it prepares and deploys the image, then publishes it automatically. Choose **publish** only to publish today's ready package without rebuilding it. The publisher checks for an already-recorded post for the date to avoid duplicates.
 
 Instagram Login supports Professional Business and Creator accounts and does not require a linked Facebook Page. This project requests **instagram_business_basic** and **instagram_business_content_publish**. See [Meta's Instagram API documentation](https://www.postman.com/meta/workspace/instagram/documentation/23987686-9386f468-7714-490f-9bfc-9442db5c8f00).
