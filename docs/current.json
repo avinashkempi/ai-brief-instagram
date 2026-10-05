@@ -1,45 +1,6 @@
 {
-  "date": "2026-10-04",
-  "status": "ready",
-  "generated_at": "2026-10-04T17:26:31.515779+00:00",
-  "stories": [
-    {
-      "title": "The latest AI news we announced in September 2026",
-      "url": "https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-september-2026/",
-      "published": "2026-10-02T15:00:00+00:00",
-      "source": "Google AI",
-      "priority": 1,
-      "summary": "A video showing the September AI updates"
-    },
-    {
-      "title": "Chatham scales its capital markets expertise with OpenAI",
-      "url": "https://openai.com/index/chatham-financial",
-      "published": "2026-10-02T00:00:00+00:00",
-      "source": "OpenAI News",
-      "priority": 1,
-      "summary": "Chatham Financial uses Codex and GPT-5.6 to build technology and redesign workflows, cutting trade validation from 30 minutes to under 4."
-    }
-  ],
-  "story": {
-    "title": "The latest AI news we announced in September 2026",
-    "url": "https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-september-2026/",
-    "published": "2026-10-02T15:00:00+00:00",
-    "source": "Google AI",
-    "priority": 1,
-    "summary": "A video showing the September AI updates"
-  },
-  "caption": "Today's AI Brief: 2 developments.\n\nSwipe through for the stories and sources.\n\n1. The latest AI news we announced in September 2026\nA video showing the September AI updates\nSource: Google AI\nhttps://blog.google/innovation-and-ai/technology/ai/google-ai-updates-september-2026/\n\n2. Chatham scales its capital markets expertise with OpenAI\nChatham Financial uses Codex and GPT-5.6 to build technology and redesign workflows, cutting trade validation…\nSource: OpenAI News\nhttps://openai.com/index/chatham-financial\n\nAI Brief · Daily AI developments",
-  "alt_texts": [
-    "AI Brief carousel slide 1 of 2. Headline: The latest AI news we announced in September 2026. Source: Google AI.",
-    "AI Brief carousel slide 2 of 2. Headline: Chatham scales its capital markets expertise with OpenAI. Source: OpenAI News."
-  ],
-  "image_paths": [
-    "posts/2026-10-04-01.jpg",
-    "posts/2026-10-04-02.jpg"
-  ],
-  "image_urls": [
-    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-10-04-01.jpg",
-    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-10-04-02.jpg"
-  ],
-  "carousel": true
+  "date": "2026-10-05",
+  "status": "skip",
+  "generated_at": "2026-10-05T03:09:29.758929+00:00",
+  "reason": "Fewer than two new eligible stories were found in the last three days; today's carousel is skipped."
 }
