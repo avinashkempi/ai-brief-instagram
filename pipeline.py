@@ -197,7 +197,8 @@ def draw_card(story: dict, output: Path, issued: date, slide_number: int, total_
     draw.text((80, 62), "AI BRIEF", font=load_font(28, True), fill=ACCENT)
     draw.text((80, 109), "THE DAILY SIGNAL", font=load_font(17), fill="#A6AA9E")
     draw.rounded_rectangle((80, 160, 272, 204), radius=22, fill=ACCENT)
-    draw.text((101, 170), f"STORY {slide_number:02d} / {total_slides:02d}", font=load_font(15, True), fill=BG)
+    badge = "AI EXPLAINER" if story.get("kind") == "evergreen" else "STORY"
+    draw.text((101, 170), f"{badge} {slide_number:02d} / {total_slides:02d}", font=load_font(15, True), fill=BG)
 
     title_font = load_font(70, True)
     lines = wrap_text(draw, story["title"], title_font, 900, 4)
@@ -221,7 +222,11 @@ def draw_card(story: dict, output: Path, issued: date, slide_number: int, total_
     panel_y = 930
     draw.rounded_rectangle((80, panel_y, 1000, panel_y + 158), radius=18, fill="#1B1E19", outline="#30342C", width=1)
     draw.text((112, panel_y + 28), "WHY IT MATTERS", font=load_font(16, True), fill=ACCENT)
-    panel_copy = f"{story['source']} published this update. The source link is in the caption."
+    panel_copy = (
+        f"Evergreen explainer based on {story['source']}. The source is in the caption."
+        if story.get("kind") == "evergreen"
+        else f"{story['source']} published this update. The source is in the caption."
+    )
     for index, line in enumerate(wrap_text(draw, panel_copy, load_font(23), 850, 2)):
         draw.text((112, panel_y + 76 + index * 34), line, font=load_font(23), fill=PAPER)
 
@@ -242,7 +247,13 @@ def short_text(value: str, limit: int) -> str:
 
 
 def caption_for(stories: list[dict]) -> str:
-    lines = [f"Today's AI Brief: {len(stories)} developments.", "Swipe through for the stories and sources."]
+    evergreen = bool(stories) and all(story.get("kind") == "evergreen" for story in stories)
+    if evergreen:
+        lines = ["Today's AI Brief: an evergreen AI explainer.", "No new eligible stories were available today; this post is clearly labeled as background reading."]
+    elif len(stories) == 1:
+        lines = ["Today's AI Brief: one new development."]
+    else:
+        lines = [f"Today's AI Brief: {len(stories)} developments.", "Swipe through for the stories and sources."]
     for index, story in enumerate(stories, start=1):
         title = short_text(story["title"], 130)
         source = short_text(story["source"], 60)
@@ -252,17 +263,29 @@ def caption_for(stories: list[dict]) -> str:
         if summary:
             entry += f"\n{summary}"
         entry += f"\nSource: {source}\n{url}"
-        candidate = "\n\n".join(lines + [entry, "AI Brief · Daily AI developments"])
+        footer = "AI Brief · Evergreen AI explainer" if evergreen else "AI Brief · Daily AI developments"
+        candidate = "\n\n".join(lines + [entry, footer])
         if len(candidate) > INSTAGRAM_CAPTION_LIMIT:
             entry = f"{index}. {title}\nSource: {source}\n{url}"
-            candidate = "\n\n".join(lines + [entry, "AI Brief · Daily AI developments"])
+            candidate = "\n\n".join(lines + [entry, footer])
         if len(candidate) <= INSTAGRAM_CAPTION_LIMIT:
             lines.append(entry)
-    lines.append("AI Brief · Daily AI developments")
+    lines.append("AI Brief · Evergreen AI explainer" if evergreen else "AI Brief · Daily AI developments")
     caption = "\n\n".join(lines)
     if len(caption) > INSTAGRAM_CAPTION_LIMIT:
         raise RuntimeError("The source links exceed Instagram's caption limit.")
     return caption
+
+
+EVERGREEN_EXPLAINERS = [
+    {"title": "What is a context window?", "summary": "A context window is the text and other input a model can consider in one request. Longer context can help with large documents, but useful answers still depend on relevance and clear instructions.", "source": "Anthropic Docs", "url": "https://docs.anthropic.com/en/docs/build-with-claude/context-windows"},
+    {"title": "What are AI model evaluations?", "summary": "Evaluations use representative tasks and scoring criteria to measure how a model behaves. They help teams compare changes and catch regressions before release.", "source": "OpenAI Platform Docs", "url": "https://platform.openai.com/docs/guides/evals"},
+    {"title": "How does retrieval-augmented generation work?", "summary": "RAG retrieves relevant material at answer time and gives it to a model as context. This can ground responses in a chosen knowledge base, though retrieval quality still matters.", "source": "Google Cloud Docs", "url": "https://cloud.google.com/use-cases/retrieval-augmented-generation"},
+    {"title": "What is a token in an AI model?", "summary": "Models process text as tokens: pieces that may be whole words, word fragments, or punctuation. Token counts affect context limits and how much text a request can include.", "source": "OpenAI Help Center", "url": "https://help.openai.com/en/articles/4936856-what-are-tokens-and-how-to-count-them"},
+    {"title": "Why do AI models hallucinate?", "summary": "A fluent answer is not proof that a claim is true. Models can produce unsupported details, so important claims should be checked against reliable sources.", "source": "OpenAI Research", "url": "https://openai.com/index/why-language-models-hallucinate/"},
+    {"title": "What is an AI agent?", "summary": "An AI agent combines a model with instructions and tools to take steps toward a goal. Clear boundaries and checks matter when tools can change external systems.", "source": "OpenAI Platform Docs", "url": "https://platform.openai.com/docs/guides/agents"},
+    {"title": "What does multimodal AI mean?", "summary": "A multimodal model can work with more than one kind of input or output, such as text, images, audio, or video. The supported capabilities vary by model.", "source": "Google AI for Developers", "url": "https://ai.google.dev/gemini-api/docs"},
+]
 
 
 def write_index() -> None:
@@ -274,40 +297,48 @@ def write_index() -> None:
     (DOCS / "index.html").write_text(page, encoding="utf-8")
 
 
+def evergreen_story(today: date) -> dict:
+    # Rotate through sourced, non-news explainers so a slow news day still gets a useful post.
+    item = EVERGREEN_EXPLAINERS[today.toordinal() % len(EVERGREEN_EXPLAINERS)]
+    return {**item, "published": datetime.now(timezone.utc).isoformat(), "priority": 0, "kind": "evergreen"}
+
+
 def prepare() -> None:
     now = datetime.now(timezone.utc)
     today = now.astimezone(IST).date()
     stories = choose_stories(now)
-    package = {"date": today.isoformat(), "status": "skip", "generated_at": now.isoformat()}
-    if len(stories) >= 2:
-        owner, repo = os.environ["GITHUB_REPOSITORY"].split("/", 1)
-        image_paths = []
-        image_urls = []
-        alt_texts = []
-        for index, story in enumerate(stories, start=1):
-            filename = f"{today.isoformat()}-{index:02d}.jpg"
-            image_path = POSTS / filename
-            draw_card(story, image_path, today, index, len(stories))
-            image_paths.append(f"posts/{filename}")
-            image_urls.append(f"https://{owner}.github.io/{repo}/posts/{filename}")
-            alt_texts.append(short_text(
-                f"AI Brief carousel slide {index} of {len(stories)}. Headline: {story['title']}. Source: {story['source']}.",
-                1000,
-            ))
-        package.update({
-            "status": "ready",
-            "stories": stories,
-            "story": stories[0],
-            "caption": caption_for(stories),
-            "alt_texts": alt_texts,
-            "image_paths": image_paths,
-            "image_urls": image_urls,
-            "carousel": True,
-        })
-        print(f"Prepared {len(stories)}-image carousel with latest AI stories.")
-    else:
-        package["reason"] = "Fewer than two new eligible stories were found in the last three days; today's carousel is skipped."
-        print(package["reason"])
+    if len(stories) == 1:
+        stories[0]["kind"] = "news"
+    elif not stories:
+        stories = [evergreen_story(today)]
+
+    package = {"date": today.isoformat(), "status": "ready", "generated_at": now.isoformat()}
+    owner, repo = os.environ["GITHUB_REPOSITORY"].split("/", 1)
+    image_paths = []
+    image_urls = []
+    alt_texts = []
+    for index, story in enumerate(stories, start=1):
+        filename = f"{today.isoformat()}-{index:02d}.jpg"
+        image_path = POSTS / filename
+        draw_card(story, image_path, today, index, len(stories))
+        image_paths.append(f"posts/{filename}")
+        image_urls.append(f"https://{owner}.github.io/{repo}/posts/{filename}")
+        alt_texts.append(short_text(
+            f"AI Brief {'evergreen explainer' if story.get('kind') == 'evergreen' else 'news'} image. Headline: {story['title']}. Source: {story['source']}.",
+            1000,
+        ))
+
+    package.update({
+        "stories": stories,
+        "story": stories[0],
+        "caption": caption_for(stories),
+        "alt_texts": alt_texts,
+        "image_paths": image_paths,
+        "image_urls": image_urls,
+        "carousel": len(stories) > 1,
+        "content_type": "evergreen" if stories[0].get("kind") == "evergreen" else "news",
+    })
+    print(f"Prepared today's {package['content_type']} image." if len(stories) == 1 else f"Prepared {len(stories)}-image news carousel.")
     DOCS.mkdir(parents=True, exist_ok=True)
     (DOCS / "current.json").write_text(json.dumps(package, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     write_index()
@@ -394,8 +425,7 @@ def publish() -> None:
     today = datetime.now(IST).date().isoformat()
     package = read_json(DOCS / "current.json", {})
     if package.get("date") != today or package.get("status") != "ready":
-        print("No current carousel package is ready; skipping today's publication.")
-        return
+        raise RuntimeError("No prepared image package is available for today. Run prepare before publish.")
     published = read_json(DOCS / "published.json", {})
     if published.get("date") == today:
         print("Today's post is already recorded as published; preventing a duplicate.")
