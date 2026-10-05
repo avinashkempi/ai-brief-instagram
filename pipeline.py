@@ -285,7 +285,8 @@ EVERGREEN_EXPLAINERS = [
     {"title": "Why do AI models hallucinate?", "summary": "A fluent answer is not proof that a claim is true. Models can produce unsupported details, so important claims should be checked against reliable sources.", "source": "OpenAI Research", "url": "https://openai.com/index/why-language-models-hallucinate/"},
     {"title": "What is an AI agent?", "summary": "An AI agent combines a model with instructions and tools to take steps toward a goal. Clear boundaries and checks matter when tools can change external systems.", "source": "OpenAI Platform Docs", "url": "https://platform.openai.com/docs/guides/agents"},
     {"title": "What does multimodal AI mean?", "summary": "A multimodal model can work with more than one kind of input or output, such as text, images, audio, or video. The supported capabilities vary by model.", "source": "Google AI for Developers", "url": "https://ai.google.dev/gemini-api/docs"},
-];
+]
+
 
 def write_index() -> None:
     DOCS.mkdir(parents=True, exist_ok=True)
@@ -425,7 +426,6 @@ def publish() -> None:
     package = read_json(DOCS / "current.json", {})
     if package.get("date") != today or package.get("status") != "ready":
         raise RuntimeError("No prepared image package is available for today. Run prepare before publish.")
-        return
     published = read_json(DOCS / "published.json", {})
     if published.get("date") == today:
         print("Today's post is already recorded as published; preventing a duplicate.")
