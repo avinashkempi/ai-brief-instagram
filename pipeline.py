@@ -263,10 +263,11 @@ def caption_for(stories: list[dict]) -> str:
         if summary:
             entry += f"\n{summary}"
         entry += f"\nSource: {source}\n{url}"
-        candidate = "\n\n".join(lines + [entry, "AI Brief · Daily AI developments"])
+        footer = "AI Brief · Evergreen AI explainer" if evergreen else "AI Brief · Daily AI developments"
+        candidate = "\n\n".join(lines + [entry, footer])
         if len(candidate) > INSTAGRAM_CAPTION_LIMIT:
             entry = f"{index}. {title}\nSource: {source}\n{url}"
-            candidate = "\n\n".join(lines + [entry, "AI Brief · Daily AI developments"])
+            candidate = "\n\n".join(lines + [entry, footer])
         if len(candidate) <= INSTAGRAM_CAPTION_LIMIT:
             lines.append(entry)
     lines.append("AI Brief · Evergreen AI explainer" if evergreen else "AI Brief · Daily AI developments")
