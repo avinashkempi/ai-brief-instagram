@@ -1,8 +1,24 @@
 {
-  "date": "2026-10-05",
+  "date": "2026-10-06",
   "status": "ready",
-  "generated_at": "2026-10-05T07:38:20.603409+00:00",
+  "generated_at": "2026-10-06T03:15:32.020758+00:00",
   "stories": [
+    {
+      "title": "Our approach to EU text provenance rules",
+      "url": "https://openai.com/index/eu-text-provenance",
+      "published": "2026-10-05T15:00:00+00:00",
+      "source": "OpenAI News",
+      "priority": 1,
+      "summary": "How OpenAI is approaching text watermarking under EU rules. Learn where watermarks apply, how detection works, and why access starts with researchers."
+    },
+    {
+      "title": "Building advertising for the way people use AI",
+      "url": "https://openai.com/index/new-chatgpt-ads-format-and-measurement",
+      "published": "2026-10-05T10:00:00+00:00",
+      "source": "OpenAI News",
+      "priority": 1,
+      "summary": "OpenAI introduces a new visual ad format in ChatGPT and expands measurement tools, attribution partnerships, and brand suitability for advertisers."
+    },
     {
       "title": "MintFlow: Minimal Trajectory Intervention for Constrained Flow Matching",
       "url": "https://arxiv.org/abs/2610.02260",
@@ -26,53 +42,37 @@
       "source": "arXiv cs.AI",
       "priority": 2,
       "summary": "arXiv:2610.02281v1 Announce Type: new Abstract: Societal resilience research relies on access to useful and actionable data, which motivates our main research question: Can annual reports, processed at scale with LLMs, provide a useful signal about how companies disclose their response to AI? We test this by applying a reproducible two-stage classification pipeline to 9,821 annual reports from 1,362 UK listed companies (2020-2025, with partial 2026 data). We first validate the method against 474 human-annotated passages, finding high recall and moderate label-level agreement. We then report three empirical patterns: (i) between 2020 and 2025, the share of reports mentioning AI risk rose from 2.8% to 41.2%, while AI adoption disclosure also rose, from 13.8% to 45.2%, and named vendor mentions cluster around a small set of major providers led by Microsoft; (ii) disclosure varies substantially by Critical National Infrastructure sector and market segment: AIM reports disclose AI risk at far lower rates than Main Market reports, and sectors such as Energy and Data Infrastructure lag behind the rest in AI risk disclosure; and (iii) harm disclosures are near-absent (seven reports across the entire corpus). We develop a substantiveness classification to assess the quality of the disclosure and find that most AI risk disclosure is not substantive: in 2025, 41.2% of all reports mention AI as a risk, but only 4.3% contain AI risk disclosure we classify as substantive."
-    },
-    {
-      "title": "Keep It CALM: Analyzing the Limits of Global Unsafety in Text-to-Image Generation",
-      "url": "https://arxiv.org/abs/2610.02300",
-      "published": "2026-10-05T04:00:00+00:00",
-      "source": "arXiv cs.AI",
-      "priority": 2,
-      "summary": "arXiv:2610.02300v1 Announce Type: new Abstract: Training-free safeguards for text-to-image generation often rely on a reusable safety signal, such as an unsafe direction or global toxic subspace, applied broadly across prompts. We provide a controlled geometric analysis of this global-unsafety assumption and reveal a consistent coverage-selectivity trade-off: compact unsafe subspaces fail to cover heterogeneous unsafe semantics, whereas broader aggregation increasingly distorts safety-adjacent benign prompts. Motivated by this finding, we propose CALM (Counterfactual Adaptive Local Modulation), a training-free safeguard that replaces uniform global removal with prompt-local counterfactual correction. Using matched unsafe-benign anchors, CALM routes each prompt to active unsafe categories, minimally edits only violating token representations toward the safe side, and suppresses positively aligned unsafe residual components. Across broad evaluation, CALM significantly improves unsafe content suppression while preserving benign utility, demonstrating that local counterfactual correction provides a more selective alternative to global unsafe signal removal."
-    },
-    {
-      "title": "Choosing Before Acting: Comparative Value Estimation for Long-Horizon Tool-Use Agents",
-      "url": "https://arxiv.org/abs/2610.02330",
-      "published": "2026-10-05T04:00:00+00:00",
-      "source": "arXiv cs.AI",
-      "priority": 2,
-      "summary": "arXiv:2610.02330v1 Announce Type: new Abstract: Large language models (LLMs) rely on long-horizon tool invocation sequences for complex tasks, where each invocation can alter the task state and condition subsequent decisions. In long-horizon tool use, final-outcome rewards provide weak credit assignment over long interaction traces. Step-level rewards can offer more targeted feedback, but obtaining reliable step supervision often requires human or LLM judgment, or additional rollouts to estimate the downstream effect of an intermediate decision. In this paper, we argue that effective tool-use agents should estimate the long-horizon value of a possible next tool invocation before executing it. This objective requires comparative supervision over alternative invocations under the same context, while logged trajectories only contain the invocation that was actually taken. Therefore, we propose Comparative Inference for Tool-use Agents (CITA). CITA trains a Comparative Inference Model (CIM) from paired signals that combine observed tool behavior, scalable supervision from a Bayesian tool-graph simulator, and semantic judgments from LLM-based comparison. The resulting CIM learns to estimate how likely a possible next tool invocation is to support final task success under the current context. Across three tool-use benchmarks and multiple backbone LLMs, CITA consistently improves Tool F1 and task success. Additional analysis shows that CIM learns accurate step-level value estimates for comparative tool choices."
     }
   ],
   "story": {
-    "title": "MintFlow: Minimal Trajectory Intervention for Constrained Flow Matching",
-    "url": "https://arxiv.org/abs/2610.02260",
-    "published": "2026-10-05T04:00:00+00:00",
-    "source": "arXiv cs.AI",
-    "priority": 2,
-    "summary": "arXiv:2610.02260v1 Announce Type: new Abstract: Flow matching models excel at generative modeling, and many downstream applications require their samples to satisfy prescribed constraints, such as observed measurements and physical laws. However, existing constrained samplers often face a trade-off: \\textit{enforcing constraints can substantially displace samples from the pretrained data distribution}. To address this trade-off, we introduce \\textbf{MintFlow}, a training-free constrained sampling framework that formulates constraint enforcement as a minimal intervention on the pretrained flow trajectory. MintFlow seeks the minimal perturbation of an intermediate flow state such that its subsequent evolution under the pretrained flow field satisfies the target constraint. By minimally perturbing the flow state while keeping the pretrained flow field unchanged, MintFlow enforces the constraint while minimizing unnecessary deviation from the pretrained distribution. An adjoint formulation yields a closed-form expression for this perturbation, eliminating expensive iterative optimization. Furthermore, MintFlow adaptively selects the intervention time to balance the required perturbation magnitude with its amplification by the remaining flow. Across a range of tasks in generative vision and physical system modeling, MintFlow achieves competitive constraint satisfaction while preserving the pretrained generative distribution substantially better than state-of-the-art constrained methods."
+    "title": "Our approach to EU text provenance rules",
+    "url": "https://openai.com/index/eu-text-provenance",
+    "published": "2026-10-05T15:00:00+00:00",
+    "source": "OpenAI News",
+    "priority": 1,
+    "summary": "How OpenAI is approaching text watermarking under EU rules. Learn where watermarks apply, how detection works, and why access starts with researchers."
   },
-  "caption": "Today's AI Brief: 5 developments.\n\nSwipe through for the stories and sources.\n\n1. MintFlow: Minimal Trajectory Intervention for Constrained Flow Matching\narXiv:2610.02260v1 Announce Type: new Abstract: Flow matching models excel at generative modeling, and many d…\nSource: arXiv cs.AI\nhttps://arxiv.org/abs/2610.02260\n\n2. Fast Models, Slow Evidence: A Paired and Self-Audited Evaluation of System-1 Decision Models for LLM Agent Harnesses\narXiv:2610.02267v1 Announce Type: new Abstract: Agent harnesses make many small, typed decisions per task: wh…\nSource: arXiv cs.AI\nhttps://arxiv.org/abs/2610.02267\n\n3. The AI Risk Observatory: What Can We Learn from AI Disclosures in Annual Reports About Societal Resilience?\narXiv:2610.02281v1 Announce Type: new Abstract: Societal resilience research relies on access to useful and a…\nSource: arXiv cs.AI\nhttps://arxiv.org/abs/2610.02281\n\n4. Keep It CALM: Analyzing the Limits of Global Unsafety in Text-to-Image Generation\narXiv:2610.02300v1 Announce Type: new Abstract: Training-free safeguards for text-to-image generation often r…\nSource: arXiv cs.AI\nhttps://arxiv.org/abs/2610.02300\n\n5. Choosing Before Acting: Comparative Value Estimation for Long-Horizon Tool-Use Agents\narXiv:2610.02330v1 Announce Type: new Abstract: Large language models (LLMs) rely on long-horizon tool invoca…\nSource: arXiv cs.AI\nhttps://arxiv.org/abs/2610.02330\n\nAI Brief · Daily AI developments",
+  "caption": "Today's AI Brief: 5 developments.\n\nSwipe through for the stories and sources.\n\n1. Our approach to EU text provenance rules\nHow OpenAI is approaching text watermarking under EU rules. Learn where watermarks apply, how detection works…\nSource: OpenAI News\nhttps://openai.com/index/eu-text-provenance\n\n2. Building advertising for the way people use AI\nOpenAI introduces a new visual ad format in ChatGPT and expands measurement tools, attribution partnerships,…\nSource: OpenAI News\nhttps://openai.com/index/new-chatgpt-ads-format-and-measurement\n\n3. MintFlow: Minimal Trajectory Intervention for Constrained Flow Matching\narXiv:2610.02260v1 Announce Type: new Abstract: Flow matching models excel at generative modeling, and many d…\nSource: arXiv cs.AI\nhttps://arxiv.org/abs/2610.02260\n\n4. Fast Models, Slow Evidence: A Paired and Self-Audited Evaluation of System-1 Decision Models for LLM Agent Harnesses\narXiv:2610.02267v1 Announce Type: new Abstract: Agent harnesses make many small, typed decisions per task: wh…\nSource: arXiv cs.AI\nhttps://arxiv.org/abs/2610.02267\n\n5. The AI Risk Observatory: What Can We Learn from AI Disclosures in Annual Reports About Societal Resilience?\narXiv:2610.02281v1 Announce Type: new Abstract: Societal resilience research relies on access to useful and a…\nSource: arXiv cs.AI\nhttps://arxiv.org/abs/2610.02281\n\nAI Brief · Daily AI developments",
   "alt_texts": [
+    "AI Brief news image. Headline: Our approach to EU text provenance rules. Source: OpenAI News.",
+    "AI Brief news image. Headline: Building advertising for the way people use AI. Source: OpenAI News.",
     "AI Brief news image. Headline: MintFlow: Minimal Trajectory Intervention for Constrained Flow Matching. Source: arXiv cs.AI.",
     "AI Brief news image. Headline: Fast Models, Slow Evidence: A Paired and Self-Audited Evaluation of System-1 Decision Models for LLM Agent Harnesses. Source: arXiv cs.AI.",
-    "AI Brief news image. Headline: The AI Risk Observatory: What Can We Learn from AI Disclosures in Annual Reports About Societal Resilience?. Source: arXiv cs.AI.",
-    "AI Brief news image. Headline: Keep It CALM: Analyzing the Limits of Global Unsafety in Text-to-Image Generation. Source: arXiv cs.AI.",
-    "AI Brief news image. Headline: Choosing Before Acting: Comparative Value Estimation for Long-Horizon Tool-Use Agents. Source: arXiv cs.AI."
+    "AI Brief news image. Headline: The AI Risk Observatory: What Can We Learn from AI Disclosures in Annual Reports About Societal Resilience?. Source: arXiv cs.AI."
   ],
   "image_paths": [
-    "posts/2026-10-05-01.jpg",
-    "posts/2026-10-05-02.jpg",
-    "posts/2026-10-05-03.jpg",
-    "posts/2026-10-05-04.jpg",
-    "posts/2026-10-05-05.jpg"
+    "posts/2026-10-06-01.jpg",
+    "posts/2026-10-06-02.jpg",
+    "posts/2026-10-06-03.jpg",
+    "posts/2026-10-06-04.jpg",
+    "posts/2026-10-06-05.jpg"
   ],
   "image_urls": [
-    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-10-05-01.jpg",
-    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-10-05-02.jpg",
-    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-10-05-03.jpg",
-    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-10-05-04.jpg",
-    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-10-05-05.jpg"
+    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-10-06-01.jpg",
+    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-10-06-02.jpg",
+    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-10-06-03.jpg",
+    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-10-06-04.jpg",
+    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-10-06-05.jpg"
   ],
   "carousel": true,
   "content_type": "news"
