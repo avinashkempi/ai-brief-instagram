@@ -1,79 +1,37 @@
 {
-  "date": "2026-10-12",
+  "date": "2026-10-13",
   "status": "ready",
-  "generated_at": "2026-10-12T07:55:52.716121+00:00",
+  "generated_at": "2026-10-13T08:22:03.170346+00:00",
   "stories": [
     {
-      "title": "Faithfulness Without Anchors: A Position Paper on the Structural Misalignments of Explainable AI Faithfulness Metrics for Feature Importance",
-      "url": "https://arxiv.org/abs/2610.12493",
-      "published": "2026-10-12T04:00:00+00:00",
-      "source": "arXiv cs.AI",
-      "priority": 2,
-      "summary": "arXiv:2610.12493v1 Announce Type: new Abstract: Explainable Artificial Intelligence (XAI) tools have often been presented as methods to increase trust in machine learning models by making aspects of their algorithms more human-understandable. However, evidence accumulated over the last decade points to an overall failure of this objective, instead promoting overreliance on incorrect predictions, which can subsequently lead to algorithmic aversion. Rather, XAI appears to function primarily as a debugging tool, useful for obtaining anecdotal insights into, for example, features learned by the model. One of the main issues underlying this limitation is that XAI methods often oversimplify the inner workings of the model, resulting in misalignment between the explanation and the model itself - a behavior referred to as unfaithfulness or infidelity. Faithfulness can be interpreted as the degree of approximation between an explanation and the model. Computing faithfulness in a rigorous manner would thus make it possible to quantify one of the various elements of trustworthiness of an explanation. However, existing metrics present significant limitations, making this quantification either infeasible or computationally expensive. In this position paper, we outline five major shortcomings of current faithfulness metrics and propose four possible avenues for research to bolster their reliability."
-    },
-    {
-      "title": "EliteTable: Self-Improving Program Search for Executable Control Policies",
-      "url": "https://arxiv.org/abs/2610.12536",
-      "published": "2026-10-12T04:00:00+00:00",
-      "source": "arXiv cs.AI",
-      "priority": 2,
-      "summary": "arXiv:2610.12536v1 Announce Type: new Abstract: EliteTable is a self-improving program-search algorithm guided by large language models (LLMs) that uses a fixed-capacity table of high-scoring solutions to guide new proposals, edits of existing solutions, and remixes of several solutions. Performance was evaluated across six Gymnasium control tasks, each with ten generations and fifty candidate slots per generation. Each task was evaluated across ten independently initialized searches. Candidate-score medians rose between the first and final generations in all six tasks, and selected-winner search-score medians rose in five. In CartPole-v1, the selected winner reached the search-score ceiling in the first generation of all ten searches. All ten paired held-out endpoints improved in four of the six tasks. BipedalWalker-v3 and CarRacing-v3 improved without reaching their reporting targets. Six of ten Acrobot-v1 searches declined on held-out episodes, and the median paired change was negative. The results document improvement during program search and the transfer of selected-winner gains to new episodes in some tasks. Comparisons and ablations are needed to establish EliteTable's relative performance and the contributions of its components."
-    },
-    {
-      "title": "Equal-Budget Monte Carlo Tree Search versus Randomized-Restart List Scheduling for DAG Workflows: A Controlled Equal-Budget Computational Study",
-      "url": "https://arxiv.org/abs/2610.12542",
-      "published": "2026-10-12T04:00:00+00:00",
-      "source": "arXiv cs.AI",
-      "priority": 2,
-      "summary": "arXiv:2610.12542v1 Announce Type: new Abstract: Monte Carlo Tree Search (MCTS) is often proposed for scheduling directed-acyclic-graph (DAG) workflows, yet most studies never run the comparison that could refute it - giving a much simpler method the same search effort. We run that comparison under a controlled protocol. All arms receive an identical budget - the same number of candidate schedules built and evaluated: an MCTS scheduling method, preregistered as the main arm; a randomized-restart list scheduler with no search tree as the control; and a textbook-UCT MCTS arm as a registered follow-up on the same domain. The analysis plan was locked before data collection; an independent checker confirmed all 768 confirmation-stage schedules valid with correct finish times. At the main budget of 2048 evaluated schedules, MCTS is 2.88% worse than the restarts (95% CI [-3.62%,-2.15%]; the 72 of 96 held-out instances with positive baseline-relative headroom). The deficit is not budget starvation: on the separate exploration pool restarts self-improve by 1.85% where MCTS gains 0.24%, and 700 of 720 of MCTS's first results are merely the warm start it was handed. The studied selection rule locks deterministically onto the first-expanded child, keeping its trials correlated while restarts draw gains from the tails; the causal link to makespan remains an inference. A structural map locates where the tree stops paying: restarts win on sparse irregular workflows, no difference is detectable on regular layered ones, and dense ones leave no room to improve. Swapping the rule for textbook UCT removes most of the deficit (-0.26%, 95% CI [-0.71%,+0.23%]) without reversing its sign. Results are confined to a controlled synthetic domain (N in {8,16,32} tasks, 2-8 processors, budgets up to 2048); we make no claim about larger budgets."
-    },
-    {
-      "title": "Know What You Don't Know: Agentic Data Synthesis by Evolving Generation Space for Closed-Loop Learning",
-      "url": "https://arxiv.org/abs/2610.12593",
-      "published": "2026-10-12T04:00:00+00:00",
-      "source": "arXiv cs.AI",
-      "priority": 2,
-      "summary": "arXiv:2610.12593v1 Announce Type: new Abstract: The continued improvement of large language models increasingly depends on synthetic experience, yet effective data synthesis for interactive agents requires not only executable and verifiable trajectories, but also interactions that provide learning value for the current task agent. Existing methods increasingly incorporate environment feedback, data validation, or learner failures, but still face a feedback-to-decision gap: observed weaknesses do not directly specify how future synthesis should change, or whether they can be represented by the current synthesis space. To address this gap, we propose EvoSyn, a learning-feedback-driven multi-agent framework that organizes synthesis around a revisable state specifying what interaction factors can be deliberately generated and where synthesis effort should be allocated. A role-specialized multi-agent system translates learner feedback into synthesis revisions, while a Designer allocates synthesis directions and a Planner grounds them into executable experience. This process enables within-space adaptation toward weak or under-covered regions and synthesis-space expansion that promotes newly discovered factors into explicit generation controls. Experiments on $\\tau^2$-Bench and CAR-Bench show that EvoSyn improves average task success by 13.3 points over the strongest synthesis baseline, while producing higher-quality and structurally broader synthetic experience and discovering controllable factors missed without learner feedback."
-    },
-    {
-      "title": "SpireBench: Evaluating Long-Horizon Strategic Play of Agentic Models with Slay the Spire",
-      "url": "https://arxiv.org/abs/2610.12596",
-      "published": "2026-10-12T04:00:00+00:00",
-      "source": "arXiv cs.AI",
-      "priority": 2,
-      "summary": "arXiv:2610.12596v1 Announce Type: new Abstract: Agentic large language models now tackle complex tasks, yet strategic reasoning over long horizons is under-studied: most agentic benchmarks are short and episodic, and performance on long tasks is hard to dissect into stored knowledge, reasoning and luck. We introduce SpireBench, in which models play the complete commercial deck-builder Slay the Spire (StS), where early decisions decide long-term success. Across 20 large language models (LLMs) at the game's highest difficulty, frontier models beat heuristic baselines and match the average human player but remain far behind experts. This gap widens as the run lengthens: the strongest models win the first act as often as experts, then fall behind. What separates strong models from weak is how well they play each fight; all of them misjudge risk over a run, preserving health rather than spending it to grow stronger. A comprehensive, self-consistent renaming of every game term shows that part of their performance rests on prior knowledge of the game, and models do not improve from the memories they write across runs, which are often wrong and overly cautious. Our harness is the first to give a model the complete original game, and we compare it with existing harnesses. Overall, SpireBench offers an unsaturated long-horizon benchmark with tools to locate where and why agents fail."
+      "title": "How does retrieval-augmented generation work?",
+      "summary": "RAG retrieves relevant material at answer time and gives it to a model as context. This can ground responses in a chosen knowledge base, though retrieval quality still matters.",
+      "source": "Google Cloud Docs",
+      "url": "https://cloud.google.com/use-cases/retrieval-augmented-generation",
+      "published": "2026-10-13T08:22:03.906174+00:00",
+      "priority": 0,
+      "kind": "evergreen"
     }
   ],
   "story": {
-    "title": "Faithfulness Without Anchors: A Position Paper on the Structural Misalignments of Explainable AI Faithfulness Metrics for Feature Importance",
-    "url": "https://arxiv.org/abs/2610.12493",
-    "published": "2026-10-12T04:00:00+00:00",
-    "source": "arXiv cs.AI",
-    "priority": 2,
-    "summary": "arXiv:2610.12493v1 Announce Type: new Abstract: Explainable Artificial Intelligence (XAI) tools have often been presented as methods to increase trust in machine learning models by making aspects of their algorithms more human-understandable. However, evidence accumulated over the last decade points to an overall failure of this objective, instead promoting overreliance on incorrect predictions, which can subsequently lead to algorithmic aversion. Rather, XAI appears to function primarily as a debugging tool, useful for obtaining anecdotal insights into, for example, features learned by the model. One of the main issues underlying this limitation is that XAI methods often oversimplify the inner workings of the model, resulting in misalignment between the explanation and the model itself - a behavior referred to as unfaithfulness or infidelity. Faithfulness can be interpreted as the degree of approximation between an explanation and the model. Computing faithfulness in a rigorous manner would thus make it possible to quantify one of the various elements of trustworthiness of an explanation. However, existing metrics present significant limitations, making this quantification either infeasible or computationally expensive. In this position paper, we outline five major shortcomings of current faithfulness metrics and propose four possible avenues for research to bolster their reliability."
+    "title": "How does retrieval-augmented generation work?",
+    "summary": "RAG retrieves relevant material at answer time and gives it to a model as context. This can ground responses in a chosen knowledge base, though retrieval quality still matters.",
+    "source": "Google Cloud Docs",
+    "url": "https://cloud.google.com/use-cases/retrieval-augmented-generation",
+    "published": "2026-10-13T08:22:03.906174+00:00",
+    "priority": 0,
+    "kind": "evergreen"
   },
-  "caption": "Today's AI Brief: 5 developments.\n\nSwipe through for the stories and sources.\n\n1. Faithfulness Without Anchors: A Position Paper on the Structural Misalignments of Explainable AI Faithfulness Metrics for Feature…\narXiv:2610.12493v1 Announce Type: new Abstract: Explainable Artificial Intelligence (XAI) tools have often be…\nSource: arXiv cs.AI\nhttps://arxiv.org/abs/2610.12493\n\n2. EliteTable: Self-Improving Program Search for Executable Control Policies\narXiv:2610.12536v1 Announce Type: new Abstract: EliteTable is a self-improving program-search algorithm guide…\nSource: arXiv cs.AI\nhttps://arxiv.org/abs/2610.12536\n\n3. Equal-Budget Monte Carlo Tree Search versus Randomized-Restart List Scheduling for DAG Workflows: A Controlled Equal-Budget Compu…\narXiv:2610.12542v1 Announce Type: new Abstract: Monte Carlo Tree Search (MCTS) is often proposed for scheduli…\nSource: arXiv cs.AI\nhttps://arxiv.org/abs/2610.12542\n\n4. Know What You Don't Know: Agentic Data Synthesis by Evolving Generation Space for Closed-Loop Learning\narXiv:2610.12593v1 Announce Type: new Abstract: The continued improvement of large language models increasing…\nSource: arXiv cs.AI\nhttps://arxiv.org/abs/2610.12593\n\n5. SpireBench: Evaluating Long-Horizon Strategic Play of Agentic Models with Slay the Spire\narXiv:2610.12596v1 Announce Type: new Abstract: Agentic large language models now tackle complex tasks, yet s…\nSource: arXiv cs.AI\nhttps://arxiv.org/abs/2610.12596\n\nAI Brief · Daily AI developments",
+  "caption": "Today's AI Brief: an evergreen AI explainer.\n\nNo new eligible stories were available today; this post is clearly labeled as background reading.\n\n1. How does retrieval-augmented generation work?\nRAG retrieves relevant material at answer time and gives it to a model as context. This can ground responses…\nSource: Google Cloud Docs\nhttps://cloud.google.com/use-cases/retrieval-augmented-generation\n\nAI Brief · Evergreen AI explainer",
   "alt_texts": [
-    "AI Brief news image. Headline: Faithfulness Without Anchors: A Position Paper on the Structural Misalignments of Explainable AI Faithfulness Metrics for Feature Importance. Source: arXiv cs.AI.",
-    "AI Brief news image. Headline: EliteTable: Self-Improving Program Search for Executable Control Policies. Source: arXiv cs.AI.",
-    "AI Brief news image. Headline: Equal-Budget Monte Carlo Tree Search versus Randomized-Restart List Scheduling for DAG Workflows: A Controlled Equal-Budget Computational Study. Source: arXiv cs.AI.",
-    "AI Brief news image. Headline: Know What You Don't Know: Agentic Data Synthesis by Evolving Generation Space for Closed-Loop Learning. Source: arXiv cs.AI.",
-    "AI Brief news image. Headline: SpireBench: Evaluating Long-Horizon Strategic Play of Agentic Models with Slay the Spire. Source: arXiv cs.AI."
+    "AI Brief evergreen explainer image. Headline: How does retrieval-augmented generation work?. Source: Google Cloud Docs."
   ],
   "image_paths": [
-    "posts/2026-10-12-01.jpg",
-    "posts/2026-10-12-02.jpg",
-    "posts/2026-10-12-03.jpg",
-    "posts/2026-10-12-04.jpg",
-    "posts/2026-10-12-05.jpg"
+    "posts/2026-10-13-01.jpg"
   ],
   "image_urls": [
-    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-10-12-01.jpg",
-    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-10-12-02.jpg",
-    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-10-12-03.jpg",
-    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-10-12-04.jpg",
-    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-10-12-05.jpg"
+    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-10-13-01.jpg"
   ],
-  "carousel": true,
-  "content_type": "news"
+  "carousel": false,
+  "content_type": "evergreen"
 }
