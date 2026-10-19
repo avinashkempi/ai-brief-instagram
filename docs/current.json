@@ -1,7 +1,7 @@
 {
-  "date": "2026-10-18",
+  "date": "2026-10-19",
   "status": "ready",
-  "generated_at": "2026-10-18T06:32:02.379779+00:00",
+  "generated_at": "2026-10-19T06:43:43.554109+00:00",
   "stories": [
     {
       "title": "How Itaú is building generative AI for its entire customer base",
@@ -9,39 +9,8 @@
       "published": "2026-10-16T19:00:00+00:00",
       "source": "OpenAI News",
       "priority": 1,
-      "summary": "With ia.i, a conversational interface, and the IARA governance platform, Itaú is applying its AI First strategy to customers and employees — in one of Brazil’s most regulated sectors."
-    },
-    {
-      "title": "Benefit Street Partners answers questions faster with Codex",
-      "url": "https://openai.com/index/benefit-street-partners",
-      "published": "2026-10-16T00:00:00+00:00",
-      "source": "OpenAI News",
-      "priority": 1,
-      "summary": "Anant Kumar builds tools to compare loan valuations and analyze credit agreements, using Codex for code review and faster follow-ups."
-    },
-    {
-      "title": "Stack Overflow for Agents triples signups with ChatGPT plugin",
-      "url": "https://openai.com/index/stack-overflow-chatgpt-plugin",
-      "published": "2026-10-16T00:00:00+00:00",
-      "source": "OpenAI News",
-      "priority": 1,
-      "summary": "Two engineers shipped Stack Overflow for Agents in a few weeks with Codex, and its ChatGPT plugin helped drive up to 10× growth in agent creation."
-    },
-    {
-      "title": "Bringing GPT-Rosalind to academic research labs",
-      "url": "https://openai.com/index/introducing-the-rosalind-academic-plan",
-      "published": "2026-10-15T19:00:00+00:00",
-      "source": "OpenAI News",
-      "priority": 1,
-      "summary": "Introducing the Rosalind Academic Plan, offering eligible academic labs sponsored access to GPT-Rosalind and tools to advance life sciences research."
-    },
-    {
-      "title": "Teaching students to think and learn through questions",
-      "url": "https://openai.com/index/teaching-students-to-think-and-learn-through-questions",
-      "published": "2026-10-15T13:00:00+00:00",
-      "source": "OpenAI News",
-      "priority": 1,
-      "summary": "Celebrate Teachers’ Day with AI for Educators in Brazilian Portuguese and see how Study Mode can help teachers support active, step-by-step learning."
+      "summary": "With ia.i, a conversational interface, and the IARA governance platform, Itaú is applying its AI First strategy to customers and employees — in one of Brazil’s most regulated sectors.",
+      "kind": "news"
     }
   ],
   "story": {
@@ -50,30 +19,19 @@
     "published": "2026-10-16T19:00:00+00:00",
     "source": "OpenAI News",
     "priority": 1,
-    "summary": "With ia.i, a conversational interface, and the IARA governance platform, Itaú is applying its AI First strategy to customers and employees — in one of Brazil’s most regulated sectors."
+    "summary": "With ia.i, a conversational interface, and the IARA governance platform, Itaú is applying its AI First strategy to customers and employees — in one of Brazil’s most regulated sectors.",
+    "kind": "news"
   },
-  "caption": "Today's AI Brief: 5 developments.\n\nSwipe through for the stories and sources.\n\n1. How Itaú is building generative AI for its entire customer base\nWith ia.i, a conversational interface, and the IARA governance platform, Itaú is applying its AI First strate…\nSource: OpenAI News\nhttps://openai.com/index/itau-generative-ai\n\n2. Benefit Street Partners answers questions faster with Codex\nAnant Kumar builds tools to compare loan valuations and analyze credit agreements, using Codex for code revie…\nSource: OpenAI News\nhttps://openai.com/index/benefit-street-partners\n\n3. Stack Overflow for Agents triples signups with ChatGPT plugin\nTwo engineers shipped Stack Overflow for Agents in a few weeks with Codex, and its ChatGPT plugin helped driv…\nSource: OpenAI News\nhttps://openai.com/index/stack-overflow-chatgpt-plugin\n\n4. Bringing GPT-Rosalind to academic research labs\nIntroducing the Rosalind Academic Plan, offering eligible academic labs sponsored access to GPT-Rosalind and…\nSource: OpenAI News\nhttps://openai.com/index/introducing-the-rosalind-academic-plan\n\n5. Teaching students to think and learn through questions\nCelebrate Teachers’ Day with AI for Educators in Brazilian Portuguese and see how Study Mode can help teacher…\nSource: OpenAI News\nhttps://openai.com/index/teaching-students-to-think-and-learn-through-questions\n\nAI Brief · Daily AI developments",
+  "caption": "Today's AI Brief: one new development.\n\n1. How Itaú is building generative AI for its entire customer base\nWith ia.i, a conversational interface, and the IARA governance platform, Itaú is applying its AI First strate…\nSource: OpenAI News\nhttps://openai.com/index/itau-generative-ai\n\nAI Brief · Daily AI developments",
   "alt_texts": [
-    "AI Brief news image. Headline: How Itaú is building generative AI for its entire customer base. Source: OpenAI News.",
-    "AI Brief news image. Headline: Benefit Street Partners answers questions faster with Codex. Source: OpenAI News.",
-    "AI Brief news image. Headline: Stack Overflow for Agents triples signups with ChatGPT plugin. Source: OpenAI News.",
-    "AI Brief news image. Headline: Bringing GPT-Rosalind to academic research labs. Source: OpenAI News.",
-    "AI Brief news image. Headline: Teaching students to think and learn through questions. Source: OpenAI News."
+    "AI Brief news image. Headline: How Itaú is building generative AI for its entire customer base. Source: OpenAI News."
   ],
   "image_paths": [
-    "posts/2026-10-18-01.jpg",
-    "posts/2026-10-18-02.jpg",
-    "posts/2026-10-18-03.jpg",
-    "posts/2026-10-18-04.jpg",
-    "posts/2026-10-18-05.jpg"
+    "posts/2026-10-19-01.jpg"
   ],
   "image_urls": [
-    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-10-18-01.jpg",
-    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-10-18-02.jpg",
-    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-10-18-03.jpg",
-    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-10-18-04.jpg",
-    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-10-18-05.jpg"
+    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-10-19-01.jpg"
   ],
-  "carousel": true,
+  "carousel": false,
   "content_type": "news"
 }
