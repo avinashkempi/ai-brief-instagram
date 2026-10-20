@@ -1,37 +1,79 @@
 {
-  "date": "2026-10-19",
+  "date": "2026-10-20",
   "status": "ready",
-  "generated_at": "2026-10-19T06:43:43.554109+00:00",
+  "generated_at": "2026-10-20T06:30:44.877178+00:00",
   "stories": [
     {
-      "title": "How Itaú is building generative AI for its entire customer base",
-      "url": "https://openai.com/index/itau-generative-ai",
-      "published": "2026-10-16T19:00:00+00:00",
-      "source": "OpenAI News",
-      "priority": 1,
-      "summary": "With ia.i, a conversational interface, and the IARA governance platform, Itaú is applying its AI First strategy to customers and employees — in one of Brazil’s most regulated sectors.",
-      "kind": "news"
+      "title": "GardenBench: A lightweight, daily evaluation of LLM capabilities",
+      "url": "https://arxiv.org/abs/2610.23866",
+      "published": "2026-10-20T04:00:00+00:00",
+      "source": "arXiv cs.AI",
+      "priority": 2,
+      "summary": "arXiv:2610.23866v1 Announce Type: new Abstract: We introduce GardenBench, a benchmark with 11 test suites that evaluate the capabilities of Large Language Models (LLMs) across a range of tasks. By systematically prompting LLMs with various lightweight queries, we document day-to-day changes in model performance, including run costs and times, that other benchmarks miss. This allows us to compare the accuracy and features of responses across model providers and versions. We account for daily variations in model accuracy, capturing both model progress and degradation, for instance, when a model is changed post-deployment or when a new model is released. We base our evaluation on general-use tasks and make our results publicly accessible via a live dashboard, diversifying existing approaches to LLM testing. Our main contribution is an innovative, lightweight, and inexpensive benchmark, designed to be consumer-facing and for everyday tasks."
+    },
+    {
+      "title": "Doing Less with More: A First-Principles Exploration of the Suitability of Agentic Computing over Alternative Architectural Choices",
+      "url": "https://arxiv.org/abs/2610.23921",
+      "published": "2026-10-20T04:00:00+00:00",
+      "source": "arXiv cs.AI",
+      "priority": 2,
+      "summary": "arXiv:2610.23921v1 Announce Type: new Abstract: There is growing interest in automating business activities with Agentic Artificial Intelligence (AI) due to latter's seeming ease of use. Never has it been easier, or costlier, to do less with more. However, little is known about when agents are preferable to established alternatives such as local computation, Representational State Transfer (REST), the Simple Object Access Protocol (SOAP), and the Model Context Protocol (MCP), particularly when development speed, performance, and operational cost are considered. We investigate this question using a controlled mathematical task that compares seven methods on a benchmark of 1,000 arithmetic expressions where semantics of operator precedence has to be preserved. We ran this setup across a native Function Calling baseline (Python library), REST, SOAP and MCP microservice architectures, direct responses from large language models (LLMs) using a Groq cloud API and five locally deployed Ollama models, and agentic systems in which five local LLMs invoke MCP tools. The deterministic methods achieve 100% accuracy with negligible latency. Direct LLM evaluation achieves at most 92.9% accuracy at over 22,000x the latency of a native function call. With MCP tools, the best agent reaches 99.9% accuracy, but incurs nearly 1,000,000x the baseline latency. These results demonstrate that LLMs approaches are poorly suited for exact arithmetic evaluation and motivate an informed architectural decision framework (ADF) for choosing an architecture based on accuracy and throughput requirements. We recognize that an actual interaction with an agent may span both reasoning and linguistic tasks. Hence our recommendation is to explore multiple architectural choices (based on task type) rather than one-size-fits-all solution (LLMs). Code is available at -"
+    },
+    {
+      "title": "A Controlled LLM Workflow for Evidence-Grounded Diagnosis of Risk Score Differences",
+      "url": "https://arxiv.org/abs/2610.23962",
+      "published": "2026-10-20T04:00:00+00:00",
+      "source": "arXiv cs.AI",
+      "priority": 2,
+      "summary": "arXiv:2610.23962v1 Announce Type: new Abstract: We propose a controlled Large Language Model (LLM) workflow for explaining risk score differences using similar historical transactions. The workflow combines reference retrieval and contrastive SHapley Additive exPlanations (SHAP) evidence with reference-based LLM reasoning and deterministic validation. Experiments on a test dataset show that the workflow produces more consistent, evidence-grounded and traceable diagnoses than the same LLM without structured workflow guidance."
+    },
+    {
+      "title": "What Social Media Teaches Us About Accumulative AI Risks",
+      "url": "https://arxiv.org/abs/2610.24006",
+      "published": "2026-10-20T04:00:00+00:00",
+      "source": "arXiv cs.AI",
+      "priority": 2,
+      "summary": "arXiv:2610.24006v1 Announce Type: new Abstract: Prominent AI safety discussions emphasize existential threats and catastrophic events, such as AI-enabled nuclear conflict or engineered biological outbreaks. This position paper argues that there is another type of AI risk that arises and accumulates from the widespread use of AI. Drawing on lessons from social media, we argue that safety assessments must also address accumulative harms that develop through repeated use, recurring decisions, and feedback across interconnected deployments. Repeated reassurance, selective exposure, recurring decision biases, and growing personal profiles may gradually narrow perspectives, weaken independent judgment, or enable exploitative influence without a single clearly harmful event. We advance the Trajectory Neglect Thesis: a focus on vivid catastrophic events and identifiable incidents risks overlooking less visible harms that accumulate through the widespread daily use of AI. Social media research motivates this position by showing how reciprocal media effects, social reinforcement, and individual susceptibility shape outcomes beyond individual encounters. We examine how related mechanisms may operate in AI systems, using conversational AI as a concrete setting where generation, semantic inference, and persistent memory may tighten feedback loops. Sycophancy, manipulation, and privacy loss provide a case study of how these risks may interact and accumulate. This comparison identifies mechanisms to investigate rather than assuming that repeated AI use is harmful. We therefore call for evaluation of cumulative patterns of use and deployment, individual and societal outcomes, careful causal inference, and proportionate safeguards that preserve useful assistance and informed user choice."
+    },
+    {
+      "title": "Beyond Explicit Intent: Discovering and Shaping Artistic Intent through Human-AI Co-Creation",
+      "url": "https://arxiv.org/abs/2610.24010",
+      "published": "2026-10-20T04:00:00+00:00",
+      "source": "arXiv cs.AI",
+      "priority": 2,
+      "summary": "arXiv:2610.24010v1 Announce Type: new Abstract: Generative AI is becoming an important medium for artistic creation, yet existing interactions often assume that creators can specify intentions in advance and accurately communicate them through text prompts. Artistic intentions, however, may be vague, latent, or recognizable only after seeing concrete visual possibilities. We propose a human-AI co-creation paradigm beyond explicit intent expression. By expanding model exploration, we expose artists to diverse visual possibilities, allowing them to identify previously unarticulated preferences through observation, comparison, and selection. We then integrate artists' curatorial judgments into reinforcement learning, assigning different learning strengths based on preferences over generation trajectories, so recognized directions are more strongly reinforced and the model gradually adapts to individual aesthetics. This creates a continuous \"explore-identify-shape-re-explore\" loop in which artistic intent is progressively discovered, externalized, and shaped. Through three user studies, we examine latent-preference discovery, personalized preference alignment, and the externalization of vague, difficult-to-express creative intentions."
     }
   ],
   "story": {
-    "title": "How Itaú is building generative AI for its entire customer base",
-    "url": "https://openai.com/index/itau-generative-ai",
-    "published": "2026-10-16T19:00:00+00:00",
-    "source": "OpenAI News",
-    "priority": 1,
-    "summary": "With ia.i, a conversational interface, and the IARA governance platform, Itaú is applying its AI First strategy to customers and employees — in one of Brazil’s most regulated sectors.",
-    "kind": "news"
+    "title": "GardenBench: A lightweight, daily evaluation of LLM capabilities",
+    "url": "https://arxiv.org/abs/2610.23866",
+    "published": "2026-10-20T04:00:00+00:00",
+    "source": "arXiv cs.AI",
+    "priority": 2,
+    "summary": "arXiv:2610.23866v1 Announce Type: new Abstract: We introduce GardenBench, a benchmark with 11 test suites that evaluate the capabilities of Large Language Models (LLMs) across a range of tasks. By systematically prompting LLMs with various lightweight queries, we document day-to-day changes in model performance, including run costs and times, that other benchmarks miss. This allows us to compare the accuracy and features of responses across model providers and versions. We account for daily variations in model accuracy, capturing both model progress and degradation, for instance, when a model is changed post-deployment or when a new model is released. We base our evaluation on general-use tasks and make our results publicly accessible via a live dashboard, diversifying existing approaches to LLM testing. Our main contribution is an innovative, lightweight, and inexpensive benchmark, designed to be consumer-facing and for everyday tasks."
   },
-  "caption": "Today's AI Brief: one new development.\n\n1. How Itaú is building generative AI for its entire customer base\nWith ia.i, a conversational interface, and the IARA governance platform, Itaú is applying its AI First strate…\nSource: OpenAI News\nhttps://openai.com/index/itau-generative-ai\n\nAI Brief · Daily AI developments",
+  "caption": "Today's AI Brief: 5 developments.\n\nSwipe through for the stories and sources.\n\n1. GardenBench: A lightweight, daily evaluation of LLM capabilities\narXiv:2610.23866v1 Announce Type: new Abstract: We introduce GardenBench, a benchmark with 11 test suites tha…\nSource: arXiv cs.AI\nhttps://arxiv.org/abs/2610.23866\n\n2. Doing Less with More: A First-Principles Exploration of the Suitability of Agentic Computing over Alternative Architectural Choic…\narXiv:2610.23921v1 Announce Type: new Abstract: There is growing interest in automating business activities w…\nSource: arXiv cs.AI\nhttps://arxiv.org/abs/2610.23921\n\n3. A Controlled LLM Workflow for Evidence-Grounded Diagnosis of Risk Score Differences\narXiv:2610.23962v1 Announce Type: new Abstract: We propose a controlled Large Language Model (LLM) workflow f…\nSource: arXiv cs.AI\nhttps://arxiv.org/abs/2610.23962\n\n4. What Social Media Teaches Us About Accumulative AI Risks\narXiv:2610.24006v1 Announce Type: new Abstract: Prominent AI safety discussions emphasize existential threats…\nSource: arXiv cs.AI\nhttps://arxiv.org/abs/2610.24006\n\n5. Beyond Explicit Intent: Discovering and Shaping Artistic Intent through Human-AI Co-Creation\narXiv:2610.24010v1 Announce Type: new Abstract: Generative AI is becoming an important medium for artistic cr…\nSource: arXiv cs.AI\nhttps://arxiv.org/abs/2610.24010\n\nAI Brief · Daily AI developments",
   "alt_texts": [
-    "AI Brief news image. Headline: How Itaú is building generative AI for its entire customer base. Source: OpenAI News."
+    "AI Brief news image. Headline: GardenBench: A lightweight, daily evaluation of LLM capabilities. Source: arXiv cs.AI.",
+    "AI Brief news image. Headline: Doing Less with More: A First-Principles Exploration of the Suitability of Agentic Computing over Alternative Architectural Choices. Source: arXiv cs.AI.",
+    "AI Brief news image. Headline: A Controlled LLM Workflow for Evidence-Grounded Diagnosis of Risk Score Differences. Source: arXiv cs.AI.",
+    "AI Brief news image. Headline: What Social Media Teaches Us About Accumulative AI Risks. Source: arXiv cs.AI.",
+    "AI Brief news image. Headline: Beyond Explicit Intent: Discovering and Shaping Artistic Intent through Human-AI Co-Creation. Source: arXiv cs.AI."
   ],
   "image_paths": [
-    "posts/2026-10-19-01.jpg"
+    "posts/2026-10-20-01.jpg",
+    "posts/2026-10-20-02.jpg",
+    "posts/2026-10-20-03.jpg",
+    "posts/2026-10-20-04.jpg",
+    "posts/2026-10-20-05.jpg"
   ],
   "image_urls": [
-    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-10-19-01.jpg"
+    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-10-20-01.jpg",
+    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-10-20-02.jpg",
+    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-10-20-03.jpg",
+    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-10-20-04.jpg",
+    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-10-20-05.jpg"
   ],
-  "carousel": false,
+  "carousel": true,
   "content_type": "news"
 }
