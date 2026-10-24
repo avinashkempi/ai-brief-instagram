@@ -1,78 +1,78 @@
 {
-  "date": "2026-10-23",
+  "date": "2026-10-24",
   "status": "ready",
-  "generated_at": "2026-10-23T06:26:44.111234+00:00",
+  "generated_at": "2026-10-24T06:23:25.332922+00:00",
   "stories": [
     {
-      "title": "The Cost of Saying Hello: An Empirical Study of Handshake Overhead in AI Agent Communication Protocols",
-      "url": "https://arxiv.org/abs/2610.30151",
-      "published": "2026-10-23T04:00:00+00:00",
-      "source": "arXiv cs.AI",
-      "priority": 2,
-      "summary": "arXiv:2610.30151v1 Announce Type: new Abstract: Every interaction between AI agents begins with a handshake: the initiating agent must locate its counterpart, learn what it can do, and establish a session before the first useful message can be sent. Surveys of agent communication protocols name handshake overhead as an efficiency criterion, yet none report measurements. This paper presents the first empirical, phase-decomposed benchmark of the handshake in three major agent protocols: MCP (in both its 2025 initialize and 2026 discover eras), A2A, and ACP. Using each protocol's official SDK, we instrument every request for round trips, per-phase latency, wire bytes, and token cost across cold-start, warm-repeat, capability-mismatch, and degraded-metadata scenarios (N=50 per cell, on loopback and under an emulated 50 ms RTT). Round-trip count dominates handshake cost. A legacy MCP handshake takes three round trips and 230 ms at 50 ms RTT; A2A needs one round trip and 61.0 ms. Round trips are not the whole bill: when an LLM reads the counterpart's metadata, handshake cost scales with the counterpart's capability inventory at 24-107 tokens per capability, so a 200-capability counterpart spends 11% of a 200k-token context window before the agent reads its own task. MCP's own 2026 revision cuts its handshake from three round trips to two and, with era pinning, to zero on warm reconnects, protocol evolution that corroborates the cost we measure. We release the full harness, raw data, and analysis at"
+      "title": "Rapidly scaling online storage to serve over 1 billion ChatGPT users (Part II)",
+      "url": "https://openai.com/index/scaling-storage-one-billion-users-part-two",
+      "published": "2026-10-23T17:00:00+00:00",
+      "source": "OpenAI News",
+      "priority": 1,
+      "summary": "Learn how OpenAI scaled Habitat with reliable multi-tenancy, global caching, and Azure Cosmos DB to deliver 12× faster reads for ChatGPT."
     },
     {
-      "title": "MCP vs CLI for AI Agents: A Comparative Analysis of Tool Integration Strategies for Autonomous Systems",
-      "url": "https://arxiv.org/abs/2610.30157",
-      "published": "2026-10-23T04:00:00+00:00",
-      "source": "arXiv cs.AI",
-      "priority": 2,
-      "summary": "arXiv:2610.30157v1 Announce Type: new Abstract: AI agents require interfaces to interact with external systems such as files, APIs, databases, and cloud services. Two competing paradigms have emerged: CLI (Command Line Interface), where agents execute shell commands directly, and MCP (Model Context Protocol), a structured JSON-RPC protocol providing governed, typed tool access. This paper presents a comparative analysis across 14 evaluation dimensions, supported by worked examples, security assessment against established compliance frameworks, and economic modeling. Our analysis indicates that CLI provides superior efficiency for single-user, local-only workflows, while MCP addresses requirements that CLI fundamentally cannot satisfy, including fine-grained access control, credential isolation, structured audit, and multi-tenant governance. We further examine how progressive disclosure techniques eliminate MCP's historical weakness (context window overhead), yielding token efficiency comparable to CLI while preserving its architectural benefits. A hybrid architecture is recommended for production systems. This analysis draws upon academic, government, and industry sources including NSA formal guidance (CSI U/OO/6030316-26), OWASP security standards, and economic modeling from BCG and Gartner."
+      "title": "Securing our frontier model training environment",
+      "url": "https://openai.com/index/securing-our-frontier-model-training-environment",
+      "published": "2026-10-23T10:00:00+00:00",
+      "source": "OpenAI News",
+      "priority": 1,
+      "summary": "OpenAI explains how we strengthened containment for frontier model training and evaluation, including offline environments and high-compute red-teaming."
     },
     {
-      "title": "Accelerating Wildfire Hazard Mapping Across Canada with an AI Surrogate Modelling Framework",
-      "url": "https://arxiv.org/abs/2610.30170",
-      "published": "2026-10-23T04:00:00+00:00",
-      "source": "arXiv cs.AI",
-      "priority": 2,
-      "summary": "arXiv:2610.30170v1 Announce Type: new Abstract: Canada's increasing wildfire activity requires frequent national hazard mapping to guide proactive mitigation, including fuel management, land-use planning, infrastructure protection, and evacuation routing. However, process-based wildfire simulation frameworks (e.g., BurnP3 and BurnP3+) rely on computationally intensive Monte Carlo simulations to model burn probability, fire intensity, and rate of spread. These workflows can take days to weeks to process a single regional modelling unit. To overcome these computational bottlenecks, we present three contributions developed through collaboration between AI researchers and wildfire modelling experts: (a) a standardized framework for training, fine-tuning, and evaluating AI surrogate models against process-based wildfire simulators; (b) a multi-task deep learning surrogate trained on national-scale data to emulate burn probability, mean fire intensity, and mean rate of spread at a fraction of the computational cost (seconds); and (c) domain-specific metrics and counterfactual evaluation protocols to probe out-of-distribution generalization. Integrating geospatial data (fuel, terrain, ignition likelihood) and regional weather, our model approximates BurnP3+ simulation outputs, achieving strong performance across agreement, rank-correlation, error, and spatial-overlap metrics. It preserves downstream hazard classifications and produces physically plausible responses to expert-informed counterfactual interventions. On a representative region, the surrogate achieves 806-fold end-to-end CPU acceleration and uses 13% of BurnP3+'s host memory, facilitating rapid scenario analysis."
+      "title": "OpenAI and Poland’s NASK partner to advance AI safety and security",
+      "url": "https://openai.com/index/openai-nask-ai-safety-security-partnership",
+      "published": "2026-10-23T00:00:00+00:00",
+      "source": "OpenAI News",
+      "priority": 1,
+      "summary": "OpenAI and Poland’s NASK are partnering on AI safety, security, and technical research to strengthen safeguards and support a more resilient digital ecosystem."
     },
     {
-      "title": "Neural Networks with Differentiable Belief-Function Layers",
-      "url": "https://arxiv.org/abs/2610.30173",
-      "published": "2026-10-23T04:00:00+00:00",
-      "source": "arXiv cs.AI",
-      "priority": 2,
-      "summary": "arXiv:2610.30173v1 Announce Type: new Abstract: Yager's 1987 rule of combination $\\boxplus$ was proposed on epistemic grounds: under high conflict, mass should be redistributed to ignorance rather than renormalised onto the class simplex. We observe that backpropagation needs the same rule: Dempster's normaliser $(1{-}\\kappa)^{-1}$, where $\\kappa$ is the conflict mass, puts a $(1{-}\\kappa)^{-2}$ term in the gradient that diverges exactly when evidence sources disagree, while Yager's $\\boxplus$ is bilinear and has no such term. Building on this, we construct a deep evidential pipeline in which every mass in the chain from heads to output is a valid Dempster--Shafer mass function, combined by Yager's rule. The output mass on the ignorance set, $m(\\Theta)$, serves as the network's ``I do not know'' signal. The network is fit to hard labels and never sees an annotator distribution, yet $m(\\Theta)$ orders human disagreement in two modalities, visual and linguistic. Dempster's rises too and ranks contested inputs about as well, but its normaliser divides the conflict out: Yager's vacuity is $9\\times$ larger on the most contested CIFAR-10H images, so only Yager's is readable as an amount of ignorance without recalibration. For out-of-distribution detection it is competitive with strong single-pass baselines, while the clamped Dempster variant that scores higher becomes gradient-unstable once the clamp is removed."
+      "title": "Build more responsive apps with the Decisions API",
+      "url": "https://openai.com/index/decisions-api",
+      "published": "2026-10-22T19:00:00+00:00",
+      "source": "OpenAI News",
+      "priority": 1,
+      "summary": "Fast, focused, low-cost decisions for any application."
     },
     {
-      "title": "When Stable and Preferred Semantics Agree: A Path-Based Approach",
-      "url": "https://arxiv.org/abs/2610.30176",
-      "published": "2026-10-23T04:00:00+00:00",
-      "source": "arXiv cs.AI",
-      "priority": 2,
-      "summary": "arXiv:2610.30176v1 Announce Type: new Abstract: We investigate structural conditions under which preferred and stable semantics agree in abstract argumentation frameworks. Our approach is based on suitably chosen sets of paths in the attack graph and binary relations induced by them. We establish a general path-based criterion for semantic agreement and instantiate it with several classes of paths, obtaining sufficient conditions expressed in terms of well-foundedness of the corresponding relations. The resulting conditions strictly generalize two principal structural criteria for preferred and stable agreement in the literature: Dung's limited controversiality condition and the SCC-symmetry condition. In particular, Dung's result is recovered as a special case by taking the relevant path set to be the set of even paths. We further introduce two infinite sequences of path sets, each yielding a family of agreement conditions. For the first sequence, a Collapse Theorem reduces the infinitely many associated well-foundedness conditions to three essentially distinct ones, whereas the second sequence gives rise to genuinely distinct conditions with no analogous collapse. Our results apply to both finite and infinite argumentation frameworks, admit simplified formulations in the finite case, and also yield sufficient conditions for the existence of stable extensions."
+      "title": "What FDE means at OpenAI",
+      "url": "https://openai.com/index/forward-deployed-engineering-means",
+      "published": "2026-10-22T06:00:00+00:00",
+      "source": "OpenAI News",
+      "priority": 1,
+      "summary": "What forward deployed engineering means at OpenAI"
     }
   ],
   "story": {
-    "title": "The Cost of Saying Hello: An Empirical Study of Handshake Overhead in AI Agent Communication Protocols",
-    "url": "https://arxiv.org/abs/2610.30151",
-    "published": "2026-10-23T04:00:00+00:00",
-    "source": "arXiv cs.AI",
-    "priority": 2,
-    "summary": "arXiv:2610.30151v1 Announce Type: new Abstract: Every interaction between AI agents begins with a handshake: the initiating agent must locate its counterpart, learn what it can do, and establish a session before the first useful message can be sent. Surveys of agent communication protocols name handshake overhead as an efficiency criterion, yet none report measurements. This paper presents the first empirical, phase-decomposed benchmark of the handshake in three major agent protocols: MCP (in both its 2025 initialize and 2026 discover eras), A2A, and ACP. Using each protocol's official SDK, we instrument every request for round trips, per-phase latency, wire bytes, and token cost across cold-start, warm-repeat, capability-mismatch, and degraded-metadata scenarios (N=50 per cell, on loopback and under an emulated 50 ms RTT). Round-trip count dominates handshake cost. A legacy MCP handshake takes three round trips and 230 ms at 50 ms RTT; A2A needs one round trip and 61.0 ms. Round trips are not the whole bill: when an LLM reads the counterpart's metadata, handshake cost scales with the counterpart's capability inventory at 24-107 tokens per capability, so a 200-capability counterpart spends 11% of a 200k-token context window before the agent reads its own task. MCP's own 2026 revision cuts its handshake from three round trips to two and, with era pinning, to zero on warm reconnects, protocol evolution that corroborates the cost we measure. We release the full harness, raw data, and analysis at"
+    "title": "Rapidly scaling online storage to serve over 1 billion ChatGPT users (Part II)",
+    "url": "https://openai.com/index/scaling-storage-one-billion-users-part-two",
+    "published": "2026-10-23T17:00:00+00:00",
+    "source": "OpenAI News",
+    "priority": 1,
+    "summary": "Learn how OpenAI scaled Habitat with reliable multi-tenancy, global caching, and Azure Cosmos DB to deliver 12× faster reads for ChatGPT."
   },
-  "caption": "Today's AI Brief: 5 developments.\n\nSwipe through for the stories and sources.\n\n1. The Cost of Saying Hello: An Empirical Study of Handshake Overhead in AI Agent Communication Protocols\narXiv:2610.30151v1 Announce Type: new Abstract: Every interaction between AI agents begins with a handshake:…\nSource: arXiv cs.AI\nhttps://arxiv.org/abs/2610.30151\n\n2. MCP vs CLI for AI Agents: A Comparative Analysis of Tool Integration Strategies for Autonomous Systems\narXiv:2610.30157v1 Announce Type: new Abstract: AI agents require interfaces to interact with external system…\nSource: arXiv cs.AI\nhttps://arxiv.org/abs/2610.30157\n\n3. Accelerating Wildfire Hazard Mapping Across Canada with an AI Surrogate Modelling Framework\narXiv:2610.30170v1 Announce Type: new Abstract: Canada's increasing wildfire activity requires frequent natio…\nSource: arXiv cs.AI\nhttps://arxiv.org/abs/2610.30170\n\n4. Neural Networks with Differentiable Belief-Function Layers\narXiv:2610.30173v1 Announce Type: new Abstract: Yager's 1987 rule of combination $\\boxplus$ was proposed on e…\nSource: arXiv cs.AI\nhttps://arxiv.org/abs/2610.30173\n\n5. When Stable and Preferred Semantics Agree: A Path-Based Approach\narXiv:2610.30176v1 Announce Type: new Abstract: We investigate structural conditions under which preferred an…\nSource: arXiv cs.AI\nhttps://arxiv.org/abs/2610.30176\n\nAI Brief · Daily AI developments",
+  "caption": "Today's AI Brief: 5 developments.\n\nSwipe through for the stories and sources.\n\n1. Rapidly scaling online storage to serve over 1 billion ChatGPT users (Part II)\nLearn how OpenAI scaled Habitat with reliable multi-tenancy, global caching, and Azure Cosmos DB to deliver 1…\nSource: OpenAI News\nhttps://openai.com/index/scaling-storage-one-billion-users-part-two\n\n2. Securing our frontier model training environment\nOpenAI explains how we strengthened containment for frontier model training and evaluation, including offline…\nSource: OpenAI News\nhttps://openai.com/index/securing-our-frontier-model-training-environment\n\n3. OpenAI and Poland’s NASK partner to advance AI safety and security\nOpenAI and Poland’s NASK are partnering on AI safety, security, and technical research to strengthen safeguar…\nSource: OpenAI News\nhttps://openai.com/index/openai-nask-ai-safety-security-partnership\n\n4. Build more responsive apps with the Decisions API\nFast, focused, low-cost decisions for any application.\nSource: OpenAI News\nhttps://openai.com/index/decisions-api\n\n5. What FDE means at OpenAI\nWhat forward deployed engineering means at OpenAI\nSource: OpenAI News\nhttps://openai.com/index/forward-deployed-engineering-means\n\nAI Brief · Daily AI developments",
   "alt_texts": [
-    "AI Brief news image. Headline: The Cost of Saying Hello: An Empirical Study of Handshake Overhead in AI Agent Communication Protocols. Source: arXiv cs.AI.",
-    "AI Brief news image. Headline: MCP vs CLI for AI Agents: A Comparative Analysis of Tool Integration Strategies for Autonomous Systems. Source: arXiv cs.AI.",
-    "AI Brief news image. Headline: Accelerating Wildfire Hazard Mapping Across Canada with an AI Surrogate Modelling Framework. Source: arXiv cs.AI.",
-    "AI Brief news image. Headline: Neural Networks with Differentiable Belief-Function Layers. Source: arXiv cs.AI.",
-    "AI Brief news image. Headline: When Stable and Preferred Semantics Agree: A Path-Based Approach. Source: arXiv cs.AI."
+    "AI Brief news image. Headline: Rapidly scaling online storage to serve over 1 billion ChatGPT users (Part II). Source: OpenAI News.",
+    "AI Brief news image. Headline: Securing our frontier model training environment. Source: OpenAI News.",
+    "AI Brief news image. Headline: OpenAI and Poland’s NASK partner to advance AI safety and security. Source: OpenAI News.",
+    "AI Brief news image. Headline: Build more responsive apps with the Decisions API. Source: OpenAI News.",
+    "AI Brief news image. Headline: What FDE means at OpenAI. Source: OpenAI News."
   ],
   "image_paths": [
-    "posts/2026-10-23-01.jpg",
-    "posts/2026-10-23-02.jpg",
-    "posts/2026-10-23-03.jpg",
-    "posts/2026-10-23-04.jpg",
-    "posts/2026-10-23-05.jpg"
+    "posts/2026-10-24-01.jpg",
+    "posts/2026-10-24-02.jpg",
+    "posts/2026-10-24-03.jpg",
+    "posts/2026-10-24-04.jpg",
+    "posts/2026-10-24-05.jpg"
   ],
   "image_urls": [
-    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-10-23-01.jpg",
-    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-10-23-02.jpg",
-    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-10-23-03.jpg",
-    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-10-23-04.jpg",
-    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-10-23-05.jpg"
+    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-10-24-01.jpg",
+    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-10-24-02.jpg",
+    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-10-24-03.jpg",
+    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-10-24-04.jpg",
+    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-10-24-05.jpg"
   ],
   "carousel": true,
   "content_type": "news"
