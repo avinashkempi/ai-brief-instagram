@@ -1,7 +1,7 @@
 {
-  "date": "2026-10-24",
+  "date": "2026-10-25",
   "status": "ready",
-  "generated_at": "2026-10-24T06:23:25.332922+00:00",
+  "generated_at": "2026-10-25T06:43:36.868556+00:00",
   "stories": [
     {
       "title": "Rapidly scaling online storage to serve over 1 billion ChatGPT users (Part II)",
@@ -36,12 +36,12 @@
       "summary": "Fast, focused, low-cost decisions for any application."
     },
     {
-      "title": "What FDE means at OpenAI",
-      "url": "https://openai.com/index/forward-deployed-engineering-means",
-      "published": "2026-10-22T06:00:00+00:00",
-      "source": "OpenAI News",
+      "title": "Beyond tree cover: mapping the world’s forest types",
+      "url": "https://deepmind.google/blog/beyond-tree-cover-mapping-the-worlds-forest-types/",
+      "published": "2026-10-22T14:30:24+00:00",
+      "source": "Google DeepMind",
       "priority": 1,
-      "summary": "What forward deployed engineering means at OpenAI"
+      "summary": "A global map categorizing every 10-meter patch of land on Earth into distinct forest types."
     }
   ],
   "story": {
@@ -52,27 +52,27 @@
     "priority": 1,
     "summary": "Learn how OpenAI scaled Habitat with reliable multi-tenancy, global caching, and Azure Cosmos DB to deliver 12× faster reads for ChatGPT."
   },
-  "caption": "Today's AI Brief: 5 developments.\n\nSwipe through for the stories and sources.\n\n1. Rapidly scaling online storage to serve over 1 billion ChatGPT users (Part II)\nLearn how OpenAI scaled Habitat with reliable multi-tenancy, global caching, and Azure Cosmos DB to deliver 1…\nSource: OpenAI News\nhttps://openai.com/index/scaling-storage-one-billion-users-part-two\n\n2. Securing our frontier model training environment\nOpenAI explains how we strengthened containment for frontier model training and evaluation, including offline…\nSource: OpenAI News\nhttps://openai.com/index/securing-our-frontier-model-training-environment\n\n3. OpenAI and Poland’s NASK partner to advance AI safety and security\nOpenAI and Poland’s NASK are partnering on AI safety, security, and technical research to strengthen safeguar…\nSource: OpenAI News\nhttps://openai.com/index/openai-nask-ai-safety-security-partnership\n\n4. Build more responsive apps with the Decisions API\nFast, focused, low-cost decisions for any application.\nSource: OpenAI News\nhttps://openai.com/index/decisions-api\n\n5. What FDE means at OpenAI\nWhat forward deployed engineering means at OpenAI\nSource: OpenAI News\nhttps://openai.com/index/forward-deployed-engineering-means\n\nAI Brief · Daily AI developments",
+  "caption": "Today's AI Brief: 5 developments.\n\nSwipe through for the stories and sources.\n\n1. Rapidly scaling online storage to serve over 1 billion ChatGPT users (Part II)\nLearn how OpenAI scaled Habitat with reliable multi-tenancy, global caching, and Azure Cosmos DB to deliver 1…\nSource: OpenAI News\nhttps://openai.com/index/scaling-storage-one-billion-users-part-two\n\n2. Securing our frontier model training environment\nOpenAI explains how we strengthened containment for frontier model training and evaluation, including offline…\nSource: OpenAI News\nhttps://openai.com/index/securing-our-frontier-model-training-environment\n\n3. OpenAI and Poland’s NASK partner to advance AI safety and security\nOpenAI and Poland’s NASK are partnering on AI safety, security, and technical research to strengthen safeguar…\nSource: OpenAI News\nhttps://openai.com/index/openai-nask-ai-safety-security-partnership\n\n4. Build more responsive apps with the Decisions API\nFast, focused, low-cost decisions for any application.\nSource: OpenAI News\nhttps://openai.com/index/decisions-api\n\n5. Beyond tree cover: mapping the world’s forest types\nA global map categorizing every 10-meter patch of land on Earth into distinct forest types.\nSource: Google DeepMind\nhttps://deepmind.google/blog/beyond-tree-cover-mapping-the-worlds-forest-types/\n\nAI Brief · Daily AI developments",
   "alt_texts": [
     "AI Brief news image. Headline: Rapidly scaling online storage to serve over 1 billion ChatGPT users (Part II). Source: OpenAI News.",
     "AI Brief news image. Headline: Securing our frontier model training environment. Source: OpenAI News.",
     "AI Brief news image. Headline: OpenAI and Poland’s NASK partner to advance AI safety and security. Source: OpenAI News.",
     "AI Brief news image. Headline: Build more responsive apps with the Decisions API. Source: OpenAI News.",
-    "AI Brief news image. Headline: What FDE means at OpenAI. Source: OpenAI News."
+    "AI Brief news image. Headline: Beyond tree cover: mapping the world’s forest types. Source: Google DeepMind."
   ],
   "image_paths": [
-    "posts/2026-10-24-01.jpg",
-    "posts/2026-10-24-02.jpg",
-    "posts/2026-10-24-03.jpg",
-    "posts/2026-10-24-04.jpg",
-    "posts/2026-10-24-05.jpg"
+    "posts/2026-10-25-01.jpg",
+    "posts/2026-10-25-02.jpg",
+    "posts/2026-10-25-03.jpg",
+    "posts/2026-10-25-04.jpg",
+    "posts/2026-10-25-05.jpg"
   ],
   "image_urls": [
-    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-10-24-01.jpg",
-    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-10-24-02.jpg",
-    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-10-24-03.jpg",
-    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-10-24-04.jpg",
-    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-10-24-05.jpg"
+    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-10-25-01.jpg",
+    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-10-25-02.jpg",
+    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-10-25-03.jpg",
+    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-10-25-04.jpg",
+    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-10-25-05.jpg"
   ],
   "carousel": true,
   "content_type": "news"
