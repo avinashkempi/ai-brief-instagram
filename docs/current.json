@@ -1,78 +1,78 @@
 {
-  "date": "2026-10-25",
+  "date": "2026-10-26",
   "status": "ready",
-  "generated_at": "2026-10-25T06:43:36.868556+00:00",
+  "generated_at": "2026-10-26T06:52:59.292209+00:00",
   "stories": [
     {
-      "title": "Rapidly scaling online storage to serve over 1 billion ChatGPT users (Part II)",
-      "url": "https://openai.com/index/scaling-storage-one-billion-users-part-two",
-      "published": "2026-10-23T17:00:00+00:00",
-      "source": "OpenAI News",
-      "priority": 1,
-      "summary": "Learn how OpenAI scaled Habitat with reliable multi-tenancy, global caching, and Azure Cosmos DB to deliver 12× faster reads for ChatGPT."
+      "title": "Tradeoff-Aware Territory Design: A Multi-Objective Decision System for Enterprise Customer-to-Seller Allocation",
+      "url": "https://arxiv.org/abs/2610.31701",
+      "published": "2026-10-26T04:00:00+00:00",
+      "source": "arXiv cs.AI",
+      "priority": 2,
+      "summary": "arXiv:2610.31701v1 Announce Type: new Abstract: Enterprise customer journeys are shaped not only by product experiences and marketing, but also by recurring resource-allocation decisions. In B2B go-to-market (GTM) organizations, territory carving determines which accounts receive seller coverage, which seller-account relationships are preserved, and how limited field capacity is distributed. Yet the process often remains manual, making it difficult to compare opportunities, value continuity, and evaluate tradeoffs among growth, balance, capacity, and feasibility. We present a production decision system for tradeoff-aware customer-to-seller allocation in enterprise GTM planning. It integrates three components: a multidimensional account-value layer that combines predictive signals to score opportunity; an observational continuity-valuation layer that estimates the cost of breaking seller-account relationships using a synthetic-control-style counterfactual framework; and a multi-objective optimization layer that allocates coverage to high-value accounts while considering continuity, opportunity balance, and operational constraints. Deployed as a scenario-based decision-support system, the framework enables planners to inspect and compare allocation tradeoffs. Historical backtesting shows that optimizer-generated scenarios substantially improve assignment compliance while maintaining comparable seller-level opportunity distribution. In production planning, adopted scenarios improved both assignment compliance and opportunity balance relative to the previous baseline. Directing scarce seller capacity toward higher-value accounts also offers incremental revenue potential at enterprise scale. The key contribution is an integrated, inspectable framework that turns territory carving into a governable decision process."
     },
     {
-      "title": "Securing our frontier model training environment",
-      "url": "https://openai.com/index/securing-our-frontier-model-training-environment",
-      "published": "2026-10-23T10:00:00+00:00",
-      "source": "OpenAI News",
-      "priority": 1,
-      "summary": "OpenAI explains how we strengthened containment for frontier model training and evaluation, including offline environments and high-compute red-teaming."
+      "title": "Phronix: The Capability-Centric Learning Paradigm for Agents",
+      "url": "https://arxiv.org/abs/2610.31789",
+      "published": "2026-10-26T04:00:00+00:00",
+      "source": "arXiv cs.AI",
+      "priority": 2,
+      "summary": "arXiv:2610.31789v1 Announce Type: new Abstract: Scientific computing increasingly relies on large language model-based agents for performance engineering tasks such as instrumentation, analysis, and workflow porting. However, agent effectiveness depends heavily on the surrounding harness, which typically relies on manually written skills and curated memory. This limits autonomous learning, forcing agents to repeatedly rediscover solutions rather than retain and reuse knowledge from prior executions. We introduce Phronix, a capability-centric learning paradigm that enables agentic harnesses to acquire, validate, and refine reusable capabilities from their own executions. Phronix operates through a predictor-validator-corrector loop: MCP tools and associated skills propose solutions, tool executions validate them, and observed outcomes refine the stored capabilities. It distills every observed interaction into a capability store and researches a failing task rather than abandoning it. First, such learned capabilities solve a recurring task on the first attempt in 93-95% of cases across every model, significantly reducing solution non-determinism and improving reliability. Second, Phronix turns an agent's own execution into 7.6-30.8 durable capabilities per task without user instruction, and creation falls below two once the needed capability exists. Third, warm-start runs consume only 0.38-0.40 million tokens per task, which is three to four times less than a single baseline attempt, while a cold-start costs no more than the baseline. On the 1000 Genome Pegasus workflow, instrumenting a production application for I/O performance analysis, Phronix passes all 11 correctness checks against six for the baseline harness, and also lifts the task solving rates of two cheaper models from 29% and 27% of SWE-bench tasks solved to 91% and 87%, respectively, matching the performance of the most expensive evaluated model."
     },
     {
-      "title": "OpenAI and Poland’s NASK partner to advance AI safety and security",
-      "url": "https://openai.com/index/openai-nask-ai-safety-security-partnership",
-      "published": "2026-10-23T00:00:00+00:00",
-      "source": "OpenAI News",
-      "priority": 1,
-      "summary": "OpenAI and Poland’s NASK are partnering on AI safety, security, and technical research to strengthen safeguards and support a more resilient digital ecosystem."
+      "title": "Patronizing and Condescending Language Detection in English and Mandarin",
+      "url": "https://arxiv.org/abs/2610.31808",
+      "published": "2026-10-26T04:00:00+00:00",
+      "source": "arXiv cs.AI",
+      "priority": 2,
+      "summary": "arXiv:2610.31808v1 Announce Type: new Abstract: Patronizing and condescending language (PCL) is a form of harmful language that belittles and assumes pity for vulnerable groups, reinforcing negative societal stereotypes. However, unlike overt hate speech, it is often difficult to detect, even for human judges. This paper proposes a system for the automated detection of PCL. Our first approach uses static word embeddings and a convolutional neural network for classification, while our second approach uses pre-trained BERT embeddings fine-tuned for the PCL task. Our second approach was considerably more successful, and achieved an F1 score of 0.528 over the development set."
     },
     {
-      "title": "Build more responsive apps with the Decisions API",
-      "url": "https://openai.com/index/decisions-api",
-      "published": "2026-10-22T19:00:00+00:00",
-      "source": "OpenAI News",
-      "priority": 1,
-      "summary": "Fast, focused, low-cost decisions for any application."
+      "title": "PaperFormalizer: Author-in-the-Loop Autoformalization of Research Papers in Lean",
+      "url": "https://arxiv.org/abs/2610.31810",
+      "published": "2026-10-26T04:00:00+00:00",
+      "source": "arXiv cs.AI",
+      "priority": 2,
+      "summary": "arXiv:2610.31810v1 Announce Type: new Abstract: Even a carefully proofread paper can leave small gaps in its proofs or its stated assumptions. We introduce PaperFormalizer, a Lean-based agentic pipeline that helps authors find and close such gaps in their own papers and turn each paper into a Lean-verified version. Starting from the LaTeX source, PaperFormalizer transcribes the paper into a dependency graph of statements, audits each statement in natural language for faithfulness, ambiguity and correctness, and then formalizes and proves the statements in Lean against Mathlib, optional domain libraries and the author's personal toolkit. Only the author knows what a statement is meant to say and how a formalization gap in a result is best fixed. The pipeline therefore stops and asks the author whenever a statement admits more than one reading, presents every repair, in natural language and TeX symbols, as a proposal that the author can accept, decline or redirect, and leaves to the author every decision that could potentially change what the paper claims. The output is an annotated and revised version of the paper, a report of the changes, and Lean code in which each declaration is linked to the statement it formalizes. The author's toolkit grows as more papers are formalized, and authors can share their verified papers so that researchers who build on them can reuse their Lean code. By making verified papers practical to produce, PaperFormalizer aims to make research that rests on mathematical proofs more robust. PaperFormalizer runs inside a coding agent (Claude Code or Codex) and is available at Papers with Lean code shared by users are available at"
     },
     {
-      "title": "Beyond tree cover: mapping the world’s forest types",
-      "url": "https://deepmind.google/blog/beyond-tree-cover-mapping-the-worlds-forest-types/",
-      "published": "2026-10-22T14:30:24+00:00",
-      "source": "Google DeepMind",
-      "priority": 1,
-      "summary": "A global map categorizing every 10-meter patch of land on Earth into distinct forest types."
+      "title": "Don't Forget What You Just Learned: Self-Directed Repair Turns Agent Mistakes Into Lasting Lessons",
+      "url": "https://arxiv.org/abs/2610.31846",
+      "published": "2026-10-26T04:00:00+00:00",
+      "source": "arXiv cs.AI",
+      "priority": 2,
+      "summary": "arXiv:2610.31846v1 Announce Type: new Abstract: Intelligent agents should learn from their mistakes so that experience leads to continuous improvement. Yet today's agents recover from a mistake only temporarily: in-context reflections are easily forgotten across sessions and compete for limited context, while full-parameter fine-tuning is expensive and can interfere with existing capabilities. We introduce Self-Direction, a mechanism for agents to learn from mistakes that combines the benefits of temporary in-context retries and policy updates. When an agent fails a task, it reflects on its own trajectory in order to extract a lesson and immediately distills it into a lightweight low-rank adapter. By keeping the original weights frozen, Self-Direction prevents adapter training from overwriting base-model parameters while training additional parameters equivalent to ~0.02% of the base model's parameter count for each adapter. The agent then saves these adapters in a persistent library of lessons, automatically routing them to solve related problems later. Experiments with agents based on open-weight models from the Qwen family across open-ended research (GAIA), tool-use workflows (Claw-Eval), and terminal tasks (Terminal-Bench 2.1) show that our method improves overall success rates by 8.9 to 17.0 percentage points and performs competitively with frontier systems. We find that Self-Direction reduces repeated mistakes across future encounters of a task, nearly doubling the reliability of an agent's corrections. Learned lessons also transfer: a handful of adapters generalize to dozens of new tasks without additional training. Ultimately, this self-directed repair transforms everyday mistakes into lasting lessons."
     }
   ],
   "story": {
-    "title": "Rapidly scaling online storage to serve over 1 billion ChatGPT users (Part II)",
-    "url": "https://openai.com/index/scaling-storage-one-billion-users-part-two",
-    "published": "2026-10-23T17:00:00+00:00",
-    "source": "OpenAI News",
-    "priority": 1,
-    "summary": "Learn how OpenAI scaled Habitat with reliable multi-tenancy, global caching, and Azure Cosmos DB to deliver 12× faster reads for ChatGPT."
+    "title": "Tradeoff-Aware Territory Design: A Multi-Objective Decision System for Enterprise Customer-to-Seller Allocation",
+    "url": "https://arxiv.org/abs/2610.31701",
+    "published": "2026-10-26T04:00:00+00:00",
+    "source": "arXiv cs.AI",
+    "priority": 2,
+    "summary": "arXiv:2610.31701v1 Announce Type: new Abstract: Enterprise customer journeys are shaped not only by product experiences and marketing, but also by recurring resource-allocation decisions. In B2B go-to-market (GTM) organizations, territory carving determines which accounts receive seller coverage, which seller-account relationships are preserved, and how limited field capacity is distributed. Yet the process often remains manual, making it difficult to compare opportunities, value continuity, and evaluate tradeoffs among growth, balance, capacity, and feasibility. We present a production decision system for tradeoff-aware customer-to-seller allocation in enterprise GTM planning. It integrates three components: a multidimensional account-value layer that combines predictive signals to score opportunity; an observational continuity-valuation layer that estimates the cost of breaking seller-account relationships using a synthetic-control-style counterfactual framework; and a multi-objective optimization layer that allocates coverage to high-value accounts while considering continuity, opportunity balance, and operational constraints. Deployed as a scenario-based decision-support system, the framework enables planners to inspect and compare allocation tradeoffs. Historical backtesting shows that optimizer-generated scenarios substantially improve assignment compliance while maintaining comparable seller-level opportunity distribution. In production planning, adopted scenarios improved both assignment compliance and opportunity balance relative to the previous baseline. Directing scarce seller capacity toward higher-value accounts also offers incremental revenue potential at enterprise scale. The key contribution is an integrated, inspectable framework that turns territory carving into a governable decision process."
   },
-  "caption": "Today's AI Brief: 5 developments.\n\nSwipe through for the stories and sources.\n\n1. Rapidly scaling online storage to serve over 1 billion ChatGPT users (Part II)\nLearn how OpenAI scaled Habitat with reliable multi-tenancy, global caching, and Azure Cosmos DB to deliver 1…\nSource: OpenAI News\nhttps://openai.com/index/scaling-storage-one-billion-users-part-two\n\n2. Securing our frontier model training environment\nOpenAI explains how we strengthened containment for frontier model training and evaluation, including offline…\nSource: OpenAI News\nhttps://openai.com/index/securing-our-frontier-model-training-environment\n\n3. OpenAI and Poland’s NASK partner to advance AI safety and security\nOpenAI and Poland’s NASK are partnering on AI safety, security, and technical research to strengthen safeguar…\nSource: OpenAI News\nhttps://openai.com/index/openai-nask-ai-safety-security-partnership\n\n4. Build more responsive apps with the Decisions API\nFast, focused, low-cost decisions for any application.\nSource: OpenAI News\nhttps://openai.com/index/decisions-api\n\n5. Beyond tree cover: mapping the world’s forest types\nA global map categorizing every 10-meter patch of land on Earth into distinct forest types.\nSource: Google DeepMind\nhttps://deepmind.google/blog/beyond-tree-cover-mapping-the-worlds-forest-types/\n\nAI Brief · Daily AI developments",
+  "caption": "Today's AI Brief: 5 developments.\n\nSwipe through for the stories and sources.\n\n1. Tradeoff-Aware Territory Design: A Multi-Objective Decision System for Enterprise Customer-to-Seller Allocation\narXiv:2610.31701v1 Announce Type: new Abstract: Enterprise customer journeys are shaped not only by product e…\nSource: arXiv cs.AI\nhttps://arxiv.org/abs/2610.31701\n\n2. Phronix: The Capability-Centric Learning Paradigm for Agents\narXiv:2610.31789v1 Announce Type: new Abstract: Scientific computing increasingly relies on large language mo…\nSource: arXiv cs.AI\nhttps://arxiv.org/abs/2610.31789\n\n3. Patronizing and Condescending Language Detection in English and Mandarin\narXiv:2610.31808v1 Announce Type: new Abstract: Patronizing and condescending language (PCL) is a form of har…\nSource: arXiv cs.AI\nhttps://arxiv.org/abs/2610.31808\n\n4. PaperFormalizer: Author-in-the-Loop Autoformalization of Research Papers in Lean\narXiv:2610.31810v1 Announce Type: new Abstract: Even a carefully proofread paper can leave small gaps in its…\nSource: arXiv cs.AI\nhttps://arxiv.org/abs/2610.31810\n\n5. Don't Forget What You Just Learned: Self-Directed Repair Turns Agent Mistakes Into Lasting Lessons\narXiv:2610.31846v1 Announce Type: new Abstract: Intelligent agents should learn from their mistakes so that e…\nSource: arXiv cs.AI\nhttps://arxiv.org/abs/2610.31846\n\nAI Brief · Daily AI developments",
   "alt_texts": [
-    "AI Brief news image. Headline: Rapidly scaling online storage to serve over 1 billion ChatGPT users (Part II). Source: OpenAI News.",
-    "AI Brief news image. Headline: Securing our frontier model training environment. Source: OpenAI News.",
-    "AI Brief news image. Headline: OpenAI and Poland’s NASK partner to advance AI safety and security. Source: OpenAI News.",
-    "AI Brief news image. Headline: Build more responsive apps with the Decisions API. Source: OpenAI News.",
-    "AI Brief news image. Headline: Beyond tree cover: mapping the world’s forest types. Source: Google DeepMind."
+    "AI Brief news image. Headline: Tradeoff-Aware Territory Design: A Multi-Objective Decision System for Enterprise Customer-to-Seller Allocation. Source: arXiv cs.AI.",
+    "AI Brief news image. Headline: Phronix: The Capability-Centric Learning Paradigm for Agents. Source: arXiv cs.AI.",
+    "AI Brief news image. Headline: Patronizing and Condescending Language Detection in English and Mandarin. Source: arXiv cs.AI.",
+    "AI Brief news image. Headline: PaperFormalizer: Author-in-the-Loop Autoformalization of Research Papers in Lean. Source: arXiv cs.AI.",
+    "AI Brief news image. Headline: Don't Forget What You Just Learned: Self-Directed Repair Turns Agent Mistakes Into Lasting Lessons. Source: arXiv cs.AI."
   ],
   "image_paths": [
-    "posts/2026-10-25-01.jpg",
-    "posts/2026-10-25-02.jpg",
-    "posts/2026-10-25-03.jpg",
-    "posts/2026-10-25-04.jpg",
-    "posts/2026-10-25-05.jpg"
+    "posts/2026-10-26-01.jpg",
+    "posts/2026-10-26-02.jpg",
+    "posts/2026-10-26-03.jpg",
+    "posts/2026-10-26-04.jpg",
+    "posts/2026-10-26-05.jpg"
   ],
   "image_urls": [
-    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-10-25-01.jpg",
-    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-10-25-02.jpg",
-    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-10-25-03.jpg",
-    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-10-25-04.jpg",
-    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-10-25-05.jpg"
+    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-10-26-01.jpg",
+    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-10-26-02.jpg",
+    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-10-26-03.jpg",
+    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-10-26-04.jpg",
+    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-10-26-05.jpg"
   ],
   "carousel": true,
   "content_type": "news"
