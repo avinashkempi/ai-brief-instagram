@@ -1,12 +1,12 @@
 {
-  "date": "2026-10-30",
+  "date": "2026-10-31",
   "status": "ready",
-  "generated_at": "2026-10-30T07:41:29.352075+00:00",
+  "generated_at": "2026-10-31T07:27:25.535493+00:00",
   "stories": [
     {
       "title": "LRMoE: Demand-Side Load Re-Calibration for Efficient MoE Training on Memory-Constrained Nodes",
       "url": "https://arxiv.org/abs/2610.37720",
-      "published": "2026-10-30T04:00:00+00:00",
+      "published": "2026-10-31T04:00:00+00:00",
       "source": "arXiv cs.AI",
       "priority": 2,
       "summary": "arXiv:2610.37720v1 Announce Type: new Abstract: Sparse Mixture-of-Experts (MoE) models offer scalable capacity for Web applications, but uneven routing creates computation and communication bottlenecks. Existing placement and replication methods redistribute this workload, yet additional expert copies compete with token-related buffers for limited GPU memory. We present LRMoE, a memory-aware MoE training system that jointly recalibrates backward demand and balances the retained workload. During forward execution, it plans retention quotas and expert placement under resource constraints while preserving all routed computations. During backpropagation, a load recalibration metric estimates each token-expert pair's contribution to the expert update and selects pairs within these quotas. A capacity-aware routing algorithm distributes retained pairs among eligible instances of their original experts. Physical compaction then forms smaller communication payloads and variable-size grouped GEMMs, reducing backward traffic, computation, and execution-buffer demand. Experiments on Qwen3-30B-A3B and GLM4.5-106B-A12B show that LRMoE reduces cumulative MoE-layer training time to fixed-loss targets by 21.2-44.8% relative to SYMI."
@@ -14,7 +14,7 @@
     {
       "title": "Amortized Localized Posterior Inference for Model Calibration with Application to an Ocean Turbulence Closure",
       "url": "https://arxiv.org/abs/2610.37731",
-      "published": "2026-10-30T04:00:00+00:00",
+      "published": "2026-10-31T04:00:00+00:00",
       "source": "arXiv cs.AI",
       "priority": 2,
       "summary": "arXiv:2610.37731v1 Announce Type: new Abstract: Model discrepancy may prevent a single calibration parameter from reproducing a physical response across the context domain. In addition, uncertainties in observations and contexts affect calibration and must be accounted for and quantified. We construct a family of localized posteriors by weighting observation likelihoods according to their proximity to a target context. Gaussian localization weights incorporate context uncertainty through covariance inflation, with reflection at domain boundaries and an optional correction for uneven context sampling. A conditional normalizing flow approximates the family of posteriors through amortized variational inference. Integrating the localized posteriors under a prescribed context measure gives the marginalized parameter distribution. In a twin experiment with the Branin-Hoo model, we compare global and localized inference under uniform and skewed context distributions. Localization reduces the reported aggregate predictive errors relative to the global posterior. An application to the k-$\\epsilon$ turbulence closure in a single-column ocean model, with atmospheric surface forcing as context, shows that localized posterior calibration reduces temperature and zonal-velocity errors relative to deterministic and global-posterior calibration. Both twin experiments are constructed to admit local compensation."
@@ -22,7 +22,7 @@
     {
       "title": "ThinkJev: One Thought, Every Budget for Calibrated Typed Decisions",
       "url": "https://arxiv.org/abs/2610.37732",
-      "published": "2026-10-30T04:00:00+00:00",
+      "published": "2026-10-31T04:00:00+00:00",
       "source": "arXiv cs.AI",
       "priority": 2,
       "summary": "arXiv:2610.37732v1 Announce Type: new Abstract: Many uses of language models end in a typed decision: a choice among a closed set of options, whose probabilities code can act on. Reading those probabilities from one forward pass is fast but often wrong on decisions that take several steps, such as arithmetic, counting, and date comparison. Letting the model think first fixes most of these errors, but costs seconds per decision instead of milliseconds. To pay for thinking only where it helps, ThinkJev builds a fast and a slow system from one open hybrid-thinking model that can answer directly or after a thought. System 1 reads the model's probabilities for the option letters when it answers directly; System 2 reads the same letters after the model has thought on the same cached prompt, so escalating repeats no work and both systems give probabilities over the same options. Because the letters can be read after any number of thought tokens, one sampled thought also gives the answer under every thinking budget. Without training, ThinkJev lets System 1 answer alone only where a statistical test on labeled dev data guarantees that its accepted answers stay under a target error rate. At a 5% target, Qwen3.5-27B answers 24.5% of 8359 test decisions this way with a realized error of 3.9% (Qwen3.5-4B and 9B: 6.5% and 0.0%). For the rest, stopping each thought as soon as its answer is confident reaches 81.6% accuracy, against 82.7% for always thinking, with 72% of the thought tokens. Choosing when to think from System 1's confidence alone saves less, because the decisions System 1 is least sure of are often not the ones thinking fixes. On the public items of JevBench, an independent benchmark of typed-decision services, Qwen3.5-27B thinks on 29.4% and is not distinguishable in accuracy from the two thinking APIs listed (exploratory). Code and data generators are available at"
@@ -30,7 +30,7 @@
     {
       "title": "OpenFrontiers: A Collection of Open Research Problems and a Benchmark for Scientific Rediscovery",
       "url": "https://arxiv.org/abs/2610.37739",
-      "published": "2026-10-30T04:00:00+00:00",
+      "published": "2026-10-31T04:00:00+00:00",
       "source": "arXiv cs.AI",
       "priority": 2,
       "summary": "arXiv:2610.37739v1 Announce Type: new Abstract: Large language models (LLMs) have shown increasing promise in research-level problem solving, yet a comprehensive collection of such problems is still missing, and evaluating them on research-level problems remains challenging. We introduce OpenFrontiers, a cross-disciplinary resource that combines a structured corpus of open research problems with a retrospective benchmark of recently resolved problems in mathematics. The corpus records problem statements, context, progress, and other information for 12,151 problems. The benchmark contains 200 problems, 110 resolved in 2026 and 90 still open, each with a Lean~4 statement checked by automated probes and two independent reviews; a subset HQ-50 further filters based on quality score, etc. Our evaluation protocol grades formal proofs with two independent checkers in an isolated sandbox under closed-book, frozen-retrieval, and live-web conditions. Evaluating seven LLM agents on the HQ-50 subset under a standardized budget, we find that closed-book rediscovery is rare, at most 7 of 40 resolved problems, whereas live-web success mostly reflects retrieval of published solutions. By linking a broad research-problem corpus to a formally graded evaluation subset with documented solutions, OpenFrontiers provides a foundation for measuring research-level rediscovery and studying progress toward solving currently open scientific problems. The dataset and benchmark could be found in"
@@ -38,7 +38,7 @@
     {
       "title": "WebAnything: From the Wild Web to Scalable Agent Environments",
       "url": "https://arxiv.org/abs/2610.37786",
-      "published": "2026-10-30T04:00:00+00:00",
+      "published": "2026-10-31T04:00:00+00:00",
       "source": "arXiv cs.AI",
       "priority": 2,
       "summary": "arXiv:2610.37786v1 Announce Type: new Abstract: Web agents require diverse, executable, and resettable website environments for reproducible training and evaluation. Human-assisted mirrors demand per-site engineering, while generative construction can diverge from specified real websites. Capture-and-replay preserves observations, with interaction coverage constrained by captured content and replay capabilities. We present WebAnything, a fully automated framework that reconstructs source-grounded, reusable Web environments from real URLs without per-site manual implementation or repair after initial setup and authorization. An Explorer-Builder collects browser-observable structures, resources, and interaction outcomes; an independent verifier checks frozen candidates and guides local repair or targeted source recapture. We construct 244 website artifacts across 14 application domains and 53 categories, supporting 12,984 executed and accepted tasks. Compared with human-assisted WebHarbor, WebAnything achieves higher aggregate scores on three fidelity metrics, with 12 wins, two ties, and no losses in a blind audit. Fine-tuning Qwen3.5-9B on 5,856 interaction trajectories improves REAL success by 9.9 percentage points, Odysseys-Easy Rubric Avg and Task Avg by 6.25 and 6.32 percentage points, and WebArena-Verified Overall success by 13.33 percentage points under the fixed harness. Code:"
@@ -47,7 +47,7 @@
   "story": {
     "title": "LRMoE: Demand-Side Load Re-Calibration for Efficient MoE Training on Memory-Constrained Nodes",
     "url": "https://arxiv.org/abs/2610.37720",
-    "published": "2026-10-30T04:00:00+00:00",
+    "published": "2026-10-31T04:00:00+00:00",
     "source": "arXiv cs.AI",
     "priority": 2,
     "summary": "arXiv:2610.37720v1 Announce Type: new Abstract: Sparse Mixture-of-Experts (MoE) models offer scalable capacity for Web applications, but uneven routing creates computation and communication bottlenecks. Existing placement and replication methods redistribute this workload, yet additional expert copies compete with token-related buffers for limited GPU memory. We present LRMoE, a memory-aware MoE training system that jointly recalibrates backward demand and balances the retained workload. During forward execution, it plans retention quotas and expert placement under resource constraints while preserving all routed computations. During backpropagation, a load recalibration metric estimates each token-expert pair's contribution to the expert update and selects pairs within these quotas. A capacity-aware routing algorithm distributes retained pairs among eligible instances of their original experts. Physical compaction then forms smaller communication payloads and variable-size grouped GEMMs, reducing backward traffic, computation, and execution-buffer demand. Experiments on Qwen3-30B-A3B and GLM4.5-106B-A12B show that LRMoE reduces cumulative MoE-layer training time to fixed-loss targets by 21.2-44.8% relative to SYMI."
@@ -61,18 +61,18 @@
     "AI Brief news image. Headline: WebAnything: From the Wild Web to Scalable Agent Environments. Source: arXiv cs.AI."
   ],
   "image_paths": [
-    "posts/2026-10-30-01.jpg",
-    "posts/2026-10-30-02.jpg",
-    "posts/2026-10-30-03.jpg",
-    "posts/2026-10-30-04.jpg",
-    "posts/2026-10-30-05.jpg"
+    "posts/2026-10-31-01.jpg",
+    "posts/2026-10-31-02.jpg",
+    "posts/2026-10-31-03.jpg",
+    "posts/2026-10-31-04.jpg",
+    "posts/2026-10-31-05.jpg"
   ],
   "image_urls": [
-    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-10-30-01.jpg",
-    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-10-30-02.jpg",
-    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-10-30-03.jpg",
-    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-10-30-04.jpg",
-    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-10-30-05.jpg"
+    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-10-31-01.jpg",
+    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-10-31-02.jpg",
+    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-10-31-03.jpg",
+    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-10-31-04.jpg",
+    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-10-31-05.jpg"
   ],
   "carousel": true,
   "content_type": "news"
