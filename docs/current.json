@@ -1,78 +1,78 @@
 {
-  "date": "2026-11-02",
+  "date": "2026-11-03",
   "status": "ready",
-  "generated_at": "2026-11-02T08:11:30.480146+00:00",
+  "generated_at": "2026-11-03T08:30:24.168081+00:00",
   "stories": [
     {
-      "title": "More Rules, Longer Lists? Benchmarking Self-Evolving Agents on a Hidden-Rule Curriculum",
-      "url": "https://arxiv.org/abs/2610.40758",
-      "published": "2026-11-02T05:00:00+00:00",
-      "source": "arXiv cs.AI",
-      "priority": 2,
-      "summary": "arXiv:2610.40758v1 Announce Type: new Abstract: Self-evolving agents rewrite a persistent state from feedback, but it is largely untested whether this lets them learn a rule nobody told them. An agent can also pass by writing down each correction as an exception, and its list then grows with every new rule. We introduce CLR-Bench, a Curriculum of Latent Rules benchmark. Each chain adds one hidden rule per level on top of the earlier ones. A rule acts on an opaque label that stands for a named grouping published on the Web, such as the founding members of an airline alliance. The task gives one example value, practice feedback reveals one more member and one non-member, and the test checks unseen members and similar non-members. Probes certify that the base model knows the members of each grouping and does not guess it without feedback, and that the evidence identifies the grouping once labels are read as named groupings. An automated pipeline builds chains from a new data domain, and we release 20 chains over 10 domains. We evaluate six recent self-evolution methods. With the certifying model they barely learn. The best gain at most 5 points over a frozen agent and exclude only 6-12% of the unseen members from the count, fewer than the 20% reached by simply keeping the raw practice history. A fixed lesson that states the named-grouping convention lifts the same methods by 14.5 to 16.5 points. Their states hold the revealed member in 75-98% of cases and almost never the class name, and when practice exposes a member the list misses, they add that member to the list. With the stronger GPT-6-Sol, ACE and Dynamic Cheatsheet learn from feedback alone. They reach 78% accuracy and solve 59-60% of the single cells, against 53% and 8% with the certifying model, and they surpass the raw history. CLR-Bench therefore measures how well an agent learns, and this ability differs across models."
+      "title": "Rewarding defenders with bigger bug bounties",
+      "url": "https://openai.com/index/rewarding-defenders-with-bigger-bug-bounties",
+      "published": "2026-11-02T18:00:00+00:00",
+      "source": "OpenAI News",
+      "priority": 1,
+      "summary": "OpenAI is raising Security Bug Bounty rewards and introducing report quality, loyalty, and priority campaign bonuses for independent security researchers."
     },
     {
-      "title": "Beyond Plausible Prediction: Safety Sufficiency in Web World Models",
-      "url": "https://arxiv.org/abs/2610.40798",
-      "published": "2026-11-02T05:00:00+00:00",
-      "source": "arXiv cs.AI",
-      "priority": 2,
-      "summary": "arXiv:2610.40798v1 Announce Type: new Abstract: Web world models increasingly predict the consequences of candidate actions before agents act, yet a plausible predicted future does not necessarily support the correct safety decision. In a matched human evaluation of 3,000 predictions from ten frozen open models, 86.1% are judged semantically plausible. However, several models exhibit highly asymmetric authorisation behaviour, combining low false-safe execution with poor recall of clarifiable ASK cases and a strong preference for BLOCK. This motivates safety sufficiency: whether a predictive interface preserves and exposes the policy-decisive information required to distinguish actions that may be EXECUTED, require clarification through ASK, or should be BLOCKED. We introduce SafeWebWorld, a benchmark for evaluating safety sufficiency across five web-safety domains through action-conditioned futures, policy-decisive evidence, and policy-conditioned decisions. Under a controlled Security-Aligned Supervised Fine-Tuning protocol, evidence preservation can improve substantially while authorisation-sensitive decisions deteriorate. To determine whether this deterioration reflects loss of authorisation-sensitive score structure or a failure of the decision readout, we introduce Latent Authorisation Recovery (LAR). Frozen-score recalibration reveals substantial but backbone-dependent recovery, while paired recovery provides only a modest additional gain. Yet within-family and matched-authorisation evaluations remain poor, showing that aggregate recoverability does not imply robust fine-grained authorisation behaviour. Overall, plausible prediction, evidence preservation, and aggregate recovery are each insufficient on their own to establish robust authorisation."
+      "title": "Preparing our next security sprint to harden OpenAI",
+      "url": "https://openai.com/index/preparing-our-next-security-sprint-to-harden-openai",
+      "published": "2026-11-02T18:00:00+00:00",
+      "source": "OpenAI News",
+      "priority": 1,
+      "summary": "OpenAI is preparing its next internal security sprint with Cathedral Systems to test and strengthen its defenses using AI."
     },
     {
-      "title": "Circumventing the Computational Hardness of Computational Arbitrage",
-      "url": "https://arxiv.org/abs/2610.40831",
-      "published": "2026-11-02T05:00:00+00:00",
-      "source": "arXiv cs.AI",
-      "priority": 2,
-      "summary": "arXiv:2610.40831v1 Announce Type: new Abstract: AI model marketplaces host providers with heterogeneous costs and capabilities. These differences create an opportunity for computational arbitrage (Olmedo et al., 2026), in which an intermediary purchases inference from a portfolio of models and resells it to users at a profit. Beyond creating profit opportunities for the arbitrageur, computational arbitrage offers financial value to both consumers and providers and could therefore significantly influence AI model markets. While prior work empirically demonstrates the feasibility of computational arbitrage for small model pools, scaling it to large marketplaces requires arbitrage strategies that are both computationally tractable and inexpensive to identify and deploy. In this work, we formalize computational arbitrage as an allocation problem and prove that it is generally NP-hard. However, we show that the optimal allocation can be computed efficiently under a natural diminishing-returns condition on how model performance scales with inference spending. We further develop a sample-efficient method for estimating model performance from limited data, reducing the upfront cost of identifying arbitrage strategies. Our analysis also yields several economic insights: at the optimum, every funded model delivers the same marginal utility per dollar; arbitrage directs revenue away from providers offering little utility relative to their prices; and it rewards complementary specialization."
+      "title": "The latest AI news we announced in October 2026",
+      "url": "https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-october-2026/",
+      "published": "2026-11-02T17:45:00+00:00",
+      "source": "Google AI",
+      "priority": 1,
+      "summary": "Animated carousel of images from AI posts in October"
     },
     {
-      "title": "Incongruence-Aware Evaluation of Multimodal Speech Emotion Recognition in Audio Large Language Models",
-      "url": "https://arxiv.org/abs/2610.40883",
-      "published": "2026-11-02T05:00:00+00:00",
-      "source": "arXiv cs.AI",
-      "priority": 2,
-      "summary": "arXiv:2610.40883v1 Announce Type: new Abstract: Voice-interactive large language models process both what a speaker says and how they say it, yet the two channels do not always agree. We ask whether that disagreement degrades speech emotion recognition. Mapping text and audio into a shared valence-arousal-dominance space, we convert the distance between them into a continuous, threshold-free incongruence score with a two-component Gaussian mixture, and validate the score against human judgement. We evaluate three audiocapable models on acted, conversational and spontaneous speech (eNTERFACE'05, MELD and CMU-MOSEI). With the model held constant across modalities, incongruence raises the odds of error whenever audio is present, in every corpus, after controlling for the ground-truth emotion and for distance in the feature space. Supervised classifiers trained on the same features behave in the opposite way, which suggests that the difficulty lies in how these models combine raw evidence rather than in the signal itself. Text-only effects are unreliable: swapping only the model that reads the transcript reverses their sign on one corpus. Rebuilding the score without the emotion lexicon reproduces the central result, and among six simpler alternatives it is the only label-free score that predicts error in all three corpora. Code, data tables and prompts are released."
+      "title": "Scaling Git at OpenAI",
+      "url": "https://openai.com/index/scaling-git-at-openai",
+      "published": "2026-11-02T15:30:00+00:00",
+      "source": "OpenAI News",
+      "priority": 1,
+      "summary": "How OpenAI built Pando, a Git-compatible backend designed for the scale of development that Codex makes possible."
     },
     {
-      "title": "ChatGPT as a Surveillance Assistant? An Exploratory Case Study of AI-Assisted Surveillance Risks",
-      "url": "https://arxiv.org/abs/2610.40890",
-      "published": "2026-11-02T05:00:00+00:00",
-      "source": "arXiv cs.AI",
-      "priority": 2,
-      "summary": "arXiv:2610.40890v1 Announce Type: new Abstract: Large language models (LLMs) can generate detailed guidance, functional code, and persuasive text at scale. As one of the most widely used consumer language model products as of 2026, ChatGPT gives broad public access to these capabilities, motivating concerns about its potential use in surveillance-related tasks. We present an exploratory case study of what potentially harmful surveillance assistance looks like in ChatGPT's public web interface. We contribute a taxonomy of seven surveillance risk categories based on prior LLM risk research and reports of deployed surveillance systems, instantiated as 110 prompts, along with a manually reviewed analysis of ChatGPT's responses. Prompts were issued using two approaches: 55 jailbreak prompts drawing on five types of elicitation strategies, and 55 plain-language direct prompts, each run alone, and if unsuccessful, again with a short fixed prefix. We find that ChatGPT provides substantive surveillance guidance for 40 of the 55 jailbreak prompts and for 33 of the 55 direct prompts without any prefix. Compliant responses also rarely included policy mentions or suggestions for privacy-preserving alternatives. We manually review every response and find that even when ChatGPT states a refusal, it may still supply detailed instructions, working code, or architectural guidance alongside brief ethical caveats."
+      "title": "Introducing the Grid Protectors Program",
+      "url": "https://openai.com/index/grid-protectors-program",
+      "published": "2026-11-02T15:00:00+00:00",
+      "source": "OpenAI News",
+      "priority": 1,
+      "summary": "OpenAI’s Grid Protectors Program will work with utilities to help future compute campuses support grid reliability and protect consumer electricity costs."
     }
   ],
   "story": {
-    "title": "More Rules, Longer Lists? Benchmarking Self-Evolving Agents on a Hidden-Rule Curriculum",
-    "url": "https://arxiv.org/abs/2610.40758",
-    "published": "2026-11-02T05:00:00+00:00",
-    "source": "arXiv cs.AI",
-    "priority": 2,
-    "summary": "arXiv:2610.40758v1 Announce Type: new Abstract: Self-evolving agents rewrite a persistent state from feedback, but it is largely untested whether this lets them learn a rule nobody told them. An agent can also pass by writing down each correction as an exception, and its list then grows with every new rule. We introduce CLR-Bench, a Curriculum of Latent Rules benchmark. Each chain adds one hidden rule per level on top of the earlier ones. A rule acts on an opaque label that stands for a named grouping published on the Web, such as the founding members of an airline alliance. The task gives one example value, practice feedback reveals one more member and one non-member, and the test checks unseen members and similar non-members. Probes certify that the base model knows the members of each grouping and does not guess it without feedback, and that the evidence identifies the grouping once labels are read as named groupings. An automated pipeline builds chains from a new data domain, and we release 20 chains over 10 domains. We evaluate six recent self-evolution methods. With the certifying model they barely learn. The best gain at most 5 points over a frozen agent and exclude only 6-12% of the unseen members from the count, fewer than the 20% reached by simply keeping the raw practice history. A fixed lesson that states the named-grouping convention lifts the same methods by 14.5 to 16.5 points. Their states hold the revealed member in 75-98% of cases and almost never the class name, and when practice exposes a member the list misses, they add that member to the list. With the stronger GPT-6-Sol, ACE and Dynamic Cheatsheet learn from feedback alone. They reach 78% accuracy and solve 59-60% of the single cells, against 53% and 8% with the certifying model, and they surpass the raw history. CLR-Bench therefore measures how well an agent learns, and this ability differs across models."
+    "title": "Rewarding defenders with bigger bug bounties",
+    "url": "https://openai.com/index/rewarding-defenders-with-bigger-bug-bounties",
+    "published": "2026-11-02T18:00:00+00:00",
+    "source": "OpenAI News",
+    "priority": 1,
+    "summary": "OpenAI is raising Security Bug Bounty rewards and introducing report quality, loyalty, and priority campaign bonuses for independent security researchers."
   },
-  "caption": "Today's AI Brief: 5 developments.\n\nSwipe through for the stories and sources.\n\n1. More Rules, Longer Lists? Benchmarking Self-Evolving Agents on a Hidden-Rule Curriculum\narXiv:2610.40758v1 Announce Type: new Abstract: Self-evolving agents rewrite a persistent state from feedback…\nSource: arXiv cs.AI\nhttps://arxiv.org/abs/2610.40758\n\n2. Beyond Plausible Prediction: Safety Sufficiency in Web World Models\narXiv:2610.40798v1 Announce Type: new Abstract: Web world models increasingly predict the consequences of can…\nSource: arXiv cs.AI\nhttps://arxiv.org/abs/2610.40798\n\n3. Circumventing the Computational Hardness of Computational Arbitrage\narXiv:2610.40831v1 Announce Type: new Abstract: AI model marketplaces host providers with heterogeneous costs…\nSource: arXiv cs.AI\nhttps://arxiv.org/abs/2610.40831\n\n4. Incongruence-Aware Evaluation of Multimodal Speech Emotion Recognition in Audio Large Language Models\narXiv:2610.40883v1 Announce Type: new Abstract: Voice-interactive large language models process both what a s…\nSource: arXiv cs.AI\nhttps://arxiv.org/abs/2610.40883\n\n5. ChatGPT as a Surveillance Assistant? An Exploratory Case Study of AI-Assisted Surveillance Risks\narXiv:2610.40890v1 Announce Type: new Abstract: Large language models (LLMs) can generate detailed guidance,…\nSource: arXiv cs.AI\nhttps://arxiv.org/abs/2610.40890\n\nAI Brief · Daily AI developments",
+  "caption": "Today's AI Brief: 5 developments.\n\nSwipe through for the stories and sources.\n\n1. Rewarding defenders with bigger bug bounties\nOpenAI is raising Security Bug Bounty rewards and introducing report quality, loyalty, and priority campaign…\nSource: OpenAI News\nhttps://openai.com/index/rewarding-defenders-with-bigger-bug-bounties\n\n2. Preparing our next security sprint to harden OpenAI\nOpenAI is preparing its next internal security sprint with Cathedral Systems to test and strengthen its defen…\nSource: OpenAI News\nhttps://openai.com/index/preparing-our-next-security-sprint-to-harden-openai\n\n3. The latest AI news we announced in October 2026\nAnimated carousel of images from AI posts in October\nSource: Google AI\nhttps://blog.google/innovation-and-ai/technology/ai/google-ai-updates-october-2026/\n\n4. Scaling Git at OpenAI\nHow OpenAI built Pando, a Git-compatible backend designed for the scale of development that Codex makes possi…\nSource: OpenAI News\nhttps://openai.com/index/scaling-git-at-openai\n\n5. Introducing the Grid Protectors Program\nOpenAI’s Grid Protectors Program will work with utilities to help future compute campuses support grid reliab…\nSource: OpenAI News\nhttps://openai.com/index/grid-protectors-program\n\nAI Brief · Daily AI developments",
   "alt_texts": [
-    "AI Brief news image. Headline: More Rules, Longer Lists? Benchmarking Self-Evolving Agents on a Hidden-Rule Curriculum. Source: arXiv cs.AI.",
-    "AI Brief news image. Headline: Beyond Plausible Prediction: Safety Sufficiency in Web World Models. Source: arXiv cs.AI.",
-    "AI Brief news image. Headline: Circumventing the Computational Hardness of Computational Arbitrage. Source: arXiv cs.AI.",
-    "AI Brief news image. Headline: Incongruence-Aware Evaluation of Multimodal Speech Emotion Recognition in Audio Large Language Models. Source: arXiv cs.AI.",
-    "AI Brief news image. Headline: ChatGPT as a Surveillance Assistant? An Exploratory Case Study of AI-Assisted Surveillance Risks. Source: arXiv cs.AI."
+    "AI Brief news image. Headline: Rewarding defenders with bigger bug bounties. Source: OpenAI News.",
+    "AI Brief news image. Headline: Preparing our next security sprint to harden OpenAI. Source: OpenAI News.",
+    "AI Brief news image. Headline: The latest AI news we announced in October 2026. Source: Google AI.",
+    "AI Brief news image. Headline: Scaling Git at OpenAI. Source: OpenAI News.",
+    "AI Brief news image. Headline: Introducing the Grid Protectors Program. Source: OpenAI News."
   ],
   "image_paths": [
-    "posts/2026-11-02-01.jpg",
-    "posts/2026-11-02-02.jpg",
-    "posts/2026-11-02-03.jpg",
-    "posts/2026-11-02-04.jpg",
-    "posts/2026-11-02-05.jpg"
+    "posts/2026-11-03-01.jpg",
+    "posts/2026-11-03-02.jpg",
+    "posts/2026-11-03-03.jpg",
+    "posts/2026-11-03-04.jpg",
+    "posts/2026-11-03-05.jpg"
   ],
   "image_urls": [
-    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-11-02-01.jpg",
-    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-11-02-02.jpg",
-    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-11-02-03.jpg",
-    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-11-02-04.jpg",
-    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-11-02-05.jpg"
+    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-11-03-01.jpg",
+    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-11-03-02.jpg",
+    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-11-03-03.jpg",
+    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-11-03-04.jpg",
+    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-11-03-05.jpg"
   ],
   "carousel": true,
   "content_type": "news"
