@@ -1,78 +1,78 @@
 {
-  "date": "2026-11-03",
+  "date": "2026-11-04",
   "status": "ready",
-  "generated_at": "2026-11-03T08:30:24.168081+00:00",
+  "generated_at": "2026-11-04T07:56:58.710193+00:00",
   "stories": [
     {
-      "title": "Rewarding defenders with bigger bug bounties",
-      "url": "https://openai.com/index/rewarding-defenders-with-bigger-bug-bounties",
-      "published": "2026-11-02T18:00:00+00:00",
-      "source": "OpenAI News",
-      "priority": 1,
-      "summary": "OpenAI is raising Security Bug Bounty rewards and introducing report quality, loyalty, and priority campaign bonuses for independent security researchers."
+      "title": "Alignment Faking Depends on the Value, Not Just the Model",
+      "url": "https://arxiv.org/abs/2611.03650",
+      "published": "2026-11-04T05:00:00+00:00",
+      "source": "arXiv cs.AI",
+      "priority": 2,
+      "summary": "arXiv:2611.03650v1 Announce Type: new Abstract: Language models can follow a directive when they believe they are monitored and abandon it when they believe they are not, a pattern termed Alignment Faking. Prior work establishes this for harmful-content objectives and a handful of moral-foundations values, leaving open how it distributes across a wider value space. We argue it is value-dependent: whether compliance survives a change in perceived oversight is a property of the model--value pairing, not of the model alone. Our framework profiles Alignment Faking per value, scoring each model-value pair under three conditions: bare (no system prompt), unmonitored, and monitored. On 32 ValueBench dimensions across ten open- and closed-weight models (8B-~675B), compliance gaps span 0.05-0.50, with a distilled 70B above a ~675B model. We observe that majority of the structural variance depends on which model was asked about which value and not on the model or value alone. A six-category taxonomy over reasoning traces tracks the behavioural shift: training-signal reasoning dominates under monitoring and value-conflict reasoning dominates when unmonitored. We package per-model results as value cards, extending model cards with behavioral disposition. Code and data are available at"
     },
     {
-      "title": "Preparing our next security sprint to harden OpenAI",
-      "url": "https://openai.com/index/preparing-our-next-security-sprint-to-harden-openai",
-      "published": "2026-11-02T18:00:00+00:00",
-      "source": "OpenAI News",
-      "priority": 1,
-      "summary": "OpenAI is preparing its next internal security sprint with Cathedral Systems to test and strengthen its defenses using AI."
+      "title": "CARD: A Proof-Carrying Certificate-to-Action Interface for Relative-Measurement Graphs",
+      "url": "https://arxiv.org/abs/2611.03651",
+      "published": "2026-11-04T05:00:00+00:00",
+      "source": "arXiv cs.AI",
+      "priority": 2,
+      "summary": "arXiv:2611.03651v1 Announce Type: new Abstract: Geometric certificates make mathematical claims about specified estimator objects, while robotic action requires a physical transform, a service decision, and timely proof support. We present CARD, a proof-carrying interface that keeps these objects distinct and records how they combine. Its lifted-fiber formulation separates semantic motion from witness repair and characterizes when projected and proof-carrying costs coincide. Its actionability result gives an exact useful-service law: uniform sampling without replacement produces a hypergeometric yield, while sampling from the eligible population gives one useful service per request under the observed live-confirmation condition. The primary study contains 404 Full16 cases from 20 sorties of an AA15-X500 airborne survey system. All 404 checker-confirmed optimizer points are reference-discrepant, with median rotation and translation discrepancies of 1.9891 degrees and 21.6322 m. The paired causal-navigation transforms are reference-consistent in all 404 cases, with medians of 0.0036566 degrees and 0.0104519 m. Across five matched request budgets, the largest difference between the hypergeometric prediction and the observed ordinary-random mean is 0.8412 services. Ordinary matched random reaches 0/50 target successes, while actionability-matched random reaches 50/50 and matches the CARD policy. Public downstream evaluation on 11 KITTI, EuRoC, and TUM SLAM cases measures optimizer wall-time ratios of 1.128x-67.65x for random versus CARD graph interventions. Native solver records locate this difference in elimination fill, Cholesky factor size, and numeric factorization. Together, these results connect certificate semantics, physical execution, proof acquisition, and graph computation through explicit system objects."
     },
     {
-      "title": "The latest AI news we announced in October 2026",
-      "url": "https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-october-2026/",
-      "published": "2026-11-02T17:45:00+00:00",
-      "source": "Google AI",
-      "priority": 1,
-      "summary": "Animated carousel of images from AI posts in October"
+      "title": "MCPGuard: Finding Conformance Gaps in MCP SDKs via Dual-Track Analysis and Dynamic Adjudication",
+      "url": "https://arxiv.org/abs/2611.03662",
+      "published": "2026-11-04T05:00:00+00:00",
+      "source": "arXiv cs.AI",
+      "priority": 2,
+      "summary": "arXiv:2611.03662v1 Announce Type: new Abstract: The Model Context Protocol (MCP) connects large language model agents to external tools and services through official SDKs that implement message validation and session logic. Specification constraints omitted by these SDKs may propagate to downstream applications, highlighting the importance of SDK-level conformance testing. Yet existing MCP conformance tools mainly exercise running endpoints and reveal little about whether SDK models enforce specification requirements. We present MCPGuard, an automated LLM-based framework for detecting specification-to-SDK conformance gaps. Its structural track aligns JSON Schema constraints with normalized SDK models and produces constraint-specific evidence. Its behavioral track extracts normative prose rules, retrieves bounded function-level slices, and audits them with LLMs for candidate omissions. An evidence-aware dynamic adjudicator then inspects complete source context and builds PoCs to validate candidates. A shared kernel with language-specific adapters enables analysis across SDKs. On the official Python 1.26.0 and TypeScript 1.29.0 SDKs, MCPGuard confirms 13 and 19 findings, respectively, none of which are exposed by two black-box baselines. Tests on open MCP servers further show that these gaps can systematically propagate downstream. By making SDK conformance of specification constraints directly testable, MCPGuard complements conventional endpoint-oriented conformance suites."
     },
     {
-      "title": "Scaling Git at OpenAI",
-      "url": "https://openai.com/index/scaling-git-at-openai",
-      "published": "2026-11-02T15:30:00+00:00",
-      "source": "OpenAI News",
-      "priority": 1,
-      "summary": "How OpenAI built Pando, a Git-compatible backend designed for the scale of development that Codex makes possible."
+      "title": "Functional-Group Knowledge Is Structured in Language Models Before It Is Spoken",
+      "url": "https://arxiv.org/abs/2611.03684",
+      "published": "2026-11-04T05:00:00+00:00",
+      "source": "arXiv cs.AI",
+      "priority": 2,
+      "summary": "arXiv:2611.03684v1 Announce Type: new Abstract: Language models serve as the reasoning core of agents for chemistry and materials science, where they must interpret molecular structure before planning syntheses or proposing materials. Yet their outputs show only what they say, not what they know. Given a prompt such as ``The primary functional group in 1-Fluorobutane (CCCCF) is'', a small general-purpose model may answer ``the alkyne group'' instead of an alkyl fluoride. The output alone cannot tell whether the model failed to recognize the fluorine or recognized it and failed to say so. We address this by reading the internal representations of five open-source models on prompts covering 92 molecules and 20 functional groups. Even without chemistry training, the models organize functional groups by chemical family, and they encode chemical differences as consistent directions. The shift from thioether ($\\mathrm{R{-}S{-}R'}$) to thiol ($\\mathrm{R{-}SH}$), added to ether ($\\mathrm{R{-}O{-}R'}$), lands nearest alcohol ($\\mathrm{R{-}OH}$). This structure emerges abruptly in the middle layers, where representations shift from tracking the wording of the prompt to tracking the functional group. The base model names the correct functional group in only 58.5\\% of prompts, the lowest of the five, yet it encodes functional-group families and preserves chemically meaningful patterns. Its errors are mostly failures to answer rather than wrong answers. Functional-group knowledge is structured in the model before it is spoken. Chemistry fine-tuning reorganizes it, making functional groups rather than prompt wording dominate the representation. These results suggest that evaluating chemical language models through outputs alone can underestimate the chemical information they encode. Representation analysis can distinguish a lack of knowledge from a failure to express it, which matters when choosing or adapting models for chemical agents."
     },
     {
-      "title": "Introducing the Grid Protectors Program",
-      "url": "https://openai.com/index/grid-protectors-program",
-      "published": "2026-11-02T15:00:00+00:00",
-      "source": "OpenAI News",
-      "priority": 1,
-      "summary": "OpenAI’s Grid Protectors Program will work with utilities to help future compute campuses support grid reliability and protect consumer electricity costs."
+      "title": "LOLPlay: Benchmarking Real-Time Visual Agents in League of Legends",
+      "url": "https://arxiv.org/abs/2611.03685",
+      "published": "2026-11-04T05:00:00+00:00",
+      "source": "arXiv cs.AI",
+      "priority": 2,
+      "summary": "arXiv:2611.03685v1 Announce Type: new Abstract: Visual agents need to coordinate reasoning and action while their environment evolves during inference. We introduce LOLPlay, a benchmark in native \\emph{League of Legends} with 36 champion-specific tasks spanning resource management, combat, cooperation, and objectives. Agents interact through screenshots and mouse--keyboard actions; automated initialization and 82 executable subgoal checks distinguish partial progress from completion. Across 324 task evaluations of three models at three reasoning-effort settings, GPT-6 Astra achieves the highest task success rate of 25.0\\% at low and medium effort, and the highest subgoal success rate of 40.3\\% at medium effort. However, high effort improves neither metric over low effort for any model. For Astra, longer requests leave fewer interaction rounds, suggesting a cost to additional reasoning in real-time control. Trajectories reveal incomplete subgoal composition and actions executing after the observed scene changes, motivating agents that combine visual reasoning with timely action."
     }
   ],
   "story": {
-    "title": "Rewarding defenders with bigger bug bounties",
-    "url": "https://openai.com/index/rewarding-defenders-with-bigger-bug-bounties",
-    "published": "2026-11-02T18:00:00+00:00",
-    "source": "OpenAI News",
-    "priority": 1,
-    "summary": "OpenAI is raising Security Bug Bounty rewards and introducing report quality, loyalty, and priority campaign bonuses for independent security researchers."
+    "title": "Alignment Faking Depends on the Value, Not Just the Model",
+    "url": "https://arxiv.org/abs/2611.03650",
+    "published": "2026-11-04T05:00:00+00:00",
+    "source": "arXiv cs.AI",
+    "priority": 2,
+    "summary": "arXiv:2611.03650v1 Announce Type: new Abstract: Language models can follow a directive when they believe they are monitored and abandon it when they believe they are not, a pattern termed Alignment Faking. Prior work establishes this for harmful-content objectives and a handful of moral-foundations values, leaving open how it distributes across a wider value space. We argue it is value-dependent: whether compliance survives a change in perceived oversight is a property of the model--value pairing, not of the model alone. Our framework profiles Alignment Faking per value, scoring each model-value pair under three conditions: bare (no system prompt), unmonitored, and monitored. On 32 ValueBench dimensions across ten open- and closed-weight models (8B-~675B), compliance gaps span 0.05-0.50, with a distilled 70B above a ~675B model. We observe that majority of the structural variance depends on which model was asked about which value and not on the model or value alone. A six-category taxonomy over reasoning traces tracks the behavioural shift: training-signal reasoning dominates under monitoring and value-conflict reasoning dominates when unmonitored. We package per-model results as value cards, extending model cards with behavioral disposition. Code and data are available at"
   },
-  "caption": "Today's AI Brief: 5 developments.\n\nSwipe through for the stories and sources.\n\n1. Rewarding defenders with bigger bug bounties\nOpenAI is raising Security Bug Bounty rewards and introducing report quality, loyalty, and priority campaign…\nSource: OpenAI News\nhttps://openai.com/index/rewarding-defenders-with-bigger-bug-bounties\n\n2. Preparing our next security sprint to harden OpenAI\nOpenAI is preparing its next internal security sprint with Cathedral Systems to test and strengthen its defen…\nSource: OpenAI News\nhttps://openai.com/index/preparing-our-next-security-sprint-to-harden-openai\n\n3. The latest AI news we announced in October 2026\nAnimated carousel of images from AI posts in October\nSource: Google AI\nhttps://blog.google/innovation-and-ai/technology/ai/google-ai-updates-october-2026/\n\n4. Scaling Git at OpenAI\nHow OpenAI built Pando, a Git-compatible backend designed for the scale of development that Codex makes possi…\nSource: OpenAI News\nhttps://openai.com/index/scaling-git-at-openai\n\n5. Introducing the Grid Protectors Program\nOpenAI’s Grid Protectors Program will work with utilities to help future compute campuses support grid reliab…\nSource: OpenAI News\nhttps://openai.com/index/grid-protectors-program\n\nAI Brief · Daily AI developments",
+  "caption": "Today's AI Brief: 5 developments.\n\nSwipe through for the stories and sources.\n\n1. Alignment Faking Depends on the Value, Not Just the Model\narXiv:2611.03650v1 Announce Type: new Abstract: Language models can follow a directive when they believe they…\nSource: arXiv cs.AI\nhttps://arxiv.org/abs/2611.03650\n\n2. CARD: A Proof-Carrying Certificate-to-Action Interface for Relative-Measurement Graphs\narXiv:2611.03651v1 Announce Type: new Abstract: Geometric certificates make mathematical claims about specifi…\nSource: arXiv cs.AI\nhttps://arxiv.org/abs/2611.03651\n\n3. MCPGuard: Finding Conformance Gaps in MCP SDKs via Dual-Track Analysis and Dynamic Adjudication\narXiv:2611.03662v1 Announce Type: new Abstract: The Model Context Protocol (MCP) connects large language mode…\nSource: arXiv cs.AI\nhttps://arxiv.org/abs/2611.03662\n\n4. Functional-Group Knowledge Is Structured in Language Models Before It Is Spoken\narXiv:2611.03684v1 Announce Type: new Abstract: Language models serve as the reasoning core of agents for che…\nSource: arXiv cs.AI\nhttps://arxiv.org/abs/2611.03684\n\n5. LOLPlay: Benchmarking Real-Time Visual Agents in League of Legends\narXiv:2611.03685v1 Announce Type: new Abstract: Visual agents need to coordinate reasoning and action while t…\nSource: arXiv cs.AI\nhttps://arxiv.org/abs/2611.03685\n\nAI Brief · Daily AI developments",
   "alt_texts": [
-    "AI Brief news image. Headline: Rewarding defenders with bigger bug bounties. Source: OpenAI News.",
-    "AI Brief news image. Headline: Preparing our next security sprint to harden OpenAI. Source: OpenAI News.",
-    "AI Brief news image. Headline: The latest AI news we announced in October 2026. Source: Google AI.",
-    "AI Brief news image. Headline: Scaling Git at OpenAI. Source: OpenAI News.",
-    "AI Brief news image. Headline: Introducing the Grid Protectors Program. Source: OpenAI News."
+    "AI Brief news image. Headline: Alignment Faking Depends on the Value, Not Just the Model. Source: arXiv cs.AI.",
+    "AI Brief news image. Headline: CARD: A Proof-Carrying Certificate-to-Action Interface for Relative-Measurement Graphs. Source: arXiv cs.AI.",
+    "AI Brief news image. Headline: MCPGuard: Finding Conformance Gaps in MCP SDKs via Dual-Track Analysis and Dynamic Adjudication. Source: arXiv cs.AI.",
+    "AI Brief news image. Headline: Functional-Group Knowledge Is Structured in Language Models Before It Is Spoken. Source: arXiv cs.AI.",
+    "AI Brief news image. Headline: LOLPlay: Benchmarking Real-Time Visual Agents in League of Legends. Source: arXiv cs.AI."
   ],
   "image_paths": [
-    "posts/2026-11-03-01.jpg",
-    "posts/2026-11-03-02.jpg",
-    "posts/2026-11-03-03.jpg",
-    "posts/2026-11-03-04.jpg",
-    "posts/2026-11-03-05.jpg"
+    "posts/2026-11-04-01.jpg",
+    "posts/2026-11-04-02.jpg",
+    "posts/2026-11-04-03.jpg",
+    "posts/2026-11-04-04.jpg",
+    "posts/2026-11-04-05.jpg"
   ],
   "image_urls": [
-    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-11-03-01.jpg",
-    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-11-03-02.jpg",
-    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-11-03-03.jpg",
-    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-11-03-04.jpg",
-    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-11-03-05.jpg"
+    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-11-04-01.jpg",
+    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-11-04-02.jpg",
+    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-11-04-03.jpg",
+    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-11-04-04.jpg",
+    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-11-04-05.jpg"
   ],
   "carousel": true,
   "content_type": "news"
