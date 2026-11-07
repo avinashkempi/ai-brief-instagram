@@ -1,78 +1,78 @@
 {
-  "date": "2026-11-06",
+  "date": "2026-11-07",
   "status": "ready",
-  "generated_at": "2026-11-06T08:27:47.840038+00:00",
+  "generated_at": "2026-11-07T07:43:17.775710+00:00",
   "stories": [
     {
-      "title": "Formalizing inverse problems in the age of AI: possibilities, pitfalls, and an invitation",
-      "url": "https://arxiv.org/abs/2611.06962",
-      "published": "2026-11-06T05:00:00+00:00",
-      "source": "arXiv cs.AI",
-      "priority": 2,
-      "summary": "arXiv:2611.06962v1 Announce Type: new Abstract: Proof assistants such as Lean check mathematical proofs down to the axioms, and AI agents have recently made writing such proofs cheap. We describe AutoIP, a Lean library in which classical linear regularization theory, together with the functional analysis it rests on, has been autoformalized by AI agents. A machine-checked proof certifies only the formal statement it proves, so the remaining human task is to confirm that each formal statement says what was intended. We organize the library around this task: a reviewer compares the formal statements with their natural-language counterparts and never needs to read a proof. Our experience is that the risks lie in the statements rather than in the proofs, and that simple automated tests on the statements can expose problems even in the established literature. We illustrate this with a textbook theorem whose hypothesis is more restrictive than asserted. We invite the inverse problems community to extend and build on the library."
+      "title": "Partnering with Hacktron to find vulnerabilities in OpenAI’s systems",
+      "url": "https://openai.com/index/partnering-with-hacktron",
+      "published": "2026-11-06T08:00:00+00:00",
+      "source": "OpenAI News",
+      "priority": 1,
+      "summary": "OpenAI is partnering with Hacktron to find vulnerabilities, test connections with third-party services, and strengthen defenses with frontier AI."
     },
     {
-      "title": "KDASO: Knowledge-Data Dual-Driven Automated Skill Optimization for Liability Adjudication Tasks",
-      "url": "https://arxiv.org/abs/2611.06972",
-      "published": "2026-11-06T05:00:00+00:00",
-      "source": "arXiv cs.AI",
-      "priority": 2,
-      "summary": "arXiv:2611.06972v1 Announce Type: new Abstract: Liability adjudication tasks (e.g., legal charge determination) require analyzing event descriptions against domain-specific skills to determine whether a party should bear liability. While Large Language Models (LLMs) have shown promise in this area by leveraging executable skills for interpretable reasoning, existing approaches face three critical limitations: skill libraries become stale as real-world scenarios dynamically evolve, skill descriptions often suffer from a semantic execution gap where LLMs deviate from intended expert logic, and growing skill collections exceed context budgets causing critical skill omission. To address these challenges, we propose Knowledge-Data Dual-Driven Automated Skill Optimization (KDASO), which continuously evolves a skill library through neighborhood-conditioned induction from recent adjudication data, execution-aligned refinement based on LLM trajectory analysis, and context-budgeted routing for scalable skill selection. Experiments across ride-hailing adjudication, legal liability determination, and logical reasoning judgment demonstrate that KDASO significantly outperforms current general-purpose and domain-specific baselines. KDASO further achieves 8.96% improvement when transferring skills to concept-similar scenarios and maintains consistent performance gains through continuous optimization, underscoring the high transferability and stability of generated skills."
+      "title": "Measuring how AI agents handle everyday wet-lab science",
+      "url": "https://openai.com/index/measuring-how-ai-agents-handle-wet-lab-science",
+      "published": "2026-11-06T00:00:00+00:00",
+      "source": "OpenAI News",
+      "priority": 1,
+      "summary": "OpenAI introduces BioBasicsBench, a 100-task benchmark measuring how well AI agents interpret raw experimental data and handle everyday wet-lab science."
     },
     {
-      "title": "BlockLock: Reproducible LLM Inference with Fixed Batch Geometry",
-      "url": "https://arxiv.org/abs/2611.06977",
-      "published": "2026-11-06T05:00:00+00:00",
-      "source": "arXiv cs.AI",
-      "priority": 2,
-      "summary": "arXiv:2611.06977v1 Announce Type: new Abstract: Reproducible LLM inference requires that a request produces the same output regardless of the other requests in the batch. Existing solutions pay for this in different ways: batch-invariant kernels constrain every operator, and isolating prefill with fixed-shape decode ({our CoRun-style baseline}) gives up shared prefill compute and pads decode. We present BlockLock, which keeps shared batched prefill and pins only the numerical path of the protected request: it fixes the geometry that the request sees, with {two modes: BlockLock-Rows uses fixed-width rows and retains batched decode of all requests; BlockLock-Pack uses terminal-anchored packing with an isolated dummy segment, then extracts the protected request's KV state for target-only decode. Under a stated per-deployment contract, both modes preserve the target's output bitwise when its companions change.} Across five {dense} models (Qwen3-8B/14B, Llama-3.1-8B-Instruct, and Gemma-3-4B/12B-IT) and three single-GPU deployments (NVIDIA A6000, A100, and H100), we evaluate our approach on both tinyBenchmarks and BFCL{; we also include initial tensor-parallel experiments on two NVIDIA A6000 GPUs. Both modes preserve target sequences and Top20-logit bits in the reported tests.} At equal delivered work, {BlockLock-Rows} reduces latency by 53.5--55.0\\% and improves throughput by 115.2--122.2\\% relative to vLLM Batch-Invariant; compared with batch-invariant kernels, it needs no custom kernel implementations and constrains only the protected requests."
+      "title": "Cult.fit builds operational muscle with Codex",
+      "url": "https://openai.com/index/cultfit-builds-with-codex",
+      "published": "2026-11-05T20:00:00+00:00",
+      "source": "OpenAI News",
+      "priority": 1,
+      "summary": "Cult.fit is using Codex to help teams across functions build tools, move faster, and change how work gets done."
     },
     {
-      "title": "Resource-Efficient Reinforcement Learning Post-Training through Elastic Expert Parallelism",
-      "url": "https://arxiv.org/abs/2611.06984",
-      "published": "2026-11-06T05:00:00+00:00",
-      "source": "arXiv cs.AI",
-      "priority": 2,
-      "summary": "arXiv:2611.06984v1 Announce Type: new Abstract: Reinforcement learning post-training improves the capabilities of large language models, but generating training responses is a major computational bottleneck. In mixture-of-experts models, workers that finish their assigned responses may remain occupied because their experts are still needed by workers processing longer responses. Consequently, approximately one-third of occupied worker time in the baseline occurs after local response generation finishes. Here we present FlexFloor, a system that enables earlier resource release during synchronous response generation while preserving the expert computation required by ongoing responses. FlexFloor jointly adapts response scheduling and the active group of workers. It uses historical response lengths and memory constraints to guide batching and prompt placement, then progressively releases workers while maintaining expert availability and correct communication. Compared with the verl baseline, FlexFloor generates approximately 65.40% more response tokens per unit of occupied computing time and increases response generation throughput by 52.74%, with little observed variation in rollout reward. By making reinforcement learning post-training more efficient, FlexFloor supports faster development and iterative improvement of large language models and AI agents."
+      "title": "Gemini Omni 1.2 Flash: Fast and cost-effective with longer clips",
+      "url": "https://deepmind.google/blog/gemini-omni-12-flash-fast-and-cost-effective-with-longer-clips/",
+      "published": "2026-11-05T17:05:16+00:00",
+      "source": "Google DeepMind",
+      "priority": 1,
+      "summary": ""
     },
     {
-      "title": "The Two-Ledger Model: Transaction-Grain Cost Accounting for Multi-Agent AI Systems Across Clouds, Models, and Systems of Record",
-      "url": "https://arxiv.org/abs/2611.06989",
-      "published": "2026-11-06T05:00:00+00:00",
-      "source": "arXiv cs.AI",
-      "priority": 2,
-      "summary": "arXiv:2611.06989v1 Announce Type: new Abstract: Enterprises run business transactions through multi-agent AI systems spanning clouds, large language models (LLMs), orchestration harnesses, and systems of record. Finance receives AI cost only at settlement grain, aggregated by SKU and charge period. The business question (what did this order, claim, or case cost in AI?) cannot be answered from billing data, because providers never see enterprise transaction boundaries. The FinOps Open Cost and Usage Specification (FOCUS) gives billing data one schema across providers but remains settlement-grain even as it adds AI token and requester attribution. We formalize this grain mismatch, derive seven requirements, and propose the Two-Ledger Model: a settlement ledger of FOCUS-conformant billing data joined to an attribution ledger of invocation-grain usage records built on OpenTelemetry GenAI telemetry. A layered correlation spine (trace context, A2A/MCP metadata, business-key correlation, probabilistic matching) assigns each record to its business transaction with recorded method and confidence; a versioned rate card prices usage in near real time; period reconciliation ties both ledgers to the invoice, and the unexplained residual identifies shadow AI. Costs are reported per order, claim, or outcome with agentic cost metrics. A simulation with known ground truth shows the spine sustaining cost coverage above 99% as trace propagation falls to zero, the reconciliation residual recovering planted unmetered spend within 0.24 percentage points while flagging provider billing errors, and mid-flight gating cutting p99 transaction cost by up to 61% at a 2-4% false-pause rate. We propose the attribution ledger as an invocation-grain FOCUS profile for standardization."
+      "title": "Australian universities are creating AI-native graduates",
+      "url": "https://openai.com/index/australian-universities-ai-native-graduates",
+      "published": "2026-11-05T17:00:00+00:00",
+      "source": "OpenAI News",
+      "priority": 1,
+      "summary": "Australian universities are expanding access to ChatGPT and bringing AI into teaching and learning to prepare students for an AI-enabled workforce."
     }
   ],
   "story": {
-    "title": "Formalizing inverse problems in the age of AI: possibilities, pitfalls, and an invitation",
-    "url": "https://arxiv.org/abs/2611.06962",
-    "published": "2026-11-06T05:00:00+00:00",
-    "source": "arXiv cs.AI",
-    "priority": 2,
-    "summary": "arXiv:2611.06962v1 Announce Type: new Abstract: Proof assistants such as Lean check mathematical proofs down to the axioms, and AI agents have recently made writing such proofs cheap. We describe AutoIP, a Lean library in which classical linear regularization theory, together with the functional analysis it rests on, has been autoformalized by AI agents. A machine-checked proof certifies only the formal statement it proves, so the remaining human task is to confirm that each formal statement says what was intended. We organize the library around this task: a reviewer compares the formal statements with their natural-language counterparts and never needs to read a proof. Our experience is that the risks lie in the statements rather than in the proofs, and that simple automated tests on the statements can expose problems even in the established literature. We illustrate this with a textbook theorem whose hypothesis is more restrictive than asserted. We invite the inverse problems community to extend and build on the library."
+    "title": "Partnering with Hacktron to find vulnerabilities in OpenAI’s systems",
+    "url": "https://openai.com/index/partnering-with-hacktron",
+    "published": "2026-11-06T08:00:00+00:00",
+    "source": "OpenAI News",
+    "priority": 1,
+    "summary": "OpenAI is partnering with Hacktron to find vulnerabilities, test connections with third-party services, and strengthen defenses with frontier AI."
   },
-  "caption": "Today's AI Brief: 5 developments.\n\nSwipe through for the stories and sources.\n\n1. Formalizing inverse problems in the age of AI: possibilities, pitfalls, and an invitation\narXiv:2611.06962v1 Announce Type: new Abstract: Proof assistants such as Lean check mathematical proofs down…\nSource: arXiv cs.AI\nhttps://arxiv.org/abs/2611.06962\n\n2. KDASO: Knowledge-Data Dual-Driven Automated Skill Optimization for Liability Adjudication Tasks\narXiv:2611.06972v1 Announce Type: new Abstract: Liability adjudication tasks (e.g., legal charge determinatio…\nSource: arXiv cs.AI\nhttps://arxiv.org/abs/2611.06972\n\n3. BlockLock: Reproducible LLM Inference with Fixed Batch Geometry\narXiv:2611.06977v1 Announce Type: new Abstract: Reproducible LLM inference requires that a request produces t…\nSource: arXiv cs.AI\nhttps://arxiv.org/abs/2611.06977\n\n4. Resource-Efficient Reinforcement Learning Post-Training through Elastic Expert Parallelism\narXiv:2611.06984v1 Announce Type: new Abstract: Reinforcement learning post-training improves the capabilitie…\nSource: arXiv cs.AI\nhttps://arxiv.org/abs/2611.06984\n\n5. The Two-Ledger Model: Transaction-Grain Cost Accounting for Multi-Agent AI Systems Across Clouds, Models, and Systems of Record\narXiv:2611.06989v1 Announce Type: new Abstract: Enterprises run business transactions through multi-agent AI…\nSource: arXiv cs.AI\nhttps://arxiv.org/abs/2611.06989\n\nAI Brief · Daily AI developments",
+  "caption": "Today's AI Brief: 5 developments.\n\nSwipe through for the stories and sources.\n\n1. Partnering with Hacktron to find vulnerabilities in OpenAI’s systems\nOpenAI is partnering with Hacktron to find vulnerabilities, test connections with third-party services, and s…\nSource: OpenAI News\nhttps://openai.com/index/partnering-with-hacktron\n\n2. Measuring how AI agents handle everyday wet-lab science\nOpenAI introduces BioBasicsBench, a 100-task benchmark measuring how well AI agents interpret raw experimenta…\nSource: OpenAI News\nhttps://openai.com/index/measuring-how-ai-agents-handle-wet-lab-science\n\n3. Cult.fit builds operational muscle with Codex\nCult.fit is using Codex to help teams across functions build tools, move faster, and change how work gets don…\nSource: OpenAI News\nhttps://openai.com/index/cultfit-builds-with-codex\n\n4. Gemini Omni 1.2 Flash: Fast and cost-effective with longer clips\nSource: Google DeepMind\nhttps://deepmind.google/blog/gemini-omni-12-flash-fast-and-cost-effective-with-longer-clips/\n\n5. Australian universities are creating AI-native graduates\nAustralian universities are expanding access to ChatGPT and bringing AI into teaching and learning to prepare…\nSource: OpenAI News\nhttps://openai.com/index/australian-universities-ai-native-graduates\n\nAI Brief · Daily AI developments",
   "alt_texts": [
-    "AI Brief news image. Headline: Formalizing inverse problems in the age of AI: possibilities, pitfalls, and an invitation. Source: arXiv cs.AI.",
-    "AI Brief news image. Headline: KDASO: Knowledge-Data Dual-Driven Automated Skill Optimization for Liability Adjudication Tasks. Source: arXiv cs.AI.",
-    "AI Brief news image. Headline: BlockLock: Reproducible LLM Inference with Fixed Batch Geometry. Source: arXiv cs.AI.",
-    "AI Brief news image. Headline: Resource-Efficient Reinforcement Learning Post-Training through Elastic Expert Parallelism. Source: arXiv cs.AI.",
-    "AI Brief news image. Headline: The Two-Ledger Model: Transaction-Grain Cost Accounting for Multi-Agent AI Systems Across Clouds, Models, and Systems of Record. Source: arXiv cs.AI."
+    "AI Brief news image. Headline: Partnering with Hacktron to find vulnerabilities in OpenAI’s systems. Source: OpenAI News.",
+    "AI Brief news image. Headline: Measuring how AI agents handle everyday wet-lab science. Source: OpenAI News.",
+    "AI Brief news image. Headline: Cult.fit builds operational muscle with Codex. Source: OpenAI News.",
+    "AI Brief news image. Headline: Gemini Omni 1.2 Flash: Fast and cost-effective with longer clips. Source: Google DeepMind.",
+    "AI Brief news image. Headline: Australian universities are creating AI-native graduates. Source: OpenAI News."
   ],
   "image_paths": [
-    "posts/2026-11-06-01.jpg",
-    "posts/2026-11-06-02.jpg",
-    "posts/2026-11-06-03.jpg",
-    "posts/2026-11-06-04.jpg",
-    "posts/2026-11-06-05.jpg"
+    "posts/2026-11-07-01.jpg",
+    "posts/2026-11-07-02.jpg",
+    "posts/2026-11-07-03.jpg",
+    "posts/2026-11-07-04.jpg",
+    "posts/2026-11-07-05.jpg"
   ],
   "image_urls": [
-    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-11-06-01.jpg",
-    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-11-06-02.jpg",
-    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-11-06-03.jpg",
-    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-11-06-04.jpg",
-    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-11-06-05.jpg"
+    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-11-07-01.jpg",
+    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-11-07-02.jpg",
+    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-11-07-03.jpg",
+    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-11-07-04.jpg",
+    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-11-07-05.jpg"
   ],
   "carousel": true,
   "content_type": "news"
