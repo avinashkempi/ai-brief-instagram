@@ -1,7 +1,7 @@
 {
-  "date": "2026-11-07",
+  "date": "2026-11-08",
   "status": "ready",
-  "generated_at": "2026-11-07T07:43:17.775710+00:00",
+  "generated_at": "2026-11-08T07:54:27.791575+00:00",
   "stories": [
     {
       "title": "Partnering with Hacktron to find vulnerabilities in OpenAI’s systems",
@@ -61,18 +61,18 @@
     "AI Brief news image. Headline: Australian universities are creating AI-native graduates. Source: OpenAI News."
   ],
   "image_paths": [
-    "posts/2026-11-07-01.jpg",
-    "posts/2026-11-07-02.jpg",
-    "posts/2026-11-07-03.jpg",
-    "posts/2026-11-07-04.jpg",
-    "posts/2026-11-07-05.jpg"
+    "posts/2026-11-08-01.jpg",
+    "posts/2026-11-08-02.jpg",
+    "posts/2026-11-08-03.jpg",
+    "posts/2026-11-08-04.jpg",
+    "posts/2026-11-08-05.jpg"
   ],
   "image_urls": [
-    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-11-07-01.jpg",
-    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-11-07-02.jpg",
-    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-11-07-03.jpg",
-    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-11-07-04.jpg",
-    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-11-07-05.jpg"
+    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-11-08-01.jpg",
+    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-11-08-02.jpg",
+    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-11-08-03.jpg",
+    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-11-08-04.jpg",
+    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-11-08-05.jpg"
   ],
   "carousel": true,
   "content_type": "news"
