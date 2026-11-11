@@ -1,78 +1,78 @@
 {
-  "date": "2026-11-10",
+  "date": "2026-11-11",
   "status": "ready",
-  "generated_at": "2026-11-10T08:47:30.152946+00:00",
+  "generated_at": "2026-11-11T08:18:13.525969+00:00",
   "stories": [
     {
-      "title": "Don't Blame The Preferences: Examining The Emergence of Sycophancy in LLM Training",
-      "url": "https://arxiv.org/abs/2611.10045",
-      "published": "2026-11-10T05:00:00+00:00",
-      "source": "arXiv cs.AI",
-      "priority": 2,
-      "summary": "arXiv:2611.10045v1 Announce Type: new Abstract: AI sycophancy, the tendency of large language models (LLMs) to flatter users and affirm their beliefs, can undermine accuracy and contribute to misinformation, dependence, and overconfidence. Although prior work has benchmarked sycophancy in released models and proposed mitigations, its origins during training remain poorly understood. Preference alignment methods such as RLHF and DPO are often blamed, but their effects are rarely compared with earlier training stages. We investigate sycophancy across the training pipelines of three model families and three benchmarks. We find that sycophancy is largely established by the end of supervised fine-tuning (SFT), rather than introduced by preference alignment. Across all nine model benchmark combinations, SFT checkpoints attain at least 92% of preference aligned models' sycophancy scores and at least 85% of final models' scores; on average, they are about as sycophantic as final models. Preference alignment increases sycophancy in only four of nine cases, by an average of 4.2 percentage points when it does. To probe the underlying causes, we isolate model representations associated with sycophancy using mechanistic interpretability and measure their activation on training datasets from each stage. SFT datasets show roughly the same average activation as other training data but contribute substantially more examples, and the highest-scoring individual datasets all come from SFT. Our findings suggest that addressing sycophancy requires interventions throughout the training pipeline, particularly in data selection and augmentation for pre-training and SFT."
+      "title": "ChatGPT Plus for veterans and servicemembers",
+      "url": "https://openai.com/index/chatgpt-plus-for-veterans",
+      "published": "2026-11-11T08:00:00+00:00",
+      "source": "OpenAI News",
+      "priority": 1,
+      "summary": "More than 20,000 veterans and transitioning service members have claimed a free year of ChatGPT Plus. See how they use it to prepare for civilian careers."
     },
     {
-      "title": "Veterans' Mental Health Crisis Severity Annotation: Do LLMs Agree More Than Human Experts?",
-      "url": "https://arxiv.org/abs/2611.10048",
-      "published": "2026-11-10T05:00:00+00:00",
+      "title": "Auditable Human-Agent Teams for Autonomous X-ray Experimentation",
+      "url": "https://arxiv.org/abs/2611.12933",
+      "published": "2026-11-11T05:00:00+00:00",
       "source": "arXiv cs.AI",
       "priority": 2,
-      "summary": "arXiv:2611.10048v1 Announce Type: new Abstract: Large language models (LLMs) offer a scalable approach for annotating mental health and crisis-related social media content, but their reliability in safety-critical tasks remains unclear. This study evaluates LLM-based crisis-severity annotation of veteran-related social media posts against annotations from eight Veteran Subject Matter Experts (SMEs). Using 149 tweets and five severity categories, we evaluate 15 open-source and 10 proprietary LLMs across eight prompt variants, examining annotation performance, inter-model agreement, prompt sensitivity, and high-severity crisis detection. Human reviewers showed higher ordinal than nominal agreement ({\\alpha} = 0.494), indicating that disagreements often occurred between neighboring severity levels. In contrast, selected LLMs demonstrated substantially higher inter-model consistency, with ordinal agreement ({\\alpha}) reaching 0.8336 under the baseline prompt. Proprietary models generally showed better agreement with expert annotations and greater stability than open-source models. GPT-5.6-Terra achieved the best overall performance, while the open-source Qwen2.5-7B showed the strongest performance in identifying Acute Crisis with Suicidal Ideation cases. However, higher model consistency did not necessarily correspond to agreement with human judgments or reliable detection of rare high-severity cases. Label-flipped demonstration experiments also revealed model-specific sensitivity to misleading in-context examples, while explanatory demonstrations did not consistently improve performance. Overall, LLMs show promise as scalable complements to expert annotation, but require careful evaluation before use in high-stakes mental health applications."
+      "summary": "arXiv:2611.12933v1 Announce Type: new Abstract: Closed-loop autonomous experimentation can accelerate scientific discovery, but implementation effort limits accessibility. Agentic systems may lower this barrier, although sustained operation on physical instruments remains largely unexplored. Here, using coding-agent infrastructure grounded in validated scientific methods, we demonstrate autonomous synchrotron X-ray experiments on nanoparticle superlattices under evolving, human-defined objectives. Complete human-agent and agent-agent transcripts enable an audit that reconstructs decision provenance and characterizes the division of cognitive labor. Across three experiments, 61-67% of messages involved interpretation or judgment, while the share of methodological and scientific contributions increased from 46% in the setup-focused first experiment to 56-61% in later experiments. Provenance showed that 59-68% of error corrections involved multiple participants and that about half of all decisions incorporated the input of another participant. These results may guide design principles for multi-agent scientific systems and inform future agent harnesses, model training, and accessible autonomous experimentation."
     },
     {
-      "title": "LoRazor: Trimming Adapter Execution for Efficient Multi-LoRA Serving",
-      "url": "https://arxiv.org/abs/2611.10049",
-      "published": "2026-11-10T05:00:00+00:00",
+      "title": "EarthRecord: From Pixels to Land Change with Multimodal Agents over Four Decades of Satellite Imagery",
+      "url": "https://arxiv.org/abs/2611.12934",
+      "published": "2026-11-11T05:00:00+00:00",
       "source": "arXiv cs.AI",
       "priority": 2,
-      "summary": "arXiv:2611.10049v1 Announce Type: new Abstract: LoRA offers a parameter-efficient adaptation strategy, supporting multi-user workloads via customized adapters on a shared backbone. However, serving concurrent requests with different adapters introduces substantial computation and memory-management overhead. We ask the research question: Do all requests need their adapters throughout the whole generation process? Our motivational study reveals that employing LoRA adapters at every decoding step is unnecessary, releasing them early has limited impact on accuracy while substantially accelerating generation. Although skipping adapters early offers theoretical workload reduction, translating these computational savings into concrete throughput gains requires tailored GPU kernels. We present LoRazor, a multi-LoRA serving framework that combines early adapter release with active-row aware GPU kernels. LoRazor determines when to permanently release a request's adapter and continue decoding with the backbone alone. By dynamically resizing LoRA kernel launches as adapters are released, LoRazor trims idle GPU blocks. Across two backbones and four tasks, LoRazor achieves up to 3.02x request throughput and 2.53x output-token throughput over vLLM multi-LoRA, with a mean relative task-accuracy decrease of 2.89%."
+      "summary": "arXiv:2611.12934v1 Announce Type: new Abstract: While multimodal agents now carry out complex data analysis with tools, their ability to turn decades of satellite imagery into reliable land-change analysis, crucial for Earth observation science, remains unmeasured. Existing benchmarks fall short: they pose questions on curated images or give agents preprocessed inputs, leaving out the raw multi-sensor archives where such analysis begins. We introduce EarthRecord, a benchmark built on the raw record of 56 sites: four decades of Landsat, MODIS, VIIRS, and Sentinel-2 data, with cloud masking and cross-sensor harmonization left to the agent. It poses 238 land-change questions across ten analysis tasks, scored against withheld references from global products, agreement among methods, and visual interpretation. Two controls test what answers rest on: the closed book removes the record, and instrument pairs alter one satellite's data while nothing changes on the ground. Evaluations of twelve multimodal agents reveal that leading agents complete most analyses end to end but falter when an answer requires mapping from imagery. Further analysis shows that the record moves answers from prior knowledge to the pixels but not yet to the real change on the ground: when one satellite's data are altered, half of the right answers follow the alteration. EarthRecord thus provides a principled platform for measuring and advancing agents from pixels to land change."
     },
     {
-      "title": "AYO: A Safe and Privacy-Preserving Platform for Studying Children's Interaction with LLMs",
-      "url": "https://arxiv.org/abs/2611.10054",
-      "published": "2026-11-10T05:00:00+00:00",
+      "title": "Train on prefill, monitor at decode: Using sparse autoencoders for topic monitoring",
+      "url": "https://arxiv.org/abs/2611.12935",
+      "published": "2026-11-11T05:00:00+00:00",
       "source": "arXiv cs.AI",
       "priority": 2,
-      "summary": "arXiv:2611.10054v1 Announce Type: new Abstract: Children and adolescents are increasingly interacting with generative AI and large language models (LLMs), yet little is known about how these interactions may influence their development, beliefs, and behavior. Existing research has relied heavily on surveys, while direct study of children's interactions with LLMs presents substantial challenges related to safety, privacy, consent, and experimental control. We introduce AYO (AI Youth Open Science), an open-source platform designed for safe and systematic research on children's interactions with conversational AI. AYO provides a child-friendly interface, configurable age-based safety guardrails, researcher monitoring, and privacy-preserving data practices. These capabilities enable cross-sectional, longitudinal, and experimental research on how children use and respond to LLMs and how AI design may shape trust, epistemic judgment, curiosity, and other aspects of development. AYO provides the infrastructure to generate evidence that guides safer AI systems, educational practices, and policies for children growing up with AI."
+      "summary": "arXiv:2611.12935v1 Announce Type: new Abstract: Topic monitoring is the task of labelling the topic of each token in a model's response during generation. Activation-based monitors that run at generation time have so far been trained to detect harmful content and are limited to two or three classes. We introduce TopicScope, a framework for training causal topic classifiers on SAE features that assign a topic to every token, so that the label can change partway through a response. We train three detector architectures on synthetic multi-topic conversations covering seven topics. Across Gemma-3 1B and 4B, monitors trained on features extracted from prefill hidden states were able to generalise to decoding. We also found that the classifiers are robust to perturbations, losing at most 5 macro-F1 points when off-topic asides are inserted, topics are removed or sections are reordered. Ablations conducted to understand the contribution of the SAE revealed that classifiers reaching baseline performance without it were several times larger. Our findings show that compact topic monitors can be trained inexpensively in prefill and deployed during generation. More broadly, our work shows where SAEs are useful beyond safety classification. Our code, dataset and checkpoints are available at and"
     },
     {
-      "title": "META-IR: Meta-Introspective Reasoning for Adaptive Safety Alignment in LLM",
-      "url": "https://arxiv.org/abs/2611.10089",
-      "published": "2026-11-10T05:00:00+00:00",
+      "title": "LandslideFM: A Foundation Model Towards Unified Landslide Perception and Understanding",
+      "url": "https://arxiv.org/abs/2611.12936",
+      "published": "2026-11-11T05:00:00+00:00",
       "source": "arXiv cs.AI",
       "priority": 2,
-      "summary": "arXiv:2611.10089v1 Announce Type: new Abstract: Large Language Models (LLMs) remain vulnerable to jailbreak attacks and harmful-content prompts, particularly under adversarial distribution shifts where static alignment pipelines fail to generalize. Although introspective methods such as STAIR strengthen refusal consistency, they depend on fixed self-evaluation policies that cannot rapidly adapt to evolving manipulation strategies. To overcome these limitations, this paper introduces META-IR, a meta-introspective reasoning framework that enhances safety alignment through meta-learning-driven adaptation. It employs a dual-loop architecture: an inner introspective loop that performs structured risk analysis, self-assessment, and reflective correction via SI-MCTS, and an outer meta-learning loop that optimizes the introspection policy across diverse jailbreak task families to enable rapid generalization to unseen attacks. A dynamic jailbreak simulation module further exposes the model to progressively harder adversarial prompts, enabling continual self-improvement without human supervision. Experiments across multiple models (Llama-3.1-8B-Instruct and Qwen-2-7B-Instruct) and a broad suite of safety, helpfulness, generalization, and introspection metrics demonstrate that META-IR substantially improves adaptation speed, robustness, and reasoning stability compared with all baseline models. These results establish META-IR as an effective pathway toward building LLMs capable of sustained, adaptive safety alignment under dynamic and evolving threat environments."
+      "summary": "arXiv:2611.12936v1 Announce Type: new Abstract: Intelligent landslide detection is essential for disaster prevention. However, existing models primarily focus on isolated visual tasks, require extensive labeled data, and lack deep analytical and scene-understanding capabilities. To address these limitations, we propose LandslideFM, the first unified foundation model that connects visual perception tasks with contextual interpretation of landslides. Specifically, LandslideFM adapts to multiple visual tasks via a Source-Agreement Graduated Trust semi-supervised learning framework that leverages limited labeled data alongside abundant unlabeled data. Furthermore, predicted landslide regions provide explicit spatial guidance to a Vision-Language Model adapted through parameter-efficient fine-tuning, enabling comprehensive landslide reasoning. To support training and evaluation in this domain, we also present LandslideVL, the first benchmark for intelligent landslide analysis, combining visual imagery and newly introduced textual prompts. Comprehensive experiments across public datasets and LandslideVL demonstrate that LandslideFM achieves superior quantitative and qualitative performance. Most importantly, LandslideFM surpasses general-purpose VLMs in specialized landslide reasoning and scene analysis. Our code is released at"
     }
   ],
   "story": {
-    "title": "Don't Blame The Preferences: Examining The Emergence of Sycophancy in LLM Training",
-    "url": "https://arxiv.org/abs/2611.10045",
-    "published": "2026-11-10T05:00:00+00:00",
-    "source": "arXiv cs.AI",
-    "priority": 2,
-    "summary": "arXiv:2611.10045v1 Announce Type: new Abstract: AI sycophancy, the tendency of large language models (LLMs) to flatter users and affirm their beliefs, can undermine accuracy and contribute to misinformation, dependence, and overconfidence. Although prior work has benchmarked sycophancy in released models and proposed mitigations, its origins during training remain poorly understood. Preference alignment methods such as RLHF and DPO are often blamed, but their effects are rarely compared with earlier training stages. We investigate sycophancy across the training pipelines of three model families and three benchmarks. We find that sycophancy is largely established by the end of supervised fine-tuning (SFT), rather than introduced by preference alignment. Across all nine model benchmark combinations, SFT checkpoints attain at least 92% of preference aligned models' sycophancy scores and at least 85% of final models' scores; on average, they are about as sycophantic as final models. Preference alignment increases sycophancy in only four of nine cases, by an average of 4.2 percentage points when it does. To probe the underlying causes, we isolate model representations associated with sycophancy using mechanistic interpretability and measure their activation on training datasets from each stage. SFT datasets show roughly the same average activation as other training data but contribute substantially more examples, and the highest-scoring individual datasets all come from SFT. Our findings suggest that addressing sycophancy requires interventions throughout the training pipeline, particularly in data selection and augmentation for pre-training and SFT."
+    "title": "ChatGPT Plus for veterans and servicemembers",
+    "url": "https://openai.com/index/chatgpt-plus-for-veterans",
+    "published": "2026-11-11T08:00:00+00:00",
+    "source": "OpenAI News",
+    "priority": 1,
+    "summary": "More than 20,000 veterans and transitioning service members have claimed a free year of ChatGPT Plus. See how they use it to prepare for civilian careers."
   },
-  "caption": "Today's AI Brief: 5 developments.\n\nSwipe through for the stories and sources.\n\n1. Don't Blame The Preferences: Examining The Emergence of Sycophancy in LLM Training\narXiv:2611.10045v1 Announce Type: new Abstract: AI sycophancy, the tendency of large language models (LLMs) t…\nSource: arXiv cs.AI\nhttps://arxiv.org/abs/2611.10045\n\n2. Veterans' Mental Health Crisis Severity Annotation: Do LLMs Agree More Than Human Experts?\narXiv:2611.10048v1 Announce Type: new Abstract: Large language models (LLMs) offer a scalable approach for an…\nSource: arXiv cs.AI\nhttps://arxiv.org/abs/2611.10048\n\n3. LoRazor: Trimming Adapter Execution for Efficient Multi-LoRA Serving\narXiv:2611.10049v1 Announce Type: new Abstract: LoRA offers a parameter-efficient adaptation strategy, suppor…\nSource: arXiv cs.AI\nhttps://arxiv.org/abs/2611.10049\n\n4. AYO: A Safe and Privacy-Preserving Platform for Studying Children's Interaction with LLMs\narXiv:2611.10054v1 Announce Type: new Abstract: Children and adolescents are increasingly interacting with ge…\nSource: arXiv cs.AI\nhttps://arxiv.org/abs/2611.10054\n\n5. META-IR: Meta-Introspective Reasoning for Adaptive Safety Alignment in LLM\narXiv:2611.10089v1 Announce Type: new Abstract: Large Language Models (LLMs) remain vulnerable to jailbreak a…\nSource: arXiv cs.AI\nhttps://arxiv.org/abs/2611.10089\n\nAI Brief · Daily AI developments",
+  "caption": "Today's AI Brief: 5 developments.\n\nSwipe through for the stories and sources.\n\n1. ChatGPT Plus for veterans and servicemembers\nMore than 20,000 veterans and transitioning service members have claimed a free year of ChatGPT Plus. See how…\nSource: OpenAI News\nhttps://openai.com/index/chatgpt-plus-for-veterans\n\n2. Auditable Human-Agent Teams for Autonomous X-ray Experimentation\narXiv:2611.12933v1 Announce Type: new Abstract: Closed-loop autonomous experimentation can accelerate scienti…\nSource: arXiv cs.AI\nhttps://arxiv.org/abs/2611.12933\n\n3. EarthRecord: From Pixels to Land Change with Multimodal Agents over Four Decades of Satellite Imagery\narXiv:2611.12934v1 Announce Type: new Abstract: While multimodal agents now carry out complex data analysis w…\nSource: arXiv cs.AI\nhttps://arxiv.org/abs/2611.12934\n\n4. Train on prefill, monitor at decode: Using sparse autoencoders for topic monitoring\narXiv:2611.12935v1 Announce Type: new Abstract: Topic monitoring is the task of labelling the topic of each t…\nSource: arXiv cs.AI\nhttps://arxiv.org/abs/2611.12935\n\n5. LandslideFM: A Foundation Model Towards Unified Landslide Perception and Understanding\narXiv:2611.12936v1 Announce Type: new Abstract: Intelligent landslide detection is essential for disaster pre…\nSource: arXiv cs.AI\nhttps://arxiv.org/abs/2611.12936\n\nAI Brief · Daily AI developments",
   "alt_texts": [
-    "AI Brief news image. Headline: Don't Blame The Preferences: Examining The Emergence of Sycophancy in LLM Training. Source: arXiv cs.AI.",
-    "AI Brief news image. Headline: Veterans' Mental Health Crisis Severity Annotation: Do LLMs Agree More Than Human Experts?. Source: arXiv cs.AI.",
-    "AI Brief news image. Headline: LoRazor: Trimming Adapter Execution for Efficient Multi-LoRA Serving. Source: arXiv cs.AI.",
-    "AI Brief news image. Headline: AYO: A Safe and Privacy-Preserving Platform for Studying Children's Interaction with LLMs. Source: arXiv cs.AI.",
-    "AI Brief news image. Headline: META-IR: Meta-Introspective Reasoning for Adaptive Safety Alignment in LLM. Source: arXiv cs.AI."
+    "AI Brief news image. Headline: ChatGPT Plus for veterans and servicemembers. Source: OpenAI News.",
+    "AI Brief news image. Headline: Auditable Human-Agent Teams for Autonomous X-ray Experimentation. Source: arXiv cs.AI.",
+    "AI Brief news image. Headline: EarthRecord: From Pixels to Land Change with Multimodal Agents over Four Decades of Satellite Imagery. Source: arXiv cs.AI.",
+    "AI Brief news image. Headline: Train on prefill, monitor at decode: Using sparse autoencoders for topic monitoring. Source: arXiv cs.AI.",
+    "AI Brief news image. Headline: LandslideFM: A Foundation Model Towards Unified Landslide Perception and Understanding. Source: arXiv cs.AI."
   ],
   "image_paths": [
-    "posts/2026-11-10-01.jpg",
-    "posts/2026-11-10-02.jpg",
-    "posts/2026-11-10-03.jpg",
-    "posts/2026-11-10-04.jpg",
-    "posts/2026-11-10-05.jpg"
+    "posts/2026-11-11-01.jpg",
+    "posts/2026-11-11-02.jpg",
+    "posts/2026-11-11-03.jpg",
+    "posts/2026-11-11-04.jpg",
+    "posts/2026-11-11-05.jpg"
   ],
   "image_urls": [
-    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-11-10-01.jpg",
-    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-11-10-02.jpg",
-    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-11-10-03.jpg",
-    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-11-10-04.jpg",
-    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-11-10-05.jpg"
+    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-11-11-01.jpg",
+    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-11-11-02.jpg",
+    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-11-11-03.jpg",
+    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-11-11-04.jpg",
+    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-11-11-05.jpg"
   ],
   "carousel": true,
   "content_type": "news"
