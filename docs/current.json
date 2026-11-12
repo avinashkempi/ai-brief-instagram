@@ -1,8 +1,40 @@
 {
-  "date": "2026-11-11",
+  "date": "2026-11-12",
   "status": "ready",
-  "generated_at": "2026-11-11T08:18:13.525969+00:00",
+  "generated_at": "2026-11-12T08:47:55.744610+00:00",
   "stories": [
+    {
+      "title": "Gilbert + Tobin rethinks the business of law with AI",
+      "url": "https://openai.com/index/gilbert-tobin-sam-nickless",
+      "published": "2026-11-12T00:00:00+00:00",
+      "source": "OpenAI News",
+      "priority": 1,
+      "summary": "A conversation with Sam Nickless, Partner and Chief Executive Officer at Gilbert + Tobin."
+    },
+    {
+      "title": "Gemini Decisions API: Fast, calibrated multimodal decisions",
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api/",
+      "published": "2026-11-11T18:00:00+00:00",
+      "source": "Google AI",
+      "priority": 1,
+      "summary": "Meet the Gemini Decisions API, powered by our state-of-the-art model Gemini Decision for fast, calibrated multimodal decisions."
+    },
+    {
+      "title": "Try Tabletop: Customizable, collaborative spaces for groups to plan, play and do more together.",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/google-labs/tabletop/",
+      "published": "2026-11-11T16:00:00+00:00",
+      "source": "Google AI",
+      "priority": 1,
+      "summary": "Tabletop is a new Google Labs experiment for group collaboration. Build interactive itineraries, polls, and brackets with your team. Join the waitlist."
+    },
+    {
+      "title": "Experience the art and legacy of Dr. Esther Mahlangu",
+      "url": "https://blog.google/company-news/outreach-and-initiatives/arts-culture/esther-mahlangu/",
+      "published": "2026-11-11T09:00:00+00:00",
+      "source": "Google AI",
+      "priority": 1,
+      "summary": "A portrait of Dr Nontobeko Ntombela, Senior Lecturer, Department of Curatorial, Public and Visual Cultures, Wits School of Arts, University of the Witwatersrand"
+    },
     {
       "title": "ChatGPT Plus for veterans and servicemembers",
       "url": "https://openai.com/index/chatgpt-plus-for-veterans",
@@ -10,69 +42,37 @@
       "source": "OpenAI News",
       "priority": 1,
       "summary": "More than 20,000 veterans and transitioning service members have claimed a free year of ChatGPT Plus. See how they use it to prepare for civilian careers."
-    },
-    {
-      "title": "Auditable Human-Agent Teams for Autonomous X-ray Experimentation",
-      "url": "https://arxiv.org/abs/2611.12933",
-      "published": "2026-11-11T05:00:00+00:00",
-      "source": "arXiv cs.AI",
-      "priority": 2,
-      "summary": "arXiv:2611.12933v1 Announce Type: new Abstract: Closed-loop autonomous experimentation can accelerate scientific discovery, but implementation effort limits accessibility. Agentic systems may lower this barrier, although sustained operation on physical instruments remains largely unexplored. Here, using coding-agent infrastructure grounded in validated scientific methods, we demonstrate autonomous synchrotron X-ray experiments on nanoparticle superlattices under evolving, human-defined objectives. Complete human-agent and agent-agent transcripts enable an audit that reconstructs decision provenance and characterizes the division of cognitive labor. Across three experiments, 61-67% of messages involved interpretation or judgment, while the share of methodological and scientific contributions increased from 46% in the setup-focused first experiment to 56-61% in later experiments. Provenance showed that 59-68% of error corrections involved multiple participants and that about half of all decisions incorporated the input of another participant. These results may guide design principles for multi-agent scientific systems and inform future agent harnesses, model training, and accessible autonomous experimentation."
-    },
-    {
-      "title": "EarthRecord: From Pixels to Land Change with Multimodal Agents over Four Decades of Satellite Imagery",
-      "url": "https://arxiv.org/abs/2611.12934",
-      "published": "2026-11-11T05:00:00+00:00",
-      "source": "arXiv cs.AI",
-      "priority": 2,
-      "summary": "arXiv:2611.12934v1 Announce Type: new Abstract: While multimodal agents now carry out complex data analysis with tools, their ability to turn decades of satellite imagery into reliable land-change analysis, crucial for Earth observation science, remains unmeasured. Existing benchmarks fall short: they pose questions on curated images or give agents preprocessed inputs, leaving out the raw multi-sensor archives where such analysis begins. We introduce EarthRecord, a benchmark built on the raw record of 56 sites: four decades of Landsat, MODIS, VIIRS, and Sentinel-2 data, with cloud masking and cross-sensor harmonization left to the agent. It poses 238 land-change questions across ten analysis tasks, scored against withheld references from global products, agreement among methods, and visual interpretation. Two controls test what answers rest on: the closed book removes the record, and instrument pairs alter one satellite's data while nothing changes on the ground. Evaluations of twelve multimodal agents reveal that leading agents complete most analyses end to end but falter when an answer requires mapping from imagery. Further analysis shows that the record moves answers from prior knowledge to the pixels but not yet to the real change on the ground: when one satellite's data are altered, half of the right answers follow the alteration. EarthRecord thus provides a principled platform for measuring and advancing agents from pixels to land change."
-    },
-    {
-      "title": "Train on prefill, monitor at decode: Using sparse autoencoders for topic monitoring",
-      "url": "https://arxiv.org/abs/2611.12935",
-      "published": "2026-11-11T05:00:00+00:00",
-      "source": "arXiv cs.AI",
-      "priority": 2,
-      "summary": "arXiv:2611.12935v1 Announce Type: new Abstract: Topic monitoring is the task of labelling the topic of each token in a model's response during generation. Activation-based monitors that run at generation time have so far been trained to detect harmful content and are limited to two or three classes. We introduce TopicScope, a framework for training causal topic classifiers on SAE features that assign a topic to every token, so that the label can change partway through a response. We train three detector architectures on synthetic multi-topic conversations covering seven topics. Across Gemma-3 1B and 4B, monitors trained on features extracted from prefill hidden states were able to generalise to decoding. We also found that the classifiers are robust to perturbations, losing at most 5 macro-F1 points when off-topic asides are inserted, topics are removed or sections are reordered. Ablations conducted to understand the contribution of the SAE revealed that classifiers reaching baseline performance without it were several times larger. Our findings show that compact topic monitors can be trained inexpensively in prefill and deployed during generation. More broadly, our work shows where SAEs are useful beyond safety classification. Our code, dataset and checkpoints are available at and"
-    },
-    {
-      "title": "LandslideFM: A Foundation Model Towards Unified Landslide Perception and Understanding",
-      "url": "https://arxiv.org/abs/2611.12936",
-      "published": "2026-11-11T05:00:00+00:00",
-      "source": "arXiv cs.AI",
-      "priority": 2,
-      "summary": "arXiv:2611.12936v1 Announce Type: new Abstract: Intelligent landslide detection is essential for disaster prevention. However, existing models primarily focus on isolated visual tasks, require extensive labeled data, and lack deep analytical and scene-understanding capabilities. To address these limitations, we propose LandslideFM, the first unified foundation model that connects visual perception tasks with contextual interpretation of landslides. Specifically, LandslideFM adapts to multiple visual tasks via a Source-Agreement Graduated Trust semi-supervised learning framework that leverages limited labeled data alongside abundant unlabeled data. Furthermore, predicted landslide regions provide explicit spatial guidance to a Vision-Language Model adapted through parameter-efficient fine-tuning, enabling comprehensive landslide reasoning. To support training and evaluation in this domain, we also present LandslideVL, the first benchmark for intelligent landslide analysis, combining visual imagery and newly introduced textual prompts. Comprehensive experiments across public datasets and LandslideVL demonstrate that LandslideFM achieves superior quantitative and qualitative performance. Most importantly, LandslideFM surpasses general-purpose VLMs in specialized landslide reasoning and scene analysis. Our code is released at"
     }
   ],
   "story": {
-    "title": "ChatGPT Plus for veterans and servicemembers",
-    "url": "https://openai.com/index/chatgpt-plus-for-veterans",
-    "published": "2026-11-11T08:00:00+00:00",
+    "title": "Gilbert + Tobin rethinks the business of law with AI",
+    "url": "https://openai.com/index/gilbert-tobin-sam-nickless",
+    "published": "2026-11-12T00:00:00+00:00",
     "source": "OpenAI News",
     "priority": 1,
-    "summary": "More than 20,000 veterans and transitioning service members have claimed a free year of ChatGPT Plus. See how they use it to prepare for civilian careers."
+    "summary": "A conversation with Sam Nickless, Partner and Chief Executive Officer at Gilbert + Tobin."
   },
-  "caption": "Today's AI Brief: 5 developments.\n\nSwipe through for the stories and sources.\n\n1. ChatGPT Plus for veterans and servicemembers\nMore than 20,000 veterans and transitioning service members have claimed a free year of ChatGPT Plus. See how…\nSource: OpenAI News\nhttps://openai.com/index/chatgpt-plus-for-veterans\n\n2. Auditable Human-Agent Teams for Autonomous X-ray Experimentation\narXiv:2611.12933v1 Announce Type: new Abstract: Closed-loop autonomous experimentation can accelerate scienti…\nSource: arXiv cs.AI\nhttps://arxiv.org/abs/2611.12933\n\n3. EarthRecord: From Pixels to Land Change with Multimodal Agents over Four Decades of Satellite Imagery\narXiv:2611.12934v1 Announce Type: new Abstract: While multimodal agents now carry out complex data analysis w…\nSource: arXiv cs.AI\nhttps://arxiv.org/abs/2611.12934\n\n4. Train on prefill, monitor at decode: Using sparse autoencoders for topic monitoring\narXiv:2611.12935v1 Announce Type: new Abstract: Topic monitoring is the task of labelling the topic of each t…\nSource: arXiv cs.AI\nhttps://arxiv.org/abs/2611.12935\n\n5. LandslideFM: A Foundation Model Towards Unified Landslide Perception and Understanding\narXiv:2611.12936v1 Announce Type: new Abstract: Intelligent landslide detection is essential for disaster pre…\nSource: arXiv cs.AI\nhttps://arxiv.org/abs/2611.12936\n\nAI Brief · Daily AI developments",
+  "caption": "Today's AI Brief: 5 developments.\n\nSwipe through for the stories and sources.\n\n1. Gilbert + Tobin rethinks the business of law with AI\nA conversation with Sam Nickless, Partner and Chief Executive Officer at Gilbert + Tobin.\nSource: OpenAI News\nhttps://openai.com/index/gilbert-tobin-sam-nickless\n\n2. Gemini Decisions API: Fast, calibrated multimodal decisions\nMeet the Gemini Decisions API, powered by our state-of-the-art model Gemini Decision for fast, calibrated mul…\nSource: Google AI\nhttps://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api/\n\n3. Try Tabletop: Customizable, collaborative spaces for groups to plan, play and do more together.\nTabletop is a new Google Labs experiment for group collaboration. Build interactive itineraries, polls, and b…\nSource: Google AI\nhttps://blog.google/innovation-and-ai/models-and-research/google-labs/tabletop/\n\n4. Experience the art and legacy of Dr. Esther Mahlangu\nA portrait of Dr Nontobeko Ntombela, Senior Lecturer, Department of Curatorial, Public and Visual Cultures, W…\nSource: Google AI\nhttps://blog.google/company-news/outreach-and-initiatives/arts-culture/esther-mahlangu/\n\n5. ChatGPT Plus for veterans and servicemembers\nMore than 20,000 veterans and transitioning service members have claimed a free year of ChatGPT Plus. See how…\nSource: OpenAI News\nhttps://openai.com/index/chatgpt-plus-for-veterans\n\nAI Brief · Daily AI developments",
   "alt_texts": [
-    "AI Brief news image. Headline: ChatGPT Plus for veterans and servicemembers. Source: OpenAI News.",
-    "AI Brief news image. Headline: Auditable Human-Agent Teams for Autonomous X-ray Experimentation. Source: arXiv cs.AI.",
-    "AI Brief news image. Headline: EarthRecord: From Pixels to Land Change with Multimodal Agents over Four Decades of Satellite Imagery. Source: arXiv cs.AI.",
-    "AI Brief news image. Headline: Train on prefill, monitor at decode: Using sparse autoencoders for topic monitoring. Source: arXiv cs.AI.",
-    "AI Brief news image. Headline: LandslideFM: A Foundation Model Towards Unified Landslide Perception and Understanding. Source: arXiv cs.AI."
+    "AI Brief news image. Headline: Gilbert + Tobin rethinks the business of law with AI. Source: OpenAI News.",
+    "AI Brief news image. Headline: Gemini Decisions API: Fast, calibrated multimodal decisions. Source: Google AI.",
+    "AI Brief news image. Headline: Try Tabletop: Customizable, collaborative spaces for groups to plan, play and do more together.. Source: Google AI.",
+    "AI Brief news image. Headline: Experience the art and legacy of Dr. Esther Mahlangu. Source: Google AI.",
+    "AI Brief news image. Headline: ChatGPT Plus for veterans and servicemembers. Source: OpenAI News."
   ],
   "image_paths": [
-    "posts/2026-11-11-01.jpg",
-    "posts/2026-11-11-02.jpg",
-    "posts/2026-11-11-03.jpg",
-    "posts/2026-11-11-04.jpg",
-    "posts/2026-11-11-05.jpg"
+    "posts/2026-11-12-01.jpg",
+    "posts/2026-11-12-02.jpg",
+    "posts/2026-11-12-03.jpg",
+    "posts/2026-11-12-04.jpg",
+    "posts/2026-11-12-05.jpg"
   ],
   "image_urls": [
-    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-11-11-01.jpg",
-    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-11-11-02.jpg",
-    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-11-11-03.jpg",
-    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-11-11-04.jpg",
-    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-11-11-05.jpg"
+    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-11-12-01.jpg",
+    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-11-12-02.jpg",
+    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-11-12-03.jpg",
+    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-11-12-04.jpg",
+    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-11-12-05.jpg"
   ],
   "carousel": true,
   "content_type": "news"
