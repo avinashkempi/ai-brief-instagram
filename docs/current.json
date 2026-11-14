@@ -1,78 +1,78 @@
 {
-  "date": "2026-11-13",
+  "date": "2026-11-14",
   "status": "ready",
-  "generated_at": "2026-11-13T08:41:54.331131+00:00",
+  "generated_at": "2026-11-14T07:57:49.057225+00:00",
   "stories": [
     {
-      "title": "Zugwise: Domain-Aware Game Reconstruction for Digitizing Handwritten Chess Scoresheets",
-      "url": "https://arxiv.org/abs/2611.14544",
-      "published": "2026-11-13T05:00:00+00:00",
-      "source": "arXiv cs.AI",
-      "priority": 2,
-      "summary": "arXiv:2611.14544v1 Announce Type: new Abstract: Digitizing handwritten chess scoresheets has been studied as a handwriting-recognition problem: read the move in each box and check that it is legal. This framing misses the errors that matter most. A misread that yields an illegal move is loud. One that yields a legal-but-wrong move is silent, because a legality-only pipeline accepts it and reads every later move against a wrong position. We therefore treat the task as game reconstruction and present Zugwise, which repurposes computer-chess machinery (quiescence search, static exchange evaluation, pin detection) to ask not \"what should be played?\" but \"could a human plausibly have written this?\" An absurdity detector makes silent errors loud at or near where they occur, and a backward search traces late symptoms to their cause. Candidate ranking excludes chess-quality signals. A Needleman-Wunsch merge adds the second player's sheet as evidence, and review stops send every disagreement between the sheets' legal readings to a human. In oracle replay of two tournament sections, a release adding them cuts silent errors from 16 to 1 and from 50 to 13. Two learned signals, CTC re-scoring against the recognizer's raw output and a Maia-style human-move prior, raise the correct fix's top-rank rate from 58.8% to 78.0% of the replacement decisions where it is a candidate, and hold without refitting on a later section. On the first section, the human-verified output matches an independent expert transcription move for move on 34 of 45 games, and adjudication against the sheets found errors in both records, on different plies. We do not establish that either workflow is faster or more accurate. The system runs entirely in the browser and is free, private, and offline-capable; alongside it we offer a three-way adjudication protocol for a domain where no single record is ground truth."
+      "title": "Introducing ChatGPT Wallet",
+      "url": "https://openai.com/index/introducing-chatgpt-wallet",
+      "published": "2026-11-13T15:00:00+00:00",
+      "source": "OpenAI News",
+      "priority": 1,
+      "summary": "Introducing ChatGPT Wallet, a secure way for agents in ChatGPT Work, Codex, and dots to complete purchases with user approval and existing card protections."
     },
     {
-      "title": "Cleaning an Agent's History Hurts When the World Still Holds the Error",
-      "url": "https://arxiv.org/abs/2611.14654",
-      "published": "2026-11-13T05:00:00+00:00",
-      "source": "arXiv cs.AI",
-      "priority": 2,
-      "summary": "arXiv:2611.14654v1 Announce Type: new Abstract: Tool-using language-model agents accumulate histories of their own mistakes, and a system that compacts, repairs or hands off such a history decides what it says about those mistakes while their effects stay in the world. Prior work cleans the history at a fixed world, where showing a corrected step and saying it is done move together. We ask whether the same correct content helps or hurts depending on how the history states it and what the world holds. We freeze an agent mid-task with its exact world state, edit the history or the world, and let a receiver model continue. On AgentCE-Bench, after the agent commits a wrong value, we hold the world fixed and add the correct value by two natural edits: a truthful note beside the preserved error or the agent's own completed action. The note raises recovery, the share of remaining targets the receiver gets right, from 51% under a matched neutral note to 66%. The completed action lowers it below the unedited history, from 50% to 44%, so the value's presence alone does not predict the effect. On AppWorld, after a database write, we vary whether its receipt reports success or failure and whether its effect is present. A success receipt lowers whole-task success from 45% to 28% while the effect is absent and raises it from 38% to 49% once present. The two effects differ by 27 points pooled over two receivers, a difference positive in six of eight receivers at 97.5% and seven at 95%. A history edit's effect thus depends on the world it describes, and a history made to look clean while the world still holds the error can leave an agent worse off than no edit at all."
+      "title": "Shield helps technicians hand off legacy portal work with OpenAI",
+      "url": "https://openai.com/business/customer-stories/shield",
+      "published": "2026-11-13T08:00:00+00:00",
+      "source": "OpenAI News",
+      "priority": 1,
+      "summary": "Shield uses OpenAI to help IT technicians hand off work in legacy portals. Its Forge agents navigate systems so technicians can focus on issues needing their judgment."
     },
     {
-      "title": "Together Compiler: Continual Compilation for AI Inference",
-      "url": "https://arxiv.org/abs/2611.14681",
-      "published": "2026-11-13T05:00:00+00:00",
-      "source": "arXiv cs.AI",
-      "priority": 2,
-      "summary": "arXiv:2611.14681v1 Announce Type: new Abstract: Today's AI workloads are rapidly changing: new models are released more often, model architectures are increasingly diverse, and traffic distributions change frequently. The challenge we face at Together AI is continual optimization for these changing workloads. Compiling a deployment into an optimized forward pass is a challenge that is well-suited for agent hill-climbing. Existing systems struggle with continual compilation due to a tradeoff between measurement throughput and fidelity. Many systems use agents to optimize individual kernels from the inference forward pass using offline benchmarks, but timings are low-fidelity because of data-dependent behavior in primitives like mixture-of-experts (MoE). On the other hand, systems use agents to directly optimize end-to-end engines but suffer from slow engine launch times. To address these challenges, we build Together Compiler (TKCC), the first truly continual agent loop designed for AI inference optimization. To address the throughput-fidelity tradeoff, we propose: (1) a Tiered Persistent Engine that decouples engine launch overheads from forward pass computation; (2) a cost model to select the parallelism configurations that seed the optimization process. We also conduct extensive ablations on agent context management and present our insights on deploying TKCC in production. TKCC outperforms highly-optimized hand-written Megakernels on the Llama 1B workhorse workload by up to 1.7x and the best open source engines on the latest frontier models (Kimi K3, GLM 5.3, MiniMax M3.1 Flash, DeepSeek v4.1 Flash) across hardware platforms by up to 2.6x higher TPS on the InferenceX benchmark. TKCC also sets the state-of-the-art performance at batch size 1, with 1111 TPS on M3.1 Flash and 1205 TPS on DeepSeek v4.1 Flash. Finally, TKCC generalizes beyond frontier language model inference. TKCC serves trillions of tokens across our production fleet."
+      "title": "How Amplitude ships product improvements in 1–2 days with OpenAI",
+      "url": "https://openai.com/business/customer-stories/amplitude",
+      "published": "2026-11-12T20:00:00+00:00",
+      "source": "OpenAI News",
+      "priority": 1,
+      "summary": "Built primarily on OpenAI models, Amplitude’s proactive product agent, Wave, identifies what to build, helps teams ship changes with coding agents, and measures the impact."
     },
     {
-      "title": "When Should Semantic Priors Enter Partially-Identified Causal Discovery?",
-      "url": "https://arxiv.org/abs/2611.14736",
-      "published": "2026-11-13T05:00:00+00:00",
-      "source": "arXiv cs.AI",
-      "priority": 2,
-      "summary": "arXiv:2611.14736v1 Announce Type: new Abstract: Observational causal discovery often leaves causal di- rections unresolved or unstable. Large language mod- els (LLMs) can provide semantic information to resolve these directions, but incorrect proposals can exclude the true causal graph and invalidate downstream inference. We study three separate decisions: where to allocate semantic queries, which proposals to admit, and which causal graphs to retain. Our framework distinguishes population non-identifiability from finite-sample insta- bility, evaluates semantic orientation against statistical and random controls, and examines calibrated admis- sion and error-tolerant DAG retention. Experiments across benchmark networks show that semantic infor- mation improves recovery over coin-flip orientations, but targeting unstable edges has no established ad- vantage over matched-random allocation. The tested admission certificate cannot support nontrivial admis- sion with the available calibration tasks. Moreover, downstream retention depends on reference adequacy: learned references contain the true DAG in only three of 80 planned tasks. These findings separate the value of semantic information from the reliability of its alloca- tion, admission, and retention, and identify calibration size and reference adequacy as key limitations."
+      "title": "Introducing Gemini 4 Hydrogen",
+      "url": "https://deepmind.google/blog/introducing-gemini-4-hydrogen/",
+      "published": "2026-11-12T18:00:50+00:00",
+      "source": "Google DeepMind",
+      "priority": 1,
+      "summary": ""
     },
     {
-      "title": "SynthCorp: A Platform for Creating Benchmarks for Data Agents",
-      "url": "https://arxiv.org/abs/2611.14765",
-      "published": "2026-11-13T05:00:00+00:00",
-      "source": "arXiv cs.AI",
-      "priority": 2,
-      "summary": "arXiv:2611.14765v1 Announce Type: new Abstract: Current benchmarks for LLM-driven data agents saturate quickly and cannot target specific capabilities. We present SynthCorp, a platform that creates customizable data estates and benchmarks by simulating how business events produce and modify corporate data over time. Each data estate combines relational databases, a document store, and a data catalog, paired with evaluation tasks and executable gold programs. First, given a scenario and target complexity dimensions, SynthCorp synthesizes reusable event types and compiles each into a program over predefined simulation primitives. Second, SynthCorp schedules event instances on a virtual calendar, interleaving routine and disruption events so that tables, documents, and catalog entries remain consistent. Third, SynthCorp executes the calendar to materialize the data estate and records every operation in a simulation log. Fourth, SynthCorp generates analytical tasks and derives verified gold programs from the log. We use SynthCorp to generate initial evaluation benchmarks comprising seven data estates (up to 1K operational tables) and 256 tasks across five domains. The data estates pass deterministic pipeline checks (such as foreign-key violations, undeclared writes, recurrence violations, and database execution failures) with a near-zero error rate, introduce cross-asset complexities, and cover all requested dimensions. Evaluating three models across four data-context settings shows that the benchmarks separate data contexts and model tiers. Auditing candidate queries against causal provenance in the simulation log verifies gold programs without manual annotation, including on multi-event composite tasks that expose reasoning failures in state-of-the-art agents. We hope the community uses SynthCorp to generate more challenging and useful data estates and benchmarks that foster the development of enterprise data agents."
+      "title": "Google Search gets a major upgrade with Gemini 4 Hydrogen",
+      "url": "https://blog.google/products-and-platforms/products/search/gemini-4-hydrogen-search-upgrade/",
+      "published": "2026-11-12T18:00:00+00:00",
+      "source": "Google AI",
+      "priority": 1,
+      "summary": "Rotating carousel of cards with text \"Gemini 4 Hydrogen\" \"Now in Google Search\" and examples from the Google Search UI"
     }
   ],
   "story": {
-    "title": "Zugwise: Domain-Aware Game Reconstruction for Digitizing Handwritten Chess Scoresheets",
-    "url": "https://arxiv.org/abs/2611.14544",
-    "published": "2026-11-13T05:00:00+00:00",
-    "source": "arXiv cs.AI",
-    "priority": 2,
-    "summary": "arXiv:2611.14544v1 Announce Type: new Abstract: Digitizing handwritten chess scoresheets has been studied as a handwriting-recognition problem: read the move in each box and check that it is legal. This framing misses the errors that matter most. A misread that yields an illegal move is loud. One that yields a legal-but-wrong move is silent, because a legality-only pipeline accepts it and reads every later move against a wrong position. We therefore treat the task as game reconstruction and present Zugwise, which repurposes computer-chess machinery (quiescence search, static exchange evaluation, pin detection) to ask not \"what should be played?\" but \"could a human plausibly have written this?\" An absurdity detector makes silent errors loud at or near where they occur, and a backward search traces late symptoms to their cause. Candidate ranking excludes chess-quality signals. A Needleman-Wunsch merge adds the second player's sheet as evidence, and review stops send every disagreement between the sheets' legal readings to a human. In oracle replay of two tournament sections, a release adding them cuts silent errors from 16 to 1 and from 50 to 13. Two learned signals, CTC re-scoring against the recognizer's raw output and a Maia-style human-move prior, raise the correct fix's top-rank rate from 58.8% to 78.0% of the replacement decisions where it is a candidate, and hold without refitting on a later section. On the first section, the human-verified output matches an independent expert transcription move for move on 34 of 45 games, and adjudication against the sheets found errors in both records, on different plies. We do not establish that either workflow is faster or more accurate. The system runs entirely in the browser and is free, private, and offline-capable; alongside it we offer a three-way adjudication protocol for a domain where no single record is ground truth."
+    "title": "Introducing ChatGPT Wallet",
+    "url": "https://openai.com/index/introducing-chatgpt-wallet",
+    "published": "2026-11-13T15:00:00+00:00",
+    "source": "OpenAI News",
+    "priority": 1,
+    "summary": "Introducing ChatGPT Wallet, a secure way for agents in ChatGPT Work, Codex, and dots to complete purchases with user approval and existing card protections."
   },
-  "caption": "Today's AI Brief: 5 developments.\n\nSwipe through for the stories and sources.\n\n1. Zugwise: Domain-Aware Game Reconstruction for Digitizing Handwritten Chess Scoresheets\narXiv:2611.14544v1 Announce Type: new Abstract: Digitizing handwritten chess scoresheets has been studied as…\nSource: arXiv cs.AI\nhttps://arxiv.org/abs/2611.14544\n\n2. Cleaning an Agent's History Hurts When the World Still Holds the Error\narXiv:2611.14654v1 Announce Type: new Abstract: Tool-using language-model agents accumulate histories of thei…\nSource: arXiv cs.AI\nhttps://arxiv.org/abs/2611.14654\n\n3. Together Compiler: Continual Compilation for AI Inference\narXiv:2611.14681v1 Announce Type: new Abstract: Today's AI workloads are rapidly changing: new models are rel…\nSource: arXiv cs.AI\nhttps://arxiv.org/abs/2611.14681\n\n4. When Should Semantic Priors Enter Partially-Identified Causal Discovery?\narXiv:2611.14736v1 Announce Type: new Abstract: Observational causal discovery often leaves causal di- rectio…\nSource: arXiv cs.AI\nhttps://arxiv.org/abs/2611.14736\n\n5. SynthCorp: A Platform for Creating Benchmarks for Data Agents\narXiv:2611.14765v1 Announce Type: new Abstract: Current benchmarks for LLM-driven data agents saturate quickl…\nSource: arXiv cs.AI\nhttps://arxiv.org/abs/2611.14765\n\nAI Brief · Daily AI developments",
+  "caption": "Today's AI Brief: 5 developments.\n\nSwipe through for the stories and sources.\n\n1. Introducing ChatGPT Wallet\nIntroducing ChatGPT Wallet, a secure way for agents in ChatGPT Work, Codex, and dots to complete purchases wi…\nSource: OpenAI News\nhttps://openai.com/index/introducing-chatgpt-wallet\n\n2. Shield helps technicians hand off legacy portal work with OpenAI\nShield uses OpenAI to help IT technicians hand off work in legacy portals. Its Forge agents navigate systems…\nSource: OpenAI News\nhttps://openai.com/business/customer-stories/shield\n\n3. How Amplitude ships product improvements in 1–2 days with OpenAI\nBuilt primarily on OpenAI models, Amplitude’s proactive product agent, Wave, identifies what to build, helps…\nSource: OpenAI News\nhttps://openai.com/business/customer-stories/amplitude\n\n4. Introducing Gemini 4 Hydrogen\nSource: Google DeepMind\nhttps://deepmind.google/blog/introducing-gemini-4-hydrogen/\n\n5. Google Search gets a major upgrade with Gemini 4 Hydrogen\nRotating carousel of cards with text \"Gemini 4 Hydrogen\" \"Now in Google Search\" and examples from the Google…\nSource: Google AI\nhttps://blog.google/products-and-platforms/products/search/gemini-4-hydrogen-search-upgrade/\n\nAI Brief · Daily AI developments",
   "alt_texts": [
-    "AI Brief news image. Headline: Zugwise: Domain-Aware Game Reconstruction for Digitizing Handwritten Chess Scoresheets. Source: arXiv cs.AI.",
-    "AI Brief news image. Headline: Cleaning an Agent's History Hurts When the World Still Holds the Error. Source: arXiv cs.AI.",
-    "AI Brief news image. Headline: Together Compiler: Continual Compilation for AI Inference. Source: arXiv cs.AI.",
-    "AI Brief news image. Headline: When Should Semantic Priors Enter Partially-Identified Causal Discovery?. Source: arXiv cs.AI.",
-    "AI Brief news image. Headline: SynthCorp: A Platform for Creating Benchmarks for Data Agents. Source: arXiv cs.AI."
+    "AI Brief news image. Headline: Introducing ChatGPT Wallet. Source: OpenAI News.",
+    "AI Brief news image. Headline: Shield helps technicians hand off legacy portal work with OpenAI. Source: OpenAI News.",
+    "AI Brief news image. Headline: How Amplitude ships product improvements in 1–2 days with OpenAI. Source: OpenAI News.",
+    "AI Brief news image. Headline: Introducing Gemini 4 Hydrogen. Source: Google DeepMind.",
+    "AI Brief news image. Headline: Google Search gets a major upgrade with Gemini 4 Hydrogen. Source: Google AI."
   ],
   "image_paths": [
-    "posts/2026-11-13-01.jpg",
-    "posts/2026-11-13-02.jpg",
-    "posts/2026-11-13-03.jpg",
-    "posts/2026-11-13-04.jpg",
-    "posts/2026-11-13-05.jpg"
+    "posts/2026-11-14-01.jpg",
+    "posts/2026-11-14-02.jpg",
+    "posts/2026-11-14-03.jpg",
+    "posts/2026-11-14-04.jpg",
+    "posts/2026-11-14-05.jpg"
   ],
   "image_urls": [
-    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-11-13-01.jpg",
-    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-11-13-02.jpg",
-    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-11-13-03.jpg",
-    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-11-13-04.jpg",
-    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-11-13-05.jpg"
+    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-11-14-01.jpg",
+    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-11-14-02.jpg",
+    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-11-14-03.jpg",
+    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-11-14-04.jpg",
+    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-11-14-05.jpg"
   ],
   "carousel": true,
   "content_type": "news"
