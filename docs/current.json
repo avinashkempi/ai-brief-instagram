@@ -1,7 +1,7 @@
 {
-  "date": "2026-11-14",
+  "date": "2026-11-15",
   "status": "ready",
-  "generated_at": "2026-11-14T07:57:49.057225+00:00",
+  "generated_at": "2026-11-15T08:23:35.402036+00:00",
   "stories": [
     {
       "title": "Introducing ChatGPT Wallet",
@@ -28,20 +28,20 @@
       "summary": "Built primarily on OpenAI models, Amplitude’s proactive product agent, Wave, identifies what to build, helps teams ship changes with coding agents, and measures the impact."
     },
     {
-      "title": "Introducing Gemini 4 Hydrogen",
-      "url": "https://deepmind.google/blog/introducing-gemini-4-hydrogen/",
-      "published": "2026-11-12T18:00:50+00:00",
-      "source": "Google DeepMind",
-      "priority": 1,
-      "summary": ""
-    },
-    {
       "title": "Google Search gets a major upgrade with Gemini 4 Hydrogen",
       "url": "https://blog.google/products-and-platforms/products/search/gemini-4-hydrogen-search-upgrade/",
       "published": "2026-11-12T18:00:00+00:00",
       "source": "Google AI",
       "priority": 1,
       "summary": "Rotating carousel of cards with text \"Gemini 4 Hydrogen\" \"Now in Google Search\" and examples from the Google Search UI"
+    },
+    {
+      "title": "Gondola doubles revenue as its team builds more with Codex",
+      "url": "https://openai.com/business/customer-stories/gondola",
+      "published": "2026-11-12T12:00:00+00:00",
+      "source": "OpenAI News",
+      "priority": 1,
+      "summary": "Gondola helps creatives get credit and get hired, with Codex raising its lead engineer’s output by 50% and ChatGPT simplifying daily work."
     }
   ],
   "story": {
@@ -52,27 +52,27 @@
     "priority": 1,
     "summary": "Introducing ChatGPT Wallet, a secure way for agents in ChatGPT Work, Codex, and dots to complete purchases with user approval and existing card protections."
   },
-  "caption": "Today's AI Brief: 5 developments.\n\nSwipe through for the stories and sources.\n\n1. Introducing ChatGPT Wallet\nIntroducing ChatGPT Wallet, a secure way for agents in ChatGPT Work, Codex, and dots to complete purchases wi…\nSource: OpenAI News\nhttps://openai.com/index/introducing-chatgpt-wallet\n\n2. Shield helps technicians hand off legacy portal work with OpenAI\nShield uses OpenAI to help IT technicians hand off work in legacy portals. Its Forge agents navigate systems…\nSource: OpenAI News\nhttps://openai.com/business/customer-stories/shield\n\n3. How Amplitude ships product improvements in 1–2 days with OpenAI\nBuilt primarily on OpenAI models, Amplitude’s proactive product agent, Wave, identifies what to build, helps…\nSource: OpenAI News\nhttps://openai.com/business/customer-stories/amplitude\n\n4. Introducing Gemini 4 Hydrogen\nSource: Google DeepMind\nhttps://deepmind.google/blog/introducing-gemini-4-hydrogen/\n\n5. Google Search gets a major upgrade with Gemini 4 Hydrogen\nRotating carousel of cards with text \"Gemini 4 Hydrogen\" \"Now in Google Search\" and examples from the Google…\nSource: Google AI\nhttps://blog.google/products-and-platforms/products/search/gemini-4-hydrogen-search-upgrade/\n\nAI Brief · Daily AI developments",
+  "caption": "Today's AI Brief: 5 developments.\n\nSwipe through for the stories and sources.\n\n1. Introducing ChatGPT Wallet\nIntroducing ChatGPT Wallet, a secure way for agents in ChatGPT Work, Codex, and dots to complete purchases wi…\nSource: OpenAI News\nhttps://openai.com/index/introducing-chatgpt-wallet\n\n2. Shield helps technicians hand off legacy portal work with OpenAI\nShield uses OpenAI to help IT technicians hand off work in legacy portals. Its Forge agents navigate systems…\nSource: OpenAI News\nhttps://openai.com/business/customer-stories/shield\n\n3. How Amplitude ships product improvements in 1–2 days with OpenAI\nBuilt primarily on OpenAI models, Amplitude’s proactive product agent, Wave, identifies what to build, helps…\nSource: OpenAI News\nhttps://openai.com/business/customer-stories/amplitude\n\n4. Google Search gets a major upgrade with Gemini 4 Hydrogen\nRotating carousel of cards with text \"Gemini 4 Hydrogen\" \"Now in Google Search\" and examples from the Google…\nSource: Google AI\nhttps://blog.google/products-and-platforms/products/search/gemini-4-hydrogen-search-upgrade/\n\n5. Gondola doubles revenue as its team builds more with Codex\nGondola helps creatives get credit and get hired, with Codex raising its lead engineer’s output by 50% and Ch…\nSource: OpenAI News\nhttps://openai.com/business/customer-stories/gondola\n\nAI Brief · Daily AI developments",
   "alt_texts": [
     "AI Brief news image. Headline: Introducing ChatGPT Wallet. Source: OpenAI News.",
     "AI Brief news image. Headline: Shield helps technicians hand off legacy portal work with OpenAI. Source: OpenAI News.",
     "AI Brief news image. Headline: How Amplitude ships product improvements in 1–2 days with OpenAI. Source: OpenAI News.",
-    "AI Brief news image. Headline: Introducing Gemini 4 Hydrogen. Source: Google DeepMind.",
-    "AI Brief news image. Headline: Google Search gets a major upgrade with Gemini 4 Hydrogen. Source: Google AI."
+    "AI Brief news image. Headline: Google Search gets a major upgrade with Gemini 4 Hydrogen. Source: Google AI.",
+    "AI Brief news image. Headline: Gondola doubles revenue as its team builds more with Codex. Source: OpenAI News."
   ],
   "image_paths": [
-    "posts/2026-11-14-01.jpg",
-    "posts/2026-11-14-02.jpg",
-    "posts/2026-11-14-03.jpg",
-    "posts/2026-11-14-04.jpg",
-    "posts/2026-11-14-05.jpg"
+    "posts/2026-11-15-01.jpg",
+    "posts/2026-11-15-02.jpg",
+    "posts/2026-11-15-03.jpg",
+    "posts/2026-11-15-04.jpg",
+    "posts/2026-11-15-05.jpg"
   ],
   "image_urls": [
-    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-11-14-01.jpg",
-    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-11-14-02.jpg",
-    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-11-14-03.jpg",
-    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-11-14-04.jpg",
-    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-11-14-05.jpg"
+    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-11-15-01.jpg",
+    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-11-15-02.jpg",
+    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-11-15-03.jpg",
+    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-11-15-04.jpg",
+    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-11-15-05.jpg"
   ],
   "carousel": true,
   "content_type": "news"
