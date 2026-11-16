@@ -1,78 +1,78 @@
 {
-  "date": "2026-11-15",
+  "date": "2026-11-16",
   "status": "ready",
-  "generated_at": "2026-11-15T08:23:35.402036+00:00",
+  "generated_at": "2026-11-16T08:32:11.403672+00:00",
   "stories": [
     {
-      "title": "Introducing ChatGPT Wallet",
-      "url": "https://openai.com/index/introducing-chatgpt-wallet",
-      "published": "2026-11-13T15:00:00+00:00",
-      "source": "OpenAI News",
-      "priority": 1,
-      "summary": "Introducing ChatGPT Wallet, a secure way for agents in ChatGPT Work, Codex, and dots to complete purchases with user approval and existing card protections."
+      "title": "When Should LLM Agents Forget? Memory Filtering Under Query-Critical Resolver Errors",
+      "url": "https://arxiv.org/abs/2611.17338",
+      "published": "2026-11-16T05:00:00+00:00",
+      "source": "arXiv cs.AI",
+      "priority": 2,
+      "summary": "arXiv:2611.17338v1 Announce Type: new Abstract: LLM memory systems often delete facts classified as stale. We show that this hard-filtering step can reduce downstream accuracy when resolver errors delete query-critical facts. Across three models, a controlled sensitivity intervention moves hard-drop from gains of +0.186 to +0.230 at perfect resolution to losses of -0.176 to -0.181 at the lowest tested reliability. Paired targeted interventions show that false-drop causes significantly greater degradation than false-keep, while a non-deleting baseline can still fail when incorrect labels steer generation. On a frozen 102/102 calibration/test split, a simple deployment-matched gate reaches 0.655 accuracy versus 0.641 for always hard-drop and 0.662 for test-informed oracle selection. Global-accuracy crossovers require gold labels and are model- and task-specific diagnostics, not deployment thresholds. Deletion should instead be treated as cost-sensitive: validate query-critical false-drop risk on matched data, or default to label-free retention when such validation is unavailable."
     },
     {
-      "title": "Shield helps technicians hand off legacy portal work with OpenAI",
-      "url": "https://openai.com/business/customer-stories/shield",
-      "published": "2026-11-13T08:00:00+00:00",
-      "source": "OpenAI News",
-      "priority": 1,
-      "summary": "Shield uses OpenAI to help IT technicians hand off work in legacy portals. Its Forge agents navigate systems so technicians can focus on issues needing their judgment."
+      "title": "Does the Ranking Hold? A Practitioner-Facing Audit of Hallucination Detectors on Small, Quantized, On-Device LLMs",
+      "url": "https://arxiv.org/abs/2611.17339",
+      "published": "2026-11-16T05:00:00+00:00",
+      "source": "arXiv cs.AI",
+      "priority": 2,
+      "summary": "arXiv:2611.17339v1 Announce Type: new Abstract: Hallucination detection for large language models is dominated by methods evaluated on 7B-70B research models with abundant sampling budgets and exact-match or ROUGE correctness labels. The small models practitioners actually ship on-device, Phi-3-mini, Llama-3.2-3B-Instruct, Qwen2.5-3B-Instruct, and Gemma-2-2B-Instruct, typically at 4-bit precision, sit outside this evidence base. We present a reproducible one-GPU audit of four detectors spanning three paradigms: length-normalized token-margin calibration, a lexical n-gram baseline, and two sampling-based consistency methods (semantic entropy and SelfCheckGPT-NLI) on two small open instruction-tuned models (Llama-3.2-3B-Instruct and Qwen2.5-3B-Instruct) loaded at 4-bit NF4 quantization on a single Colab T4 GPU, evaluated on closed-book TriviaQA. Cross-model ranking transfer is poor: Spearman rho is -0.80 and Kendall tau-b is -0.667, meaning the detector ranking actively inverts between the two models, and the cheap lexical baseline is statistically indistinguishable from the sampling-based consistency detectors on both models under bootstrap 95 percent confidence intervals. As a second, methodological contribution, we show that the standard token-overlap-to-multiple-choice correctness labeler for TruthfulQA-Generation produces near-chance AUROC (0.46-0.59) for all four detectors on both models, a labeler failure, not a detector failure, since the same detectors reach 0.69-0.89 AUROC on TriviaQA under the identical pipeline. We release the harness, prompts, and per-item scores and frame the detector choice explicitly as a fairness-of-error-rates allocation problem for practitioners deploying on resource-constrained, on-device hardware."
     },
     {
-      "title": "How Amplitude ships product improvements in 1–2 days with OpenAI",
-      "url": "https://openai.com/business/customer-stories/amplitude",
-      "published": "2026-11-12T20:00:00+00:00",
-      "source": "OpenAI News",
-      "priority": 1,
-      "summary": "Built primarily on OpenAI models, Amplitude’s proactive product agent, Wave, identifies what to build, helps teams ship changes with coding agents, and measures the impact."
+      "title": "LoRAWeaver: Directional Adapter Routing in LoRA Representation Space",
+      "url": "https://arxiv.org/abs/2611.17340",
+      "published": "2026-11-16T05:00:00+00:00",
+      "source": "arXiv cs.AI",
+      "priority": 2,
+      "summary": "arXiv:2611.17340v1 Announce Type: new Abstract: Large language models are expensive to update through full retraining. Parameter-efficient fine-tuning reduces the cost of adaptation, but repeated adaptation creates a growing pool of task-specific LoRA adapters. This pool complicates adapter selection during inference. Existing routing and encoder-based methods often require retraining when new adapters are added, which limits their use in dynamic settings. This paper treats adapter routing as a representation alignment problem in the adapter-output space. The proposed training-free method selects adapters by matching adapter-conditioned query representations against task prototypes using cosine similarity. Experiments with LLaMA-2-7B and LLaMA-2-13B on a 48-task FLAN-v2 benchmark and on out-of-distribution tasks show that the method outperforms training-free baselines in the cross-task setting and approaches a trained retrieval encoder without learning a router. An ablation confirms the benefit of directional alignment in the adapter-output space."
     },
     {
-      "title": "Google Search gets a major upgrade with Gemini 4 Hydrogen",
-      "url": "https://blog.google/products-and-platforms/products/search/gemini-4-hydrogen-search-upgrade/",
-      "published": "2026-11-12T18:00:00+00:00",
-      "source": "Google AI",
-      "priority": 1,
-      "summary": "Rotating carousel of cards with text \"Gemini 4 Hydrogen\" \"Now in Google Search\" and examples from the Google Search UI"
+      "title": "Tabular Population Priors as Structured Retrieval for EHR Medication Set Prediction",
+      "url": "https://arxiv.org/abs/2611.17341",
+      "published": "2026-11-16T05:00:00+00:00",
+      "source": "arXiv cs.AI",
+      "priority": 2,
+      "summary": "arXiv:2611.17341v1 Announce Type: new Abstract: Medication prediction from electronic health records is a fixed vocabulary structured prediction problem, yet recent clinical RAG systems often treat it like open ended case based reasoning: retrieve similar patient admissions and ask an LLM to infer a medication set. This retrieval object is indirect the model receives retrieved patient records while the target is a discrete set of medication class labels. We propose a more task aligned retrieval object: a tabular population prior ranked medication class candidates from a sparse condition medication co occurrence table estimated from training admissions. Using PACERAG as a fixed downstream pipeline and replacing only its patient retriever, this drop in swap improves F1 from 0.303 to 0.338 (+11.5% relative) and Jaccard from 0.218 to 0.237 on 1,004 heldout MIMIC IV admissions, with no additional LLM calls and no inference time patient index. A non LLM top k baseline reaches F1=0.248, confirming the prior is predictive before LLM integration. Aggregate population statistics can provide a more task aligned, efficient, and auditable retrieval source than patient level nearest neighbors for fixed vocabulary EHR set prediction."
     },
     {
-      "title": "Gondola doubles revenue as its team builds more with Codex",
-      "url": "https://openai.com/business/customer-stories/gondola",
-      "published": "2026-11-12T12:00:00+00:00",
-      "source": "OpenAI News",
-      "priority": 1,
-      "summary": "Gondola helps creatives get credit and get hired, with Codex raising its lead engineer’s output by 50% and ChatGPT simplifying daily work."
+      "title": "An Operationalization of Opaque Serial Depth",
+      "url": "https://arxiv.org/abs/2611.17495",
+      "published": "2026-11-16T05:00:00+00:00",
+      "source": "arXiv cs.AI",
+      "priority": 2,
+      "summary": "arXiv:2611.17495v1 Announce Type: new Abstract: Chain-of-thought (CoT) is currently a valuable tool for overseeing AI models, but some architectural shifts could significantly reduce CoT monitorability. We operationalize a measure that serves as a proxy for the amount of unverbalized serial cognition a model can perform, as a specific instantiation of the notion of opaque serial depth: roughly, the length of the longest path through a model's computation that does not pass through an interpretable bottleneck. Our main contribution is a particular standard for what counts as such a bottleneck. We define natural-language-rooted (NL-rooted) nodes as nodes that were initialized from a pre-training prior to produce human-understandable outputs, whose output space has not been expanded beyond that prior, and whose outputs the model has not been modified to interpret as a different type of data. By construction, the resulting measure, NLS depth, can be adjudicated before training from an architecture, training recipe, and deployment configuration alone, and is insensitive to ordinary post-training such as prompting, distillation, and RL. We find that, across open-weight models, NLS depth correlates strongly with layer count, with some exceptions, and has grown slowly over recent years. It would likely grow slowly under continued scaling of standard transformers, while latent-reasoning architectures such as full-bandwidth transformers could increase it by a large amount. We work through how NLS depth applies to a range of existing and proposed architectures, discuss alternative operationalizations, and give a worked example bounding the depth of Gemma3-1B. We argue that AI developers should track and report the NLS depth of their models as a complement to direct measurements of CoT monitorability."
     }
   ],
   "story": {
-    "title": "Introducing ChatGPT Wallet",
-    "url": "https://openai.com/index/introducing-chatgpt-wallet",
-    "published": "2026-11-13T15:00:00+00:00",
-    "source": "OpenAI News",
-    "priority": 1,
-    "summary": "Introducing ChatGPT Wallet, a secure way for agents in ChatGPT Work, Codex, and dots to complete purchases with user approval and existing card protections."
+    "title": "When Should LLM Agents Forget? Memory Filtering Under Query-Critical Resolver Errors",
+    "url": "https://arxiv.org/abs/2611.17338",
+    "published": "2026-11-16T05:00:00+00:00",
+    "source": "arXiv cs.AI",
+    "priority": 2,
+    "summary": "arXiv:2611.17338v1 Announce Type: new Abstract: LLM memory systems often delete facts classified as stale. We show that this hard-filtering step can reduce downstream accuracy when resolver errors delete query-critical facts. Across three models, a controlled sensitivity intervention moves hard-drop from gains of +0.186 to +0.230 at perfect resolution to losses of -0.176 to -0.181 at the lowest tested reliability. Paired targeted interventions show that false-drop causes significantly greater degradation than false-keep, while a non-deleting baseline can still fail when incorrect labels steer generation. On a frozen 102/102 calibration/test split, a simple deployment-matched gate reaches 0.655 accuracy versus 0.641 for always hard-drop and 0.662 for test-informed oracle selection. Global-accuracy crossovers require gold labels and are model- and task-specific diagnostics, not deployment thresholds. Deletion should instead be treated as cost-sensitive: validate query-critical false-drop risk on matched data, or default to label-free retention when such validation is unavailable."
   },
-  "caption": "Today's AI Brief: 5 developments.\n\nSwipe through for the stories and sources.\n\n1. Introducing ChatGPT Wallet\nIntroducing ChatGPT Wallet, a secure way for agents in ChatGPT Work, Codex, and dots to complete purchases wi…\nSource: OpenAI News\nhttps://openai.com/index/introducing-chatgpt-wallet\n\n2. Shield helps technicians hand off legacy portal work with OpenAI\nShield uses OpenAI to help IT technicians hand off work in legacy portals. Its Forge agents navigate systems…\nSource: OpenAI News\nhttps://openai.com/business/customer-stories/shield\n\n3. How Amplitude ships product improvements in 1–2 days with OpenAI\nBuilt primarily on OpenAI models, Amplitude’s proactive product agent, Wave, identifies what to build, helps…\nSource: OpenAI News\nhttps://openai.com/business/customer-stories/amplitude\n\n4. Google Search gets a major upgrade with Gemini 4 Hydrogen\nRotating carousel of cards with text \"Gemini 4 Hydrogen\" \"Now in Google Search\" and examples from the Google…\nSource: Google AI\nhttps://blog.google/products-and-platforms/products/search/gemini-4-hydrogen-search-upgrade/\n\n5. Gondola doubles revenue as its team builds more with Codex\nGondola helps creatives get credit and get hired, with Codex raising its lead engineer’s output by 50% and Ch…\nSource: OpenAI News\nhttps://openai.com/business/customer-stories/gondola\n\nAI Brief · Daily AI developments",
+  "caption": "Today's AI Brief: 5 developments.\n\nSwipe through for the stories and sources.\n\n1. When Should LLM Agents Forget? Memory Filtering Under Query-Critical Resolver Errors\narXiv:2611.17338v1 Announce Type: new Abstract: LLM memory systems often delete facts classified as stale. We…\nSource: arXiv cs.AI\nhttps://arxiv.org/abs/2611.17338\n\n2. Does the Ranking Hold? A Practitioner-Facing Audit of Hallucination Detectors on Small, Quantized, On-Device LLMs\narXiv:2611.17339v1 Announce Type: new Abstract: Hallucination detection for large language models is dominate…\nSource: arXiv cs.AI\nhttps://arxiv.org/abs/2611.17339\n\n3. LoRAWeaver: Directional Adapter Routing in LoRA Representation Space\narXiv:2611.17340v1 Announce Type: new Abstract: Large language models are expensive to update through full re…\nSource: arXiv cs.AI\nhttps://arxiv.org/abs/2611.17340\n\n4. Tabular Population Priors as Structured Retrieval for EHR Medication Set Prediction\narXiv:2611.17341v1 Announce Type: new Abstract: Medication prediction from electronic health records is a fix…\nSource: arXiv cs.AI\nhttps://arxiv.org/abs/2611.17341\n\n5. An Operationalization of Opaque Serial Depth\narXiv:2611.17495v1 Announce Type: new Abstract: Chain-of-thought (CoT) is currently a valuable tool for overs…\nSource: arXiv cs.AI\nhttps://arxiv.org/abs/2611.17495\n\nAI Brief · Daily AI developments",
   "alt_texts": [
-    "AI Brief news image. Headline: Introducing ChatGPT Wallet. Source: OpenAI News.",
-    "AI Brief news image. Headline: Shield helps technicians hand off legacy portal work with OpenAI. Source: OpenAI News.",
-    "AI Brief news image. Headline: How Amplitude ships product improvements in 1–2 days with OpenAI. Source: OpenAI News.",
-    "AI Brief news image. Headline: Google Search gets a major upgrade with Gemini 4 Hydrogen. Source: Google AI.",
-    "AI Brief news image. Headline: Gondola doubles revenue as its team builds more with Codex. Source: OpenAI News."
+    "AI Brief news image. Headline: When Should LLM Agents Forget? Memory Filtering Under Query-Critical Resolver Errors. Source: arXiv cs.AI.",
+    "AI Brief news image. Headline: Does the Ranking Hold? A Practitioner-Facing Audit of Hallucination Detectors on Small, Quantized, On-Device LLMs. Source: arXiv cs.AI.",
+    "AI Brief news image. Headline: LoRAWeaver: Directional Adapter Routing in LoRA Representation Space. Source: arXiv cs.AI.",
+    "AI Brief news image. Headline: Tabular Population Priors as Structured Retrieval for EHR Medication Set Prediction. Source: arXiv cs.AI.",
+    "AI Brief news image. Headline: An Operationalization of Opaque Serial Depth. Source: arXiv cs.AI."
   ],
   "image_paths": [
-    "posts/2026-11-15-01.jpg",
-    "posts/2026-11-15-02.jpg",
-    "posts/2026-11-15-03.jpg",
-    "posts/2026-11-15-04.jpg",
-    "posts/2026-11-15-05.jpg"
+    "posts/2026-11-16-01.jpg",
+    "posts/2026-11-16-02.jpg",
+    "posts/2026-11-16-03.jpg",
+    "posts/2026-11-16-04.jpg",
+    "posts/2026-11-16-05.jpg"
   ],
   "image_urls": [
-    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-11-15-01.jpg",
-    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-11-15-02.jpg",
-    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-11-15-03.jpg",
-    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-11-15-04.jpg",
-    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-11-15-05.jpg"
+    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-11-16-01.jpg",
+    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-11-16-02.jpg",
+    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-11-16-03.jpg",
+    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-11-16-04.jpg",
+    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-11-16-05.jpg"
   ],
   "carousel": true,
   "content_type": "news"
