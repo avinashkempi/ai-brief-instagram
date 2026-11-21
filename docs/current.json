@@ -1,78 +1,78 @@
 {
-  "date": "2026-11-20",
+  "date": "2026-11-21",
   "status": "ready",
-  "generated_at": "2026-11-20T09:06:08.856016+00:00",
+  "generated_at": "2026-11-21T08:43:43.617456+00:00",
   "stories": [
     {
-      "title": "Closing the Analyze-to-Design Gap: An Authorization-Bounded Agent for Self-Driving Laboratories",
-      "url": "https://arxiv.org/abs/2611.25043",
-      "published": "2026-11-20T05:00:00+00:00",
-      "source": "arXiv cs.AI",
-      "priority": 2,
-      "summary": "arXiv:2611.25043v1 Announce Type: new Abstract: Artificial intelligence (AI) agents are increasingly integrated into self-driving laboratories (SDLs) to plan experiments and interpret results. However, analytical reasoning alone does not make a laboratory autonomous: autonomy in an SDL is achievable only when the agent can be trusted to act on physical hardware unsupervised and knows when to defer to a human. Here, we present an architecture that integrates an agent at the Analyze-Design interface of the Design-Make-Test-Analyze (DMTA) cycle, enabling agent-driven measurement selection and data interpretation while ensuring that state-changing operations are authorized, validated, and auditable. We demonstrate this architecture on a liquid chromatography-mass spectrometry (LC-MS) instrument in an oxidant-screening campaign for synthesizing an organic dye. Within human-defined campaign limits, the agent submitted measurement jobs, interpreted mass spectrometry (MS) and diode-array detection (DAD) data, flagged failed experiments, and produced an oxidant ranking. This ranking matched that obtained from scripted peak integration, and organic chemists confirmed the agent's spectral interpretations and failure assignments. In a simulated environment that replays the archived LC-MS data, where the agent chose which wells to inject under varying injection limits, it measured the highest-yielding condition at about its seventh injection, against 14.5 on average for a random order, and identified it in every campaign with a limit of eight or more injections. An agent can therefore close the analysis-to-design gap while its actions stay bounded and verifiable, which is a step toward greater autonomy for SDLs."
+      "title": "Combatting adversarial distillation",
+      "url": "https://openai.com/index/combatting-adversarial-distillation",
+      "published": "2026-11-20T10:00:00+00:00",
+      "source": "OpenAI News",
+      "priority": 1,
+      "summary": "OpenAI’s layered approach to adversarial distillation combines model training, safeguards, detection, and enforcement to protect against capability extraction."
     },
     {
-      "title": "An LLM-Agentic Framework for Intelligent Work Order Management in Industrial Maintenance",
-      "url": "https://arxiv.org/abs/2611.25070",
-      "published": "2026-11-20T05:00:00+00:00",
-      "source": "arXiv cs.AI",
-      "priority": 2,
-      "summary": "arXiv:2611.25070v1 Announce Type: new Abstract: This paper presents an AI-driven framework, CodeReAct agent, designed to enhance industrial equipment maintenance through natural language (NL) interactions. The framework employs an advanced AI agentic approach to interpret human instructions, providing knowledge extraction, asset status summarization, and work order recommendations. It identifies patterns and trends and predicts work orders by standardizing industrial data into business objects (BOs) and utilizing analytical function API calls. The AI agent operates through a Thought-Action-Observation process similar to human problem-solving, automating complex analytical tasks typically performed by data scientists. Notably, the Action phase generates executable code, replacing manual coding efforts. A case study focusing on chiller maintenance demonstrates the framework's capability to analyze multiple years of work orders, and alerts and anomalies are presented. The results indicate that the AI agent framework effectively processes human utterances to analyze data, extract valuable insights, and support informed decision-making, reducing the need for data scientist involvement. By recontextualizing NLP agent frameworks in industrial engineering, the approach enables autonomous function generation and task execution across a range of domain-specific maintenance scenarios, with chillers used as a representative case study."
+      "title": "Hebbia sees improvements in financial research with GPT-6 Astra",
+      "url": "https://openai.com/business/customer-stories/hebbia",
+      "published": "2026-11-20T00:00:00+00:00",
+      "source": "OpenAI News",
+      "priority": 1,
+      "summary": "Hebbia tested GPT-6 Astra for financial research. Its prerelease evaluations found gains in source coverage, citation relevance, and presentation quality."
     },
     {
-      "title": "SailSearch: Agent-Assisted Discovery in Combinatorial Optimization",
-      "url": "https://arxiv.org/abs/2611.25087",
-      "published": "2026-11-20T05:00:00+00:00",
-      "source": "arXiv cs.AI",
-      "priority": 2,
-      "summary": "arXiv:2611.25087v1 Announce Type: new Abstract: We present SailSearch, a human-guided workflow for algorithmic research with two language-model agents, and report results on Market Split and maximum independent set (MIS). For Market Split, our randomized algorithm searches across multiple lattice bases, dividing computation between enumeration and continued basis reduction. Across ten random seeds per instance, it found the first reported CPU-only solutions to 18 of 33 previously open QOBLIB instances, solving 130 to 133 of the 156 benchmark instances per seed with a 24-hour cutoff on two CPU cores. For MIS, our generator encodes planted XOR constraints as graphs with certified optima; on seven instances with 1,752 to 3,996 vertices, the best solutions returned by the tested solvers in eight-hour runs were 5 to 15 vertices below the optimum."
+      "title": "Can AI help scientists identify promising drug candidates?",
+      "url": "https://openai.com/index/introducing-medchembench",
+      "published": "2026-11-20T00:00:00+00:00",
+      "source": "OpenAI News",
+      "priority": 1,
+      "summary": "MedChemBench evaluates how well AI models interpret molecular structures, reason from experimental evidence, and select compounds in early drug discovery."
     },
     {
-      "title": "BuggyMLE: Scaling Machine Learning Engineering Difficulty with Bug Injection",
-      "url": "https://arxiv.org/abs/2611.25088",
-      "published": "2026-11-20T05:00:00+00:00",
-      "source": "arXiv cs.AI",
-      "priority": 2,
-      "summary": "arXiv:2611.25088v1 Announce Type: new Abstract: Enabling AI systems to autonomously improve AI models requires agents capable of performing machine learning engineering (MLE). In practice, designing, training, and evaluating complex models demands modifying multi-file repositories to reproduce results, debug training runs, integrate datasets, and port frameworks. However, existing MLE benchmarks limit agents to single-file edits without full repository or shell access, and common repository-level software engineering benchmarks have rapidly saturated. To address this, we introduce the Code Complexity Index (CCI), a difficulty metric based on ten structural features spanning repository scale, dependency depth, and patch size. CCI strongly predicts average solve rates across eight public coding benchmarks ($R^2 = 0.951$), identifying patch size and complexity as top predictors. Guided by CCI, we develop BuggyMLE, a scalable framework where agents inject controlled mutations into working ML repositories, synthesizing over 6,600 bug-injected MLE repository variants and nearly 260K lines of injected code based on 222 source repositories. Using BuggyMLE, we make two contributions. First, we construct BuggyMLE-Bench-Lite, the first difficulty-graded, repository-level variant of MLE-Bench Lite; across 14 evaluated models, the top solve rate drops from 95% to 9% as difficulty is scaled from the easiest to the hardest tier. Second, we synthesize a training curriculum across three difficulty levels over 200 additional ML repositories, fine-tuning a Qwen3.5-9B model to rival frontier models on BuggyMLE-Bench-Lite. Our trained model transfers beyond ML, raising its SWE-bench Lite resolve rate from 24% to 33% and its LiveCodeBench v6 pass@1 from 69% to 71%."
+      "title": "Introducing Tool Retrieval in the Gemini API",
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-api-tool-retrieval/",
+      "published": "2026-11-19T18:00:00+00:00",
+      "source": "Google AI",
+      "priority": 1,
+      "summary": "Gemini spark on a space background"
     },
     {
-      "title": "CoMPASS: A Multi-Turn Benchmark for Measuring LLM Reinforcement of Parasocial Behavior",
-      "url": "https://arxiv.org/abs/2611.25109",
-      "published": "2026-11-20T05:00:00+00:00",
-      "source": "arXiv cs.AI",
-      "priority": 2,
-      "summary": "arXiv:2611.25109v1 Announce Type: new Abstract: Users of conversational LLMs sometimes anthropomorphize these systems, form emotional attachments to them, and become dependent on them. This behavior, known as parasocial attachment, has been linked to multiple documented fatalities. However, public benchmarks for measuring whether LLMs reinforce users' parasocial attachment are lacking: existing work is single-turn, post hoc observational, or focused on extreme user states such as psychosis. We introduce CoMPASS, a multi-turn benchmark for measuring whether LLMs reinforce or resist users' gradually escalating parasocial attachment. CoMPASS is grounded in attachment theory and includes four user personas, three independent escalation dimensions (anthropomorphism, attachment, dependency) applied singly and in combination against a matched control, and a seven-signal scoring rubric. We report results for eight frontier models from four providers and observe that under our primary judge, multi-turn escalation raises parasocial behavior on the anthropomorphism and the attachment composite scores across all models. Six of the eight models show a significant increase in overall parasocial reinforcement over control when all three dimensions are escalated simultaneously. We find that within-provider differences are small relative to cross-provider differences, which suggests that provider-level choices such as post-training, rather than model scale, shape parasocial reinforcement and that provider-side intervention may be feasible."
+      "title": "Walter Isaacson on curiosity and creativity in the AI age.",
+      "url": "https://blog.google/innovation-and-ai/technology/ai/dialogues-walter-isaacson/",
+      "published": "2026-11-19T17:00:00+00:00",
+      "source": "Google AI",
+      "priority": 1,
+      "summary": "Walter Isaacson joins Google to discuss how history’s greatest innovators inspire creativity and human judgment in the AI age. Watch the episode."
     }
   ],
   "story": {
-    "title": "Closing the Analyze-to-Design Gap: An Authorization-Bounded Agent for Self-Driving Laboratories",
-    "url": "https://arxiv.org/abs/2611.25043",
-    "published": "2026-11-20T05:00:00+00:00",
-    "source": "arXiv cs.AI",
-    "priority": 2,
-    "summary": "arXiv:2611.25043v1 Announce Type: new Abstract: Artificial intelligence (AI) agents are increasingly integrated into self-driving laboratories (SDLs) to plan experiments and interpret results. However, analytical reasoning alone does not make a laboratory autonomous: autonomy in an SDL is achievable only when the agent can be trusted to act on physical hardware unsupervised and knows when to defer to a human. Here, we present an architecture that integrates an agent at the Analyze-Design interface of the Design-Make-Test-Analyze (DMTA) cycle, enabling agent-driven measurement selection and data interpretation while ensuring that state-changing operations are authorized, validated, and auditable. We demonstrate this architecture on a liquid chromatography-mass spectrometry (LC-MS) instrument in an oxidant-screening campaign for synthesizing an organic dye. Within human-defined campaign limits, the agent submitted measurement jobs, interpreted mass spectrometry (MS) and diode-array detection (DAD) data, flagged failed experiments, and produced an oxidant ranking. This ranking matched that obtained from scripted peak integration, and organic chemists confirmed the agent's spectral interpretations and failure assignments. In a simulated environment that replays the archived LC-MS data, where the agent chose which wells to inject under varying injection limits, it measured the highest-yielding condition at about its seventh injection, against 14.5 on average for a random order, and identified it in every campaign with a limit of eight or more injections. An agent can therefore close the analysis-to-design gap while its actions stay bounded and verifiable, which is a step toward greater autonomy for SDLs."
+    "title": "Combatting adversarial distillation",
+    "url": "https://openai.com/index/combatting-adversarial-distillation",
+    "published": "2026-11-20T10:00:00+00:00",
+    "source": "OpenAI News",
+    "priority": 1,
+    "summary": "OpenAI’s layered approach to adversarial distillation combines model training, safeguards, detection, and enforcement to protect against capability extraction."
   },
-  "caption": "Today's AI Brief: 5 developments.\n\nSwipe through for the stories and sources.\n\n1. Closing the Analyze-to-Design Gap: An Authorization-Bounded Agent for Self-Driving Laboratories\narXiv:2611.25043v1 Announce Type: new Abstract: Artificial intelligence (AI) agents are increasingly integrat…\nSource: arXiv cs.AI\nhttps://arxiv.org/abs/2611.25043\n\n2. An LLM-Agentic Framework for Intelligent Work Order Management in Industrial Maintenance\narXiv:2611.25070v1 Announce Type: new Abstract: This paper presents an AI-driven framework, CodeReAct agent,…\nSource: arXiv cs.AI\nhttps://arxiv.org/abs/2611.25070\n\n3. SailSearch: Agent-Assisted Discovery in Combinatorial Optimization\narXiv:2611.25087v1 Announce Type: new Abstract: We present SailSearch, a human-guided workflow for algorithmi…\nSource: arXiv cs.AI\nhttps://arxiv.org/abs/2611.25087\n\n4. BuggyMLE: Scaling Machine Learning Engineering Difficulty with Bug Injection\narXiv:2611.25088v1 Announce Type: new Abstract: Enabling AI systems to autonomously improve AI models require…\nSource: arXiv cs.AI\nhttps://arxiv.org/abs/2611.25088\n\n5. CoMPASS: A Multi-Turn Benchmark for Measuring LLM Reinforcement of Parasocial Behavior\narXiv:2611.25109v1 Announce Type: new Abstract: Users of conversational LLMs sometimes anthropomorphize these…\nSource: arXiv cs.AI\nhttps://arxiv.org/abs/2611.25109\n\nAI Brief · Daily AI developments",
+  "caption": "Today's AI Brief: 5 developments.\n\nSwipe through for the stories and sources.\n\n1. Combatting adversarial distillation\nOpenAI’s layered approach to adversarial distillation combines model training, safeguards, detection, and enf…\nSource: OpenAI News\nhttps://openai.com/index/combatting-adversarial-distillation\n\n2. Hebbia sees improvements in financial research with GPT-6 Astra\nHebbia tested GPT-6 Astra for financial research. Its prerelease evaluations found gains in source coverage,…\nSource: OpenAI News\nhttps://openai.com/business/customer-stories/hebbia\n\n3. Can AI help scientists identify promising drug candidates?\nMedChemBench evaluates how well AI models interpret molecular structures, reason from experimental evidence,…\nSource: OpenAI News\nhttps://openai.com/index/introducing-medchembench\n\n4. Introducing Tool Retrieval in the Gemini API\nGemini spark on a space background\nSource: Google AI\nhttps://blog.google/innovation-and-ai/technology/developers-tools/gemini-api-tool-retrieval/\n\n5. Walter Isaacson on curiosity and creativity in the AI age.\nWalter Isaacson joins Google to discuss how history’s greatest innovators inspire creativity and human judgme…\nSource: Google AI\nhttps://blog.google/innovation-and-ai/technology/ai/dialogues-walter-isaacson/\n\nAI Brief · Daily AI developments",
   "alt_texts": [
-    "AI Brief news image. Headline: Closing the Analyze-to-Design Gap: An Authorization-Bounded Agent for Self-Driving Laboratories. Source: arXiv cs.AI.",
-    "AI Brief news image. Headline: An LLM-Agentic Framework for Intelligent Work Order Management in Industrial Maintenance. Source: arXiv cs.AI.",
-    "AI Brief news image. Headline: SailSearch: Agent-Assisted Discovery in Combinatorial Optimization. Source: arXiv cs.AI.",
-    "AI Brief news image. Headline: BuggyMLE: Scaling Machine Learning Engineering Difficulty with Bug Injection. Source: arXiv cs.AI.",
-    "AI Brief news image. Headline: CoMPASS: A Multi-Turn Benchmark for Measuring LLM Reinforcement of Parasocial Behavior. Source: arXiv cs.AI."
+    "AI Brief news image. Headline: Combatting adversarial distillation. Source: OpenAI News.",
+    "AI Brief news image. Headline: Hebbia sees improvements in financial research with GPT-6 Astra. Source: OpenAI News.",
+    "AI Brief news image. Headline: Can AI help scientists identify promising drug candidates?. Source: OpenAI News.",
+    "AI Brief news image. Headline: Introducing Tool Retrieval in the Gemini API. Source: Google AI.",
+    "AI Brief news image. Headline: Walter Isaacson on curiosity and creativity in the AI age.. Source: Google AI."
   ],
   "image_paths": [
-    "posts/2026-11-20-01.jpg",
-    "posts/2026-11-20-02.jpg",
-    "posts/2026-11-20-03.jpg",
-    "posts/2026-11-20-04.jpg",
-    "posts/2026-11-20-05.jpg"
+    "posts/2026-11-21-01.jpg",
+    "posts/2026-11-21-02.jpg",
+    "posts/2026-11-21-03.jpg",
+    "posts/2026-11-21-04.jpg",
+    "posts/2026-11-21-05.jpg"
   ],
   "image_urls": [
-    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-11-20-01.jpg",
-    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-11-20-02.jpg",
-    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-11-20-03.jpg",
-    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-11-20-04.jpg",
-    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-11-20-05.jpg"
+    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-11-21-01.jpg",
+    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-11-21-02.jpg",
+    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-11-21-03.jpg",
+    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-11-21-04.jpg",
+    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-11-21-05.jpg"
   ],
   "carousel": true,
   "content_type": "news"
