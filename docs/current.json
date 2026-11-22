@@ -1,7 +1,7 @@
 {
-  "date": "2026-11-21",
+  "date": "2026-11-22",
   "status": "ready",
-  "generated_at": "2026-11-21T08:43:43.617456+00:00",
+  "generated_at": "2026-11-22T08:43:35.809442+00:00",
   "stories": [
     {
       "title": "Combatting adversarial distillation",
@@ -61,18 +61,18 @@
     "AI Brief news image. Headline: Walter Isaacson on curiosity and creativity in the AI age.. Source: Google AI."
   ],
   "image_paths": [
-    "posts/2026-11-21-01.jpg",
-    "posts/2026-11-21-02.jpg",
-    "posts/2026-11-21-03.jpg",
-    "posts/2026-11-21-04.jpg",
-    "posts/2026-11-21-05.jpg"
+    "posts/2026-11-22-01.jpg",
+    "posts/2026-11-22-02.jpg",
+    "posts/2026-11-22-03.jpg",
+    "posts/2026-11-22-04.jpg",
+    "posts/2026-11-22-05.jpg"
   ],
   "image_urls": [
-    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-11-21-01.jpg",
-    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-11-21-02.jpg",
-    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-11-21-03.jpg",
-    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-11-21-04.jpg",
-    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-11-21-05.jpg"
+    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-11-22-01.jpg",
+    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-11-22-02.jpg",
+    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-11-22-03.jpg",
+    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-11-22-04.jpg",
+    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-11-22-05.jpg"
   ],
   "carousel": true,
   "content_type": "news"
