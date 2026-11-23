@@ -1,78 +1,78 @@
 {
-  "date": "2026-11-22",
+  "date": "2026-11-23",
   "status": "ready",
-  "generated_at": "2026-11-22T08:43:35.809442+00:00",
+  "generated_at": "2026-11-23T09:41:43.827465+00:00",
   "stories": [
     {
-      "title": "Combatting adversarial distillation",
-      "url": "https://openai.com/index/combatting-adversarial-distillation",
-      "published": "2026-11-20T10:00:00+00:00",
-      "source": "OpenAI News",
-      "priority": 1,
-      "summary": "OpenAI’s layered approach to adversarial distillation combines model training, safeguards, detection, and enforcement to protect against capability extraction."
+      "title": "Adding One More Agent: How AI Team Size and Formation Shape Productivity and Diversity in Human-AI Brainstorming Teams",
+      "url": "https://arxiv.org/abs/2611.26663",
+      "published": "2026-11-23T05:00:00+00:00",
+      "source": "arXiv cs.AI",
+      "priority": 2,
+      "summary": "arXiv:2611.26663v1 Announce Type: new Abstract: Generative AI has improved individual productivity, but whether adding a plurality of AI partners helps or hurts remains open. We crossed AI partnership (one versus two) with behavioral formation (calibrated to average human behavior versus customized by the participant) in a brainstorming experiment ($N$=168) with human-human dyads as reference. Two-AI rooms posted more ideas to the shared board, but human-authored ideas dropped substantially. With one AI partner, formation mattered: humans paired with an average-calibrated AI posted more than any other condition. With two, this effect vanished. Humans continued talking but converted fewer ideas into board posts. AI social talk predicted more human posts, while AI posting volume predicted fewer. AI presence increased global diversity of human-authored ideas, but only a second AI increased within-session differentiation. The number of AI partners and their formation can reshape what the human contributes; single-agent results do not generalize to multi-agent teams."
     },
     {
-      "title": "Hebbia sees improvements in financial research with GPT-6 Astra",
-      "url": "https://openai.com/business/customer-stories/hebbia",
-      "published": "2026-11-20T00:00:00+00:00",
-      "source": "OpenAI News",
-      "priority": 1,
-      "summary": "Hebbia tested GPT-6 Astra for financial research. Its prerelease evaluations found gains in source coverage, citation relevance, and presentation quality."
+      "title": "Coherence by Construction: Synthesizing CTI Knowledge Graphs and the Formal Limits of Coherence Validation",
+      "url": "https://arxiv.org/abs/2611.26717",
+      "published": "2026-11-23T05:00:00+00:00",
+      "source": "arXiv cs.AI",
+      "priority": 2,
+      "summary": "arXiv:2611.26717v1 Announce Type: new Abstract: Synthesizing relational training data such as knowledge graphs with a large language model typically emits structured objects one at a time, which keeps each object valid but leaves the relationships between them ungrounded. We study an alternative paradigm, generation by simulation: rather than describing a relational artifact, we simulate a process that produces it and take the artifact to be its causal record. Language-model agents propose intent and a deterministic referee resolves outcomes against an explicit world model, so a relation is emitted only when the event it represents occurs, making coherence a property of construction. We instantiate the paradigm for cyber threat intelligence knowledge graphs in the STIX 2.1 standard with three engines, among them an evolutionary engine applying language-model genetic operators to structured graph genomes, sharing a deterministic compiler that makes malformed and dangling output unrepresentable. We prove referential closure, causal grounding, and identifier stability, an ablation localizes each to the referee and world model rather than the policy, and two independent LLM judges reproduce the rubric's engine ranking. Our central result is cautionary, and we prove it: a validator reading any graph feature set a structure-matched random graph can reproduce is uninformative about coherence for a coherence-by-construction generator. Using Erd\\H{o}s-R\\'enyi controls we realize the theorem four times, as structural separation, embedding transfer, inductive link prediction, and real-data augmentation each reward a triviality rather than coherence; we give the mechanism behind each and the conditions a valid benchmark must meet."
     },
     {
-      "title": "Can AI help scientists identify promising drug candidates?",
-      "url": "https://openai.com/index/introducing-medchembench",
-      "published": "2026-11-20T00:00:00+00:00",
-      "source": "OpenAI News",
-      "priority": 1,
-      "summary": "MedChemBench evaluates how well AI models interpret molecular structures, reason from experimental evidence, and select compounds in early drug discovery."
+      "title": "TOUMAII: A 4.5M-Pair Tool-Calling Preference Dataset and Its Source-Agnostic Generator",
+      "url": "https://arxiv.org/abs/2611.26722",
+      "published": "2026-11-23T05:00:00+00:00",
+      "source": "arXiv cs.AI",
+      "priority": 2,
+      "summary": "arXiv:2611.26722v1 Announce Type: new Abstract: To autonomously execute multi-step tasks, enterprise agents must reliably interact with tools, call APIs, or query databases, making tool-calling a fundamental capability of AI models. Supervised fine-tuning (SFT) optimises for producing the correct call, but never contrasts it with a plausible incorrect one. In an environment where even a minor formatting error can invalidate a call and an incorrect decision can derail the interaction, direct preference optimisation (DPO) targets exactly this contrast. DPO, therefore, requires preference pairs rather than plain demonstrations. For tool-calling, such data, especially in realistic multi-turn settings, remains extremely scarce. To address this scarcity, we introduce TOUMAII, a large-scale tool-calling preference dataset containing ~4.5M validated preference pairs, derived from Agent-Ark/Toucan-1.5M (apache-2.0) conversations. The dataset consists of multi- and single-turn interactions and includes parallel and sequential function calls. Additionally, we release TOUMAII-Gen, a synthetic data generation pipeline that consumes tool-calling SFT datasets and generates a preference dataset with naturally occurring model-generated tool-calling failure modes. To validate the effectiveness of our DPO data, we fine-tune a 3-billion-parameter model, achieving performance parity with other high-quality tool-calling preference datasets. Furthermore, we release a second small preference dataset derived from ToolACE (apache-2.0), showcasing the source-agnostic nature of our pipeline. We release the complete code and datasets: and"
     },
     {
-      "title": "Introducing Tool Retrieval in the Gemini API",
-      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-api-tool-retrieval/",
-      "published": "2026-11-19T18:00:00+00:00",
-      "source": "Google AI",
-      "priority": 1,
-      "summary": "Gemini spark on a space background"
+      "title": "ChatAtom: A Multi-Agent LLM System for Molecular Dynamics Simulation and Visualization",
+      "url": "https://arxiv.org/abs/2611.26782",
+      "published": "2026-11-23T05:00:00+00:00",
+      "source": "arXiv cs.AI",
+      "priority": 2,
+      "summary": "arXiv:2611.26782v1 Announce Type: new Abstract: Molecular dynamics (MD) simulation resolves atomic-scale motion and predicts the structural, mechanical, and dynamic properties of materials, making it cen- tral to materials design and discovery. Yet an MD study requires an expert-driven workflow: designing the simulation, writing reliable input scripts, executing them, and analyzing the results with separate tools. Here we present ChatAtom, a multi-agent large language model system that translates a natural-language request into a complete MD workflow without the user writing input scripts or analysis code. Each agent has a defined responsibility within the workflow. An orchestrator plans the study; the LAMMPS and OVITO agents each use a generator-reviewer pair to prepare and review simulation and visualization scripts before execution; a high-performance computing agent dispatches jobs to remote resources; and an analysis agent interprets the completed run. The work- flow is accessible through a browser interface that streams thermodynamic data and rendered frames during local execution, allowing users to follow the simu- lation as it progresses. The architecture also supports new capabilities through loadable skills without modifying the agents, enabling autonomous hypothesis generation and testing. We evaluate ChatAtom through script-generation bench- marks, an end-to-end study of crack propagation, and a closed-loop campaign. By bringing script generation, execution, visualization, and analysis into one reviewed and observable pipeline, ChatAtom lowers the barrier to conducting MD studies and broadens access to advanced simulation workflows."
     },
     {
-      "title": "Walter Isaacson on curiosity and creativity in the AI age.",
-      "url": "https://blog.google/innovation-and-ai/technology/ai/dialogues-walter-isaacson/",
-      "published": "2026-11-19T17:00:00+00:00",
-      "source": "Google AI",
-      "priority": 1,
-      "summary": "Walter Isaacson joins Google to discuss how history’s greatest innovators inspire creativity and human judgment in the AI age. Watch the episode."
+      "title": "Beyond Final Answers: Interpretable Tumor Immune Microenvironment Reasoning from H&E and mIF",
+      "url": "https://arxiv.org/abs/2611.26794",
+      "published": "2026-11-23T05:00:00+00:00",
+      "source": "arXiv cs.AI",
+      "priority": 2,
+      "summary": "arXiv:2611.26794v1 Announce Type: new Abstract: Readouts of the tumor immune microenvironment (TIME), such as CD8+ T-cell density, intra-epithelial infiltration and the Ki67 index, combine tissue architecture from H&E with cell phenotypes from multiplex immunofluorescence (mIF). Multimodal large language models (MLLMs) could automate these readouts with an explanation, but two gaps remain. Pathology MLLMs read H&E alone, while these readouts need the cell phenotypes that mIF measures. And their reasoning has no step-level truth to be checked against, so R1-style reinforcement learning rewards only the final answer and leaves the reasoning unverified. Same-section H&E and mIF provide what both gaps lack: mIF measures every cell without manual annotation, which gives cell-level ground truth for each step that clinical guidelines prescribe, from delineating a tissue compartment to counting and normalizing the marker-positive cells within it. We therefore present HERMES (H&E-mIF Reasoning with Multimodal Evidence Supervision), an R1-style MLLM that reasons jointly over paired H&E and mIF in guideline steps and is trained with a process reward that checks every stated quantity against this truth. Across four field-level TIME tasks in colorectal cancer, HERMES (4B) reaches an average accuracy of 84.5%, compared with 74.7% for the strongest of twelve proprietary, general, medical and pathology MLLMs, and a higher share of its intermediate quantities is correct than for the strongest open-weight baseline. Without the process reward, reinforcement learning barely improves on supervised fine-tuning (80.0% vs. 78.8%) and fewer stated quantities are correct; editing a decisive stated quantity changes the answer as implied in all 885 test questions. Without retraining, it keeps the highest average accuracy on an external cohort imaged with CODEX (76.4% vs. 67.3%) and on head and neck cancer, a cancer type absent from training (76.7% vs. 72.5%)."
     }
   ],
   "story": {
-    "title": "Combatting adversarial distillation",
-    "url": "https://openai.com/index/combatting-adversarial-distillation",
-    "published": "2026-11-20T10:00:00+00:00",
-    "source": "OpenAI News",
-    "priority": 1,
-    "summary": "OpenAI’s layered approach to adversarial distillation combines model training, safeguards, detection, and enforcement to protect against capability extraction."
+    "title": "Adding One More Agent: How AI Team Size and Formation Shape Productivity and Diversity in Human-AI Brainstorming Teams",
+    "url": "https://arxiv.org/abs/2611.26663",
+    "published": "2026-11-23T05:00:00+00:00",
+    "source": "arXiv cs.AI",
+    "priority": 2,
+    "summary": "arXiv:2611.26663v1 Announce Type: new Abstract: Generative AI has improved individual productivity, but whether adding a plurality of AI partners helps or hurts remains open. We crossed AI partnership (one versus two) with behavioral formation (calibrated to average human behavior versus customized by the participant) in a brainstorming experiment ($N$=168) with human-human dyads as reference. Two-AI rooms posted more ideas to the shared board, but human-authored ideas dropped substantially. With one AI partner, formation mattered: humans paired with an average-calibrated AI posted more than any other condition. With two, this effect vanished. Humans continued talking but converted fewer ideas into board posts. AI social talk predicted more human posts, while AI posting volume predicted fewer. AI presence increased global diversity of human-authored ideas, but only a second AI increased within-session differentiation. The number of AI partners and their formation can reshape what the human contributes; single-agent results do not generalize to multi-agent teams."
   },
-  "caption": "Today's AI Brief: 5 developments.\n\nSwipe through for the stories and sources.\n\n1. Combatting adversarial distillation\nOpenAI’s layered approach to adversarial distillation combines model training, safeguards, detection, and enf…\nSource: OpenAI News\nhttps://openai.com/index/combatting-adversarial-distillation\n\n2. Hebbia sees improvements in financial research with GPT-6 Astra\nHebbia tested GPT-6 Astra for financial research. Its prerelease evaluations found gains in source coverage,…\nSource: OpenAI News\nhttps://openai.com/business/customer-stories/hebbia\n\n3. Can AI help scientists identify promising drug candidates?\nMedChemBench evaluates how well AI models interpret molecular structures, reason from experimental evidence,…\nSource: OpenAI News\nhttps://openai.com/index/introducing-medchembench\n\n4. Introducing Tool Retrieval in the Gemini API\nGemini spark on a space background\nSource: Google AI\nhttps://blog.google/innovation-and-ai/technology/developers-tools/gemini-api-tool-retrieval/\n\n5. Walter Isaacson on curiosity and creativity in the AI age.\nWalter Isaacson joins Google to discuss how history’s greatest innovators inspire creativity and human judgme…\nSource: Google AI\nhttps://blog.google/innovation-and-ai/technology/ai/dialogues-walter-isaacson/\n\nAI Brief · Daily AI developments",
+  "caption": "Today's AI Brief: 5 developments.\n\nSwipe through for the stories and sources.\n\n1. Adding One More Agent: How AI Team Size and Formation Shape Productivity and Diversity in Human-AI Brainstorming Teams\narXiv:2611.26663v1 Announce Type: new Abstract: Generative AI has improved individual productivity, but wheth…\nSource: arXiv cs.AI\nhttps://arxiv.org/abs/2611.26663\n\n2. Coherence by Construction: Synthesizing CTI Knowledge Graphs and the Formal Limits of Coherence Validation\narXiv:2611.26717v1 Announce Type: new Abstract: Synthesizing relational training data such as knowledge graph…\nSource: arXiv cs.AI\nhttps://arxiv.org/abs/2611.26717\n\n3. TOUMAII: A 4.5M-Pair Tool-Calling Preference Dataset and Its Source-Agnostic Generator\narXiv:2611.26722v1 Announce Type: new Abstract: To autonomously execute multi-step tasks, enterprise agents m…\nSource: arXiv cs.AI\nhttps://arxiv.org/abs/2611.26722\n\n4. ChatAtom: A Multi-Agent LLM System for Molecular Dynamics Simulation and Visualization\narXiv:2611.26782v1 Announce Type: new Abstract: Molecular dynamics (MD) simulation resolves atomic-scale moti…\nSource: arXiv cs.AI\nhttps://arxiv.org/abs/2611.26782\n\n5. Beyond Final Answers: Interpretable Tumor Immune Microenvironment Reasoning from H&E and mIF\narXiv:2611.26794v1 Announce Type: new Abstract: Readouts of the tumor immune microenvironment (TIME), such as…\nSource: arXiv cs.AI\nhttps://arxiv.org/abs/2611.26794\n\nAI Brief · Daily AI developments",
   "alt_texts": [
-    "AI Brief news image. Headline: Combatting adversarial distillation. Source: OpenAI News.",
-    "AI Brief news image. Headline: Hebbia sees improvements in financial research with GPT-6 Astra. Source: OpenAI News.",
-    "AI Brief news image. Headline: Can AI help scientists identify promising drug candidates?. Source: OpenAI News.",
-    "AI Brief news image. Headline: Introducing Tool Retrieval in the Gemini API. Source: Google AI.",
-    "AI Brief news image. Headline: Walter Isaacson on curiosity and creativity in the AI age.. Source: Google AI."
+    "AI Brief news image. Headline: Adding One More Agent: How AI Team Size and Formation Shape Productivity and Diversity in Human-AI Brainstorming Teams. Source: arXiv cs.AI.",
+    "AI Brief news image. Headline: Coherence by Construction: Synthesizing CTI Knowledge Graphs and the Formal Limits of Coherence Validation. Source: arXiv cs.AI.",
+    "AI Brief news image. Headline: TOUMAII: A 4.5M-Pair Tool-Calling Preference Dataset and Its Source-Agnostic Generator. Source: arXiv cs.AI.",
+    "AI Brief news image. Headline: ChatAtom: A Multi-Agent LLM System for Molecular Dynamics Simulation and Visualization. Source: arXiv cs.AI.",
+    "AI Brief news image. Headline: Beyond Final Answers: Interpretable Tumor Immune Microenvironment Reasoning from H&E and mIF. Source: arXiv cs.AI."
   ],
   "image_paths": [
-    "posts/2026-11-22-01.jpg",
-    "posts/2026-11-22-02.jpg",
-    "posts/2026-11-22-03.jpg",
-    "posts/2026-11-22-04.jpg",
-    "posts/2026-11-22-05.jpg"
+    "posts/2026-11-23-01.jpg",
+    "posts/2026-11-23-02.jpg",
+    "posts/2026-11-23-03.jpg",
+    "posts/2026-11-23-04.jpg",
+    "posts/2026-11-23-05.jpg"
   ],
   "image_urls": [
-    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-11-22-01.jpg",
-    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-11-22-02.jpg",
-    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-11-22-03.jpg",
-    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-11-22-04.jpg",
-    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-11-22-05.jpg"
+    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-11-23-01.jpg",
+    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-11-23-02.jpg",
+    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-11-23-03.jpg",
+    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-11-23-04.jpg",
+    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-11-23-05.jpg"
   ],
   "carousel": true,
   "content_type": "news"
