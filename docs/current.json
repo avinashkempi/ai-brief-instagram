@@ -1,12 +1,12 @@
 {
-  "date": "2026-11-26",
+  "date": "2026-11-27",
   "status": "ready",
-  "generated_at": "2026-11-26T09:59:45.366380+00:00",
+  "generated_at": "2026-11-27T10:04:55.579541+00:00",
   "stories": [
     {
       "title": "Context Scaling: A New Frontier of AI Scaling",
       "url": "https://arxiv.org/abs/2611.33160",
-      "published": "2026-11-26T05:00:00+00:00",
+      "published": "2026-11-27T05:00:00+00:00",
       "source": "arXiv cs.AI",
       "priority": 2,
       "summary": "arXiv:2611.33160v1 Announce Type: new Abstract: Many failures of deployed AI arise not from weak inference but from a mismatch between the state a task depends on and the context available when the system acts. Relevant user state, repository revisions, tool traces, sensor readings, or environment changes may be unavailable, distorted, or poorly selected. We call the effort to reduce this bottleneck context scaling. We frame a model as $P_\\theta(d\\mid c)$ within a system governed by three budgets: training $B_\\theta$, decision-time $B_d$, and context-infrastructure $B_c$. Pretraining scaling invests in $\\theta$; decision-time scaling searches, refines, or verifies decisions under supplied context; context scaling improves the system's capacity to acquire, represent, deliver, evaluate, and persist deployment state for model use. The three programs interact, but only $B_c$ targets what the system can make available before a decision. This view makes the model-infrastructure pair the unit of analysis. We define effective-context value as a task- and intervention-dependent attribution, separate deployment state from model-visible context, and identify availability, fidelity, selection, and utilization failures. We then organize current mechanisms through a five-operation context lifecycle and propose controlled budget interventions and utility-cost curves for evaluation. The resulting agenda centers on grounded reporting, interaction-data and full-cost infrastructure, and safety and governance for persistent, adaptive systems."
@@ -14,7 +14,7 @@
     {
       "title": "Constraint-Aware Test-Time Scoring for LLM and VLM Candidate Selection",
       "url": "https://arxiv.org/abs/2611.33161",
-      "published": "2026-11-26T05:00:00+00:00",
+      "published": "2026-11-27T05:00:00+00:00",
       "source": "arXiv cs.AI",
       "priority": 2,
       "summary": "arXiv:2611.33161v1 Announce Type: new Abstract: When an LLM or VLM produces several candidate answers, picking the best one usually relies on the model's own confidence, a learned judge model, or a domain check. Each has a known weakness: an answer can be fluent but insecure, mathematically plausible but physically infeasible, or rated highly by a judge while quietly breaking a task requirement. We propose a scoring framework that combines a small set of hard checks every answer must pass with a wider set of softer checks whose scores are blended into one number per candidate. This adaptive scoring framework consists of three components: a drafting model that produces the candidates, a configuring model that selects and weights the checks for each task, and scoring models that rate properties no grounded tool can compute. We apply our proposed method to four tasks: writing code that is both correct and secure (CWEval), generating robot manipulation plans (LIBERO with added safety variants), passing competitive-programming hidden tests (LiveCodeBench), and answering questions from retrieved documents (HotpotQA). An ablation study isolates the contribution of each component and finds that the largest gains come from combining hard checks with candidate comparison: on tasks where the first sampled answer is often broken or unsafe, this pairing lifts joint correctness-and-safety by up to +0.21 (retrieval-augmented QA) and code-generation safety by up to +0.28 (CWEval), with the size of the gain tracking how weak the first sample is, falling to near zero or slightly negative where it is already strong. The per-task layer that selects and weights the softer checks adds no measurable value over simpler alternatives. This builds a unified scoring framework, together with an ablation that identifies the grounded hard checks, not the soft-factor configuration, as the source of the gain."
@@ -22,7 +22,7 @@
     {
       "title": "AutoformBench: A Lean Formalization Benchmark for Advanced Mathematics",
       "url": "https://arxiv.org/abs/2611.33165",
-      "published": "2026-11-26T05:00:00+00:00",
+      "published": "2026-11-27T05:00:00+00:00",
       "source": "arXiv cs.AI",
       "priority": 2,
       "summary": "arXiv:2611.33165v1 Announce Type: new Abstract: AI systems are increasingly capable of producing machine-checked Lean proofs of advanced mathematical results. Real mathematical formalization, however, is not isolated theorem proving: it requires building the definitions and intermediate lemmas that connect a result to a formal library. Existing evaluations often provide isolated theorem statements in settings where much of this supporting theory is already available in Mathlib. We introduce AutoformBench, a benchmark of 341 Lean 4 formalization tasks drawn from 24 advanced mathematical sources. Lean-experienced mathematicians formalized and audited each target statement, leaving the corresponding Lean proof to the evaluated agent. Each problem is embedded in a broader mathematical development: agents receive the informal proof but must translate it into Lean while constructing the missing definitions, intermediate lemmas, and supporting infrastructure. We compare the performance of frontier models on these problems. We find a largely shared difficulty frontier: success depends less on mathematical domain than on models' ability to construct missing formal infrastructure. Data and code at"
@@ -30,7 +30,7 @@
     {
       "title": "General-Purpose Decision Models for AI Configuration Tuning",
       "url": "https://arxiv.org/abs/2611.33190",
-      "published": "2026-11-26T05:00:00+00:00",
+      "published": "2026-11-27T05:00:00+00:00",
       "source": "arXiv cs.AI",
       "priority": 2,
       "summary": "arXiv:2611.33190v1 Announce Type: new Abstract: AI configuration tuning searches for settings that improve the performance of AI systems under a limited budget. Existing tuners use different sampling and search policies, making the choice of decision strategy central to both tuning quality and cost. We investigate whether general-purpose decision models can guide tuning, using Jev as a deployed representative that returns structured choices and numeric scores across diverse tasks. To assess where it helps, we compare its use as an optimizer, performance predictor, and region guider against conventional methods and a large language model (LLM) on eight AI tuning tasks. Conventional optimizers attain rank 1 in six of eight comparisons. Similarly, established predictors outperform Jev in seven. Through region guidance, however, it finds configurations with lower perplexity than those selected by the native tuner, offering a quality gain when additional decision time and API fees are acceptable. These findings yield actionable recommendations on selecting the decision role, retaining conventional predictors, and balancing tuning quality against cost."
@@ -38,7 +38,7 @@
     {
       "title": "What, Who, and When: Structured Harm Assessment for Mental Health Safety via Short Reasoning",
       "url": "https://arxiv.org/abs/2611.33263",
-      "published": "2026-11-26T05:00:00+00:00",
+      "published": "2026-11-27T05:00:00+00:00",
       "source": "arXiv cs.AI",
       "priority": 2,
       "summary": "arXiv:2611.33263v1 Announce Type: new Abstract: The growing use of large language models (LLMs) for mental health support raises important safety concerns. Existing guard models primarily identify categories of harmful content, often overlooking the context needed to determine an appropriate response. We introduce a clinically grounded taxonomy that characterizes harm along three dimensions: what the harm is, who is involved, and when it occurs. It further separates harm characterization from intervention decisions, thus enabling safety policies to be specified outside the model weights through explicit, clinician-curated instructions that can be updated and audited. We validate the taxonomy with expert clinicians and validate a panel of LLM judges to scale annotation. Relabeling public benchmarks in this taxonomy shows that they rarely contain harm directed at the user, which accounts for nearly half of the harm in real conversations. We then train MindGuard2, a 35B-A3B reasoning-based guard model using supervised fine-tuning on short reasoning traces followed by reinforcement learning with a reasoning-length penalty, to minimize inference overhead while preserving the benefits of reasoning. On two public benchmarks and real-world conversations, MindGuard2 achieves balanced accuracy comparable to the substantially larger GLM-5.3 at approximately 10x lower median latency, advancing the accuracy-latency Pareto frontier. Furthermore, it achieves low false-positive rates at high recall, helping balance the need to detect unsafe situations against the risk of unnecessary interventions that may disrupt support and undermine user trust. We release a safety guardrail model with SOTA performance trained on synthetic data, together with synthetic conversations and annotations of public benchmarks in our taxonomy."
@@ -47,7 +47,7 @@
   "story": {
     "title": "Context Scaling: A New Frontier of AI Scaling",
     "url": "https://arxiv.org/abs/2611.33160",
-    "published": "2026-11-26T05:00:00+00:00",
+    "published": "2026-11-27T05:00:00+00:00",
     "source": "arXiv cs.AI",
     "priority": 2,
     "summary": "arXiv:2611.33160v1 Announce Type: new Abstract: Many failures of deployed AI arise not from weak inference but from a mismatch between the state a task depends on and the context available when the system acts. Relevant user state, repository revisions, tool traces, sensor readings, or environment changes may be unavailable, distorted, or poorly selected. We call the effort to reduce this bottleneck context scaling. We frame a model as $P_\\theta(d\\mid c)$ within a system governed by three budgets: training $B_\\theta$, decision-time $B_d$, and context-infrastructure $B_c$. Pretraining scaling invests in $\\theta$; decision-time scaling searches, refines, or verifies decisions under supplied context; context scaling improves the system's capacity to acquire, represent, deliver, evaluate, and persist deployment state for model use. The three programs interact, but only $B_c$ targets what the system can make available before a decision. This view makes the model-infrastructure pair the unit of analysis. We define effective-context value as a task- and intervention-dependent attribution, separate deployment state from model-visible context, and identify availability, fidelity, selection, and utilization failures. We then organize current mechanisms through a five-operation context lifecycle and propose controlled budget interventions and utility-cost curves for evaluation. The resulting agenda centers on grounded reporting, interaction-data and full-cost infrastructure, and safety and governance for persistent, adaptive systems."
@@ -61,18 +61,18 @@
     "AI Brief news image. Headline: What, Who, and When: Structured Harm Assessment for Mental Health Safety via Short Reasoning. Source: arXiv cs.AI."
   ],
   "image_paths": [
-    "posts/2026-11-26-01.jpg",
-    "posts/2026-11-26-02.jpg",
-    "posts/2026-11-26-03.jpg",
-    "posts/2026-11-26-04.jpg",
-    "posts/2026-11-26-05.jpg"
+    "posts/2026-11-27-01.jpg",
+    "posts/2026-11-27-02.jpg",
+    "posts/2026-11-27-03.jpg",
+    "posts/2026-11-27-04.jpg",
+    "posts/2026-11-27-05.jpg"
   ],
   "image_urls": [
-    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-11-26-01.jpg",
-    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-11-26-02.jpg",
-    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-11-26-03.jpg",
-    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-11-26-04.jpg",
-    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-11-26-05.jpg"
+    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-11-27-01.jpg",
+    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-11-27-02.jpg",
+    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-11-27-03.jpg",
+    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-11-27-04.jpg",
+    "https://avinashkempi.github.io/ai-brief-instagram/posts/2026-11-27-05.jpg"
   ],
   "carousel": true,
   "content_type": "news"
